@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+// COLOR
+$black: #000;
+$white: #fff;
+$pink: #ef0276;
+$yellow: #f5a404;
+$blue: #170a64;
+$blue-2: #1d0e78;
+$light-blue: #e8f3ff;
+$gradient: linear-gradient(88deg, #9f0178 2.32%, #ff6911 98.59%);
+
+// FONT FAMILY
+$font-roboto: "Roboto", sans-serif;
+
+// FONT WEIGHT
+$fw-t: 100;
+$fw-el: 200;
+$fw-l: 300;
+$fw-r: 400;
+$fw-m: 500;
+$fw-b: 700;
+$fw-bl: 900;
+
+// MIXIN
+@mixin flex($j, $a, $g) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  gap: $g;
+}
+
+// BREAKPOINTS
+@mixin min-extra-desktop {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin min-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin extra-desktop {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media only screen and (max-width: 1399px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin landscape-phone {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin extra-mobile {
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media only screen and (max-width: 391px) {
+    @content;
+  }
+}
+
+// KEYFRAMES
+
+@keyframes shaking {
+  0% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+@keyframes moveHorizontalReverse {
+  0% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes spinMoving {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  50% {
+    transform: translate(10px, -100px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
