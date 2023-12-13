@@ -11,7 +11,7 @@ const homeService = new Swiper("#home-services .services-slider .swiper", {
     prevEl: "#home-services .services-slider .slider-button-prev",
   },
   breakpoints: {
-    767: { slidesPerView: 2, spaceBetween: 25 },
+    480: { slidesPerView: 2, spaceBetween: 25 },
     991: { slidesPerView: 3, spaceBetween: 25 },
   },
 });

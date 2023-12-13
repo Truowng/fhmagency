@@ -821,4 +821,28 @@ h6 {
     }
   }
 }
+
+@include mobile {
+  .heading-block {
+    .badge {
+      font-size: 8px;
+      line-height: 15px;
+      padding: 5px 10px;
+    }
+    .title {
+      font-size: 22px;
+      line-height: 44px;
+    }
+    .desc {
+      font-size: 14px;
+      line-height: 32px;
+    }
+  }
+
+  .button.button-l {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 10px 15px;
+  }
+}
 // END RESPONSIVE
