@@ -44,7 +44,7 @@ h6 {
 
 @include min-extra-desktop {
   .container {
-    max-width: 1160px;
+    max-width: 1184px;
   }
   .testimonials {
     .container {
@@ -214,6 +214,22 @@ h6 {
           line-height: 19px;
           text-transform: capitalize;
           transition: all ease 0.5s;
+          position: relative;
+          &:hover {
+            &::before {
+              width: 100%;
+            }
+          }
+          &::before {
+            content: "";
+            width: 0%;
+            height: 1px;
+            background-color: $white;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: all ease 0.5s;
+          }
         }
         &:last-child {
           .link {
@@ -223,6 +239,9 @@ h6 {
 
             &:hover {
               background-color: $pink;
+              &::before {
+                content: none;
+              }
             }
           }
         }
@@ -429,6 +448,7 @@ h6 {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    // aspect-ratio: 1160/550;
     &.play {
       &::before {
         opacity: 0;
@@ -517,6 +537,8 @@ h6 {
     }
   }
   .heading-block {
+    position: relative;
+    z-index: 2;
     .title {
       font-size: 50px;
       line-height: 59px;
@@ -579,6 +601,8 @@ h6 {
 
   .footer-mid {
     margin-top: 37px;
+    padding-bottom: 37px;
+    border-bottom: 1px solid #ffffff29;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 112px;
@@ -622,18 +646,179 @@ h6 {
       .item {
         width: 38px;
         aspect-ratio: 1;
-
+        a {
+          img {
+            transition: all ease 0.5s;
+          }
+        }
         &:hover {
           a {
             img {
-              filter: brightness(0) saturate(100%) invert(98%) sepia(0%)
-                saturate(7500%) hue-rotate(66deg) brightness(104%)
-                contrast(103%);
+              filter: brightness(2);
             }
           }
         }
       }
     }
   }
+
+  .footer-bottom {
+    margin: 40px 0 44px;
+    @include flex(space-between, center, 20px);
+  }
+
+  .copyrights {
+    font-size: 14px;
+    line-height: 24px;
+    color: $white;
+  }
+
+  .policy-list {
+    @include flex(unset, center, unset);
+    .item {
+      margin-right: 20px;
+      padding-right: 20px;
+      border-right: 1px solid #ffffff2e;
+      &:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: 0;
+      }
+      a {
+        font-size: 14px;
+        line-height: normal;
+        color: $white;
+      }
+    }
+  }
 }
 // END FOOTER
+
+// START SEO
+.seo {
+  padding: 58px 0;
+
+  background-color: $blue;
+  p {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: $fw-l;
+    margin-bottom: 20px;
+    color: #a297e4;
+    letter-spacing: 0.015em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+// END SEO
+
+// START RESPONSIVE
+@include large-desktop {
+  #home-about {
+    .about-wrapper {
+      gap: 50px;
+    }
+    .heading-block {
+      width: 50%;
+    }
+  }
+}
+
+@include tablet {
+  .project {
+    .project-group {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  #fhm-footer {
+    .footer-mid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-bottom {
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+  }
+}
+
+@include landscape-phone {
+  .testimonials {
+    .swiper {
+      overflow: visible;
+      .swiper-slide-active {
+        .testimonials-item {
+          background-color: $white !important;
+          .title,
+          .desc,
+          .name,
+          .address {
+            color: $blue !important;
+          }
+          .rating {
+            &::before {
+              background: linear-gradient(
+                90deg,
+                $pink var(--percent),
+                #888888 var(--percent)
+              ) !important;
+              -webkit-background-clip: text !important;
+              -webkit-text-fill-color: transparent !important;
+            }
+          }
+        }
+      }
+      .swiper-slide {
+        width: unset;
+        .testimonials-item {
+          background-color: rgba($color: $white, $alpha: 0.3);
+
+          .title,
+          .desc,
+          .name,
+          .address {
+            color: $white;
+          }
+          .rating {
+            &::before {
+              background: linear-gradient(
+                90deg,
+                $white var(--percent),
+                #888888 var(--percent)
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .testimonials-slider {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+    .testimonials-item {
+      max-width: 450px;
+    }
+  }
+
+  #fhm-footer {
+    .footer-mid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .policy-list {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      .item {
+        a {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+// END RESPONSIVE
