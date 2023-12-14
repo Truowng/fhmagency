@@ -1,0 +1,128 @@
+.blog-list {
+    .cta {
+        margin-top: 0;
+    }
+}
+
+
+.blog-highlight {
+    padding: 75px 0 120px;
+    background: $blue;
+
+    .heading-block {
+        margin-bottom: 42px;
+
+        &.heading-center {
+            .desc {
+                max-width: 863px;
+            }
+        }
+
+        .desc {
+            margin-top: 5px;
+        }
+    }
+
+    .blog-highlight-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 74px;
+        row-gap: 82px;
+    }
+
+    .blog-item {
+        &:first-child {
+            grid-row: span 2;
+            grid-column: span 2;
+
+            .content {
+                .title {
+                    font-size: 28px;
+                    line-height: 44px;
+                }
+            }
+        }
+
+        .content {
+            .date {
+                font-size: 11px;
+                line-height: 15px;
+                letter-spacing: 3.3px;
+                margin-bottom: 5px;
+            }
+
+            .title {
+                font-weight: 500;
+                letter-spacing: 0.27px;
+
+            }
+        }
+    }
+}
+
+.blog-orther {
+    padding: 110px 0 145px;
+
+    .heading-block {
+        margin-bottom: 50px;
+    }
+
+    .blog-orther-list {
+        position: relative;
+    }
+}
+
+
+//**Responsive Blog List Page**//
+
+@include desktop {
+    .blog-highlight {
+        .blog-highlight-list {
+            column-gap: 48px;
+            row-gap: 48px;
+        }
+    }
+}
+
+@include tablet {
+    .blog-highlight {
+        .blog-highlight-list {
+            column-gap: 24px;
+            row-gap: 36px;
+        }
+    }  
+}
+
+@include landscape-phone {
+    .blog-highlight {
+       padding: 43px 0 55px;
+
+        .blog-highlight-list {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .blog-item {
+            &:first-child {
+                .content {
+                    .title  {
+                        font-size: 20px;
+                        line-height: 32px
+                    }
+                }
+            }
+
+            &:nth-child(6) {
+                display: none;
+            }
+        }
+    }  
+}
+
+@include extra-mobile {
+    .blog-highlight {
+        .blog-highlight-list {
+            grid-column: 12px;
+            grid-row: 30px;
+        }
+    }
+}
