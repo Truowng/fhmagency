@@ -19,7 +19,7 @@ $fw-el: 200;
 $fw-l: 300;
 $fw-r: 400;
 $fw-m: 500;
-$fw-sb: 500;
+$fw-sb: 600;
 $fw-b: 700;
 $fw-eb: 800;
 $fw-bl: 900;
@@ -157,5 +157,22 @@ $fw-bl: 900;
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes launchBg {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes imageSlide {
+  0% {
+    transform: translateX(calc(-50% + 20px));
+  }
+  100% {
+    transform: translateX(0%);
   }
 }

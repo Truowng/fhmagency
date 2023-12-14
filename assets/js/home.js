@@ -4,8 +4,8 @@ import { hackerEffect } from "./hackerEffect.js";
 const homeService = new Swiper("#home-services .services-slider .swiper", {
   direction: "horizontal",
   speed: 1000,
-  slidesPerView: 1,
-  spaceBetween: 25,
+  slidesPerView: "auto",
+  spaceBetween: 12,
   navigation: {
     nextEl: "#home-services .services-slider .slider-button-next",
     prevEl: "#home-services .services-slider .slider-button-prev",
