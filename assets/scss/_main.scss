@@ -379,9 +379,15 @@ h6 {
       border-radius: 20px;
       overflow: hidden;
       margin-bottom: 28px;
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
       img {
         height: 100%;
         object-fit: cover;
+        transition: all ease 1s;
       }
     }
     .title {

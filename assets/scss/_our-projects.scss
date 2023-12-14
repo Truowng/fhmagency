@@ -1,0 +1,17 @@
+// START OUR PROJECT
+#project-banner {
+  position: relative;
+  padding: 206px 0 235px;
+  .decor-el {
+    left: 50%;
+    top: 100px;
+    transform: translateX(-40%);
+    width: 100%;
+  }
+  .curve-bg {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+// END OUR PROJECT

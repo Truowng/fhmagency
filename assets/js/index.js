@@ -1,3 +1,6 @@
+// INIT
+AOS.init();
+
 const testimonialsSlider = new Swiper(
   ".testimonials .testimonials-slider .swiper",
   {
