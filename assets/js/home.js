@@ -19,8 +19,8 @@ const homeService = new Swiper("#home-services .services-slider .swiper", {
 const homeBlog = new Swiper("#home-blog .blog-slider .swiper", {
   direction: "horizontal",
   speed: 1000,
-  slidesPerView: 1,
-  spaceBetween: 25,
+  slidesPerView: "auto",
+  spaceBetween: 20,
   breakpoints: {
     767: {
       slidesPerView: 2,

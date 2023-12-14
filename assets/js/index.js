@@ -52,3 +52,21 @@ if (pauseButton) {
     video.pause();
   });
 }
+
+// HANDLE MENU
+const openButton = document.querySelector("#fhm-header .nav .button-open");
+const closeButton = document.querySelector(
+  "#fhm-header .nav-mobile .button-close"
+);
+const navMobile = document.querySelector("#fhm-header .nav-mobile");
+
+if (navMobile) {
+  openButton.addEventListener("click", () => {
+    navMobile.classList.remove("close");
+    navMobile.classList.add("open");
+  });
+  closeButton.addEventListener("click", () => {
+    navMobile.classList.remove("open");
+    navMobile.classList.add("close");
+  });
+}

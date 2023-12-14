@@ -12,6 +12,10 @@ body {
   background-color: $blue-2;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 ul,
 ol {
   list-style: none;
@@ -184,11 +188,11 @@ h6 {
   width: 100%;
   z-index: 10;
   .header-wrapper {
-    @include flex(space-between, center, 20px);
+    @include flex(space-between, end, 20px);
   }
   .topbar {
     @include flex(end, center, 16px);
-    margin-bottom: 27px;
+    transform: translateY(15px);
     .info {
       @include flex(unset, center, 6px);
       .icon {
@@ -205,9 +209,9 @@ h6 {
     }
   }
   .nav {
+    transform: translateY(-5px);
     .list {
       @include flex(space-between, center, 80px);
-
       .item {
         .link {
           font-size: 16px;
@@ -245,6 +249,99 @@ h6 {
             }
           }
         }
+      }
+    }
+    .button-open {
+      outline: none;
+      border: none;
+      width: 18px;
+      background-color: transparent;
+      display: none;
+    }
+  }
+  .nav-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20px;
+    overflow: hidden;
+    // background-color: $blue-2;
+    transform: translateX(100%);
+
+    background-color: #ef66a9;
+    @include flex(center, center, unset);
+    transition: all $cubic 1s;
+    &.open {
+      transform: translateX(0%);
+      // animation: openMenu $cubic 2.5s;
+      // animation-fill-mode: forwards;
+    }
+
+    &.close {
+      transform: translateX(100%);
+      // animation: closeMenu $cubic 2.5s;
+      // animation-fill-mode: forwards;
+    }
+
+    .nav {
+      .list {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+        .item {
+          @include flex(unset, center, 15px);
+          .icon {
+            width: 40px;
+          }
+          a {
+            font-size: 25px;
+            font-weight: $fw-m;
+          }
+          &:last-child {
+            width: 100%;
+            a {
+              width: 100%;
+              text-align: center;
+              padding: 20px 0;
+            }
+          }
+        }
+      }
+    }
+    .bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      .decor-el {
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+      }
+    }
+    .button-close {
+      outline: none;
+      border: none;
+      width: 40px;
+      aspect-ratio: 1;
+      @include flex(center, center, unset);
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: $white;
+      border-radius: 500px;
+      &:hover {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+      img {
+        width: 50%;
+        transition: all ease 1s;
       }
     }
   }
@@ -304,6 +401,17 @@ h6 {
         text-decoration: underline;
       }
     }
+  }
+  .button-show-all {
+    display: none;
+    margin-top: 55px;
+    width: 100%;
+    padding: 15px;
+    border-color: $blue;
+    color: $blue;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: $fw-m;
   }
 }
 // END PROJECT
@@ -726,6 +834,16 @@ h6 {
 }
 
 @include tablet {
+  #fhm-header {
+    .nav {
+      .list {
+        display: none;
+      }
+      .button-open {
+        display: block;
+      }
+    }
+  }
   .project {
     .project-group {
       grid-template-columns: repeat(2, 1fr);
@@ -747,28 +865,6 @@ h6 {
   .testimonials {
     .swiper {
       overflow: visible;
-      .swiper-slide-active {
-        .testimonials-item {
-          background-color: $white !important;
-          .title,
-          .desc,
-          .name,
-          .address {
-            color: $blue !important;
-          }
-          .rating {
-            &::before {
-              background: linear-gradient(
-                90deg,
-                $pink var(--percent),
-                #888888 var(--percent)
-              ) !important;
-              -webkit-background-clip: text !important;
-              -webkit-text-fill-color: transparent !important;
-            }
-          }
-        }
-      }
       .swiper-slide {
         width: unset;
         .testimonials-item {
@@ -813,6 +909,7 @@ h6 {
     .policy-list {
       flex-wrap: nowrap;
       overflow-x: auto;
+      width: 100%;
       .item {
         a {
           white-space: nowrap;
@@ -823,6 +920,25 @@ h6 {
 }
 
 @include mobile {
+  #fhm-header {
+    padding-top: 0;
+    .container {
+      padding: 0;
+    }
+    .topbar {
+      padding: 11px var(--bs-gutter-x, 0.75rem);
+      transform: unset;
+      background-color: $blue;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+    .header-wrapper {
+      padding: 0 var(--bs-gutter-x, 0.75rem);
+    }
+    .logo {
+      width: 126px;
+    }
+  }
   .heading-block {
     .badge {
       font-size: 8px;
@@ -843,6 +959,100 @@ h6 {
     font-size: 10px;
     line-height: 12px;
     padding: 10px 15px;
+  }
+
+  .project {
+    .project-group {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-item {
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+    .button-show-all {
+      display: block;
+    }
+  }
+
+  .testimonials {
+    .testimonials-item {
+      max-width: 302px;
+      padding: 54px 17px 34px;
+      .rating {
+        margin-bottom: 10px;
+      }
+      .title {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 10px;
+      }
+      .desc {
+        font-size: 12px;
+        line-height: 24px;
+        margin-bottom: 15px;
+      }
+      .user {
+        .name {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 0;
+        }
+        .address {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  .cta {
+    .decor-el {
+      &:nth-child(1) {
+        top: 206px;
+        left: -40px;
+      }
+      &:nth-child(2) {
+        top: 298px;
+        left: 33px;
+        right: initial;
+      }
+      &:nth-child(3) {
+        top: -50px;
+        right: 0;
+      }
+    }
+    .heading-block {
+      .title {
+        font-size: 25px;
+        line-height: 36px;
+        margin-bottom: 10px;
+      }
+      .desc {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 24px;
+      }
+      .button {
+        padding: 10px;
+        max-width: 160px;
+        width: 100%;
+        font-size: 12px;
+        line-height: 24px;
+      }
+    }
+  }
+  #fhm-footer {
+    .footer-mid {
+      grid-column-gap: 40px;
+    }
+    .footer-social {
+      .footer-social-list {
+        gap: 27px;
+        flex-wrap: wrap;
+      }
+    }
   }
 }
 // END RESPONSIVE
