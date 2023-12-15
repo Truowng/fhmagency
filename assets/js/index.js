@@ -28,12 +28,12 @@ const testimonialsSlider = new Swiper(
   {
     direction: "horizontal",
     speed: 1000,
-    spaceBetween: 75,
+    slidesPerView: "auto",
+    spaceBetween: 22,
     autoplay: {
       delay: 3000,
       pauseOnMouseEnter: true,
     },
-    slidesPerView: 1,
     initialSlide: 3,
     loop: true,
     breakpoints: {

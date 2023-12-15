@@ -2,7 +2,7 @@
 const homeService = new Swiper("#home-services .services-slider .swiper", {
   direction: "horizontal",
   speed: 1000,
-  slidesPerView: 1,
+  slidesPerView: "auto",
   spaceBetween: 25,
   navigation: {
     nextEl: "#home-services .services-slider .slider-button-next",
