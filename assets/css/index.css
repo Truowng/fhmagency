@@ -849,6 +849,8 @@ h6 {
 }
 #fhm-footer .footer-mid {
   margin-top: 37px;
+  padding-bottom: 37px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1607843137);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 112px;
@@ -887,8 +889,44 @@ h6 {
   width: 38px;
   aspect-ratio: 1;
 }
+#fhm-footer .footer-social .footer-social-list .item a img {
+  transition: all ease 0.5s;
+}
 #fhm-footer .footer-social .footer-social-list .item:hover a img {
-  filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(7500%) hue-rotate(66deg) brightness(104%) contrast(103%);
+  filter: brightness(2);
+}
+#fhm-footer .footer-bottom {
+  margin: 40px 0 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+#fhm-footer .copyrights {
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+}
+#fhm-footer .policy-list {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: unset;
+}
+#fhm-footer .policy-list .item {
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1803921569);
+}
+#fhm-footer .policy-list .item:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: 0;
+}
+#fhm-footer .policy-list .item a {
+  font-size: 14px;
+  line-height: normal;
+  color: #fff;
 }
 
 .seo {

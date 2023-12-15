@@ -818,6 +818,8 @@ h6 {
 
   .footer-mid {
     margin-top: 37px;
+    padding-bottom: 37px;
+    border-bottom: 1px solid #ffffff29;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 112px;
@@ -861,16 +863,48 @@ h6 {
       .item {
         width: 38px;
         aspect-ratio: 1;
-
+        a {
+          img {
+            transition: all ease 0.5s;
+          }
+        }
         &:hover {
           a {
             img {
-              filter: brightness(0) saturate(100%) invert(98%) sepia(0%)
-                saturate(7500%) hue-rotate(66deg) brightness(104%)
-                contrast(103%);
+              filter: brightness(2);
             }
           }
         }
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin: 40px 0 44px;
+    @include flex(space-between, center, 20px);
+  }
+
+  .copyrights {
+    font-size: 14px;
+    line-height: 24px;
+    color: $white;
+  }
+
+  .policy-list {
+    @include flex(unset, center, unset);
+    .item {
+      margin-right: 20px;
+      padding-right: 20px;
+      border-right: 1px solid #ffffff2e;
+      &:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: 0;
+      }
+      a {
+        font-size: 14px;
+        line-height: normal;
+        color: $white;
       }
     }
   }
