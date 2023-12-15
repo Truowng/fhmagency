@@ -32,6 +32,9 @@ $fw-bl: 900;
   gap: $g;
 }
 
+// FUNCTION
+$cubic: cubic-bezier(0.77, 0, 0.175, 1);
+
 // BREAKPOINTS
 @mixin min-extra-desktop {
   @media (min-width: 1400px) {
