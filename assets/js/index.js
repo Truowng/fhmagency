@@ -4,7 +4,7 @@ AOS.init();
 //HACKER
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+~|,.?/{}[]-123456789";
 
-export const hackerEffect = (el) => {
+const hackerEffect = (el) => {
   let iterations = 0;
   const interval = setInterval(() => {
     el.innerText = el.innerText
