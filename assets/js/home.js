@@ -1,5 +1,3 @@
-import { hackerEffect } from "./hackerEffect.js";
-
 // SLIDE
 const homeService = new Swiper("#home-services .services-slider .swiper", {
   direction: "horizontal",
@@ -31,11 +29,4 @@ const homeBlog = new Swiper("#home-blog .blog-slider .swiper", {
       spaceBetween: 25,
     },
   },
-});
-
-// COUNTER
-const counterItems = document.querySelectorAll(".counter-item .num");
-
-counterItems.forEach((counterItem) => {
-  hackerEffect(counterItem);
 });

@@ -54,32 +54,6 @@
     transform: scale(1);
   }
 }
-@keyframes openMenu {
-  0% {
-    border-radius: 500px;
-    transform: scale(0.1) translateX(-700%);
-  }
-  50% {
-    transform: scale(0.1) translate(0%);
-  }
-  100% {
-    transform: scale(1);
-    border-radius: 0;
-  }
-}
-@keyframes closeMenu {
-  0% {
-    transform: scale(1);
-    border-radius: 0;
-  }
-  50% {
-    transform: scale(0.1) translate(0%);
-  }
-  100% {
-    border-radius: 500px;
-    transform: scale(0.1) translateX(-700%);
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -1746,4 +1720,8 @@ h6 {
 #project-banner .curve-bg {
   position: absolute;
   bottom: 0;
+}
+#project-banner .heading-block {
+  position: relative;
+  z-index: 2;
 }

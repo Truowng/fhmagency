@@ -12,6 +12,11 @@
     position: absolute;
     bottom: 0;
   }
+
+  .heading-block {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 // END OUR PROJECT
