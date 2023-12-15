@@ -13,7 +13,7 @@ body {
 }
 
 main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 ul,
@@ -256,6 +256,9 @@ h6 {
             padding: 7px 20px;
             border-radius: 5px;
             background-color: $yellow;
+            &::before {
+              content: unset;
+            }
 
             &:hover {
               background-color: $pink;

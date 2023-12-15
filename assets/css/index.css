@@ -83,7 +83,7 @@ body {
 }
 
 main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 ul,
@@ -333,6 +333,9 @@ h6 {
   padding: 7px 20px;
   border-radius: 5px;
   background-color: #f5a404;
+}
+#fhm-header .nav .list .item:last-child .link::before {
+  content: unset;
 }
 #fhm-header .nav .list .item:last-child .link:hover {
   background-color: #ef0276;
@@ -1371,6 +1374,9 @@ h6 {
 #home-services .services-item {
   position: relative;
 }
+#home-services .services-item:hover .image a img {
+  transform: scale(1.1);
+}
 #home-services .services-item .image {
   border-radius: 20px;
   overflow: hidden;
@@ -1384,6 +1390,7 @@ h6 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all ease 1s;
 }
 #home-services .services-item .content {
   padding: 70px 30px 30px;
