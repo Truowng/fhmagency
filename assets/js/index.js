@@ -50,6 +50,27 @@ const testimonialsSlider = new Swiper(
   }
 );
 
+const blogSlider = new Swiper(".blog .blog-slider .swiper", {
+  direction: "horizontal",
+  speed: 1000,
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+    },
+    991: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+  },
+  navigation: {
+    nextEl: ".blog .blog-slider .slider-button-next",
+    prevEl: ".blog .blog-slider .slider-button-prev",
+  },
+});
+
 // VIDEO CONTROL
 const playButton = document.querySelector(".video .button-play");
 const pauseButton = document.querySelector(".video .button-pause");

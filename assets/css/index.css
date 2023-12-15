@@ -832,12 +832,81 @@ h6 {
   margin-bottom: 0;
 }
 
+.blog {
+  margin-top: 139px;
+  overflow: hidden;
+}
+.blog .blog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: unset;
+}
+.blog .swiper {
+  overflow: visible;
+}
+.blog .blog-slider {
+  margin-top: 66px;
+  position: relative;
+}
+.blog .slider-button {
+  top: 40%;
+}
+.blog .slider-button-prev {
+  left: -22px;
+}
+.blog .slider-button-next {
+  right: -127px;
+}
+.blog .blog-item .image {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.blog .blog-item .image:hover img {
+  transform: scale(1.1);
+}
+.blog .blog-item .image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all ease 1s;
+}
+.blog .blog-item .content .date {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.blog .blog-item .content .title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
+.blog .blog-item .content .title:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 1399px) {
   #home-about .about-wrapper {
     gap: 50px;
   }
   #home-about .heading-block {
     width: 50%;
+  }
+  .blog .blog-slider .slider-button-next {
+    right: -22px;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -849,6 +918,9 @@ h6 {
   }
   .project .project-group {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .blog .blog-slider .slider-button {
+    display: none;
   }
   #fhm-footer .footer-mid {
     grid-template-columns: repeat(3, 1fr);
@@ -884,6 +956,11 @@ h6 {
   }
   .testimonials .testimonials-item {
     max-width: 450px;
+  }
+  .blog .blog-heading {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
   }
   #fhm-footer .footer-mid {
     grid-template-columns: repeat(2, 1fr);
@@ -998,6 +1075,20 @@ h6 {
     max-width: 160px;
     width: 100%;
     font-size: 12px;
+    line-height: 24px;
+  }
+  .blog .blog-slider .swiper-slide {
+    max-width: 207px;
+  }
+  .blog .blog-slider .blog-item .image {
+    border-radius: 10px;
+  }
+  .blog .blog-slider .blog-item .content .date {
+    font-size: 10px;
+    line-height: 19px;
+  }
+  .blog .blog-slider .blog-item .content .title {
+    font-size: 14px;
     line-height: 24px;
   }
   #fhm-footer .footer-mid {
@@ -1359,62 +1450,6 @@ h6 {
   margin-top: 130px;
 }
 
-#home-blog {
-  margin-top: 139px;
-  overflow: hidden;
-}
-#home-blog .blog-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: unset;
-}
-#home-blog .swiper {
-  overflow: visible;
-}
-#home-blog .blog-slider {
-  margin-top: 66px;
-}
-#home-blog .blog-item .image {
-  border-radius: 20px;
-  overflow: hidden;
-  margin-bottom: 28px;
-}
-#home-blog .blog-item .image:hover img {
-  transform: scale(1.1);
-}
-#home-blog .blog-item .image img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all ease 1s;
-}
-#home-blog .blog-item .content .date {
-  font-size: 12px;
-  line-height: 19px;
-  font-weight: 300;
-  display: block;
-  margin-bottom: 10px;
-  color: #fff;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-#home-blog .blog-item .content .title {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  color: #fff;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  -ms-text-overflow: ellipsis;
-  overflow: hidden;
-  -webkit-line-clamp: 2;
-}
-#home-blog .blog-item .content .title:hover {
-  text-decoration: underline;
-}
-
 @media (min-width: 1400px) {
   #home-about .container {
     max-width: 1320px;
@@ -1507,11 +1542,6 @@ h6 {
   }
   #home-counter .counter-item:nth-child(2) {
     align-self: baseline;
-  }
-  #home-blog .blog-heading {
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
   }
   #home-services .services-content .services-item .content a {
     font-size: 22px;
@@ -1688,20 +1718,6 @@ h6 {
   }
   #home-services .services-slider .slider-button {
     display: none;
-  }
-  #home-blog .blog-slider .swiper-slide {
-    max-width: 207px;
-  }
-  #home-blog .blog-slider .blog-item .image {
-    border-radius: 10px;
-  }
-  #home-blog .blog-slider .blog-item .content .date {
-    font-size: 10px;
-    line-height: 19px;
-  }
-  #home-blog .blog-slider .blog-item .content .title {
-    font-size: 14px;
-    line-height: 24px;
   }
   #home-client .client-item img {
     width: 60%;

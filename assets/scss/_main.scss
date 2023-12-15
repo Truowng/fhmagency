@@ -827,6 +827,79 @@ h6 {
 }
 // END SEO
 
+// START BLOG
+.blog {
+  margin-top: 139px;
+  overflow: hidden;
+  .blog-heading {
+    @include flex(space-between, end, unset);
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+  .blog-slider {
+    margin-top: 66px;
+    position: relative;
+  }
+
+  .slider-button {
+    top: 40%;
+  }
+
+  .slider-button-prev {
+    left: -22px;
+  }
+  .slider-button-next {
+    right: -127px;
+  }
+  .blog-item {
+    .image {
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      img {
+        height: 100%;
+        object-fit: cover;
+        transition: all ease 1s;
+      }
+    }
+    .content {
+      .date {
+        font-size: 12px;
+        line-height: 19px;
+        font-weight: $fw-l;
+        display: block;
+        margin-bottom: 10px;
+        color: $white;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      .title {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: $fw-b;
+        color: $white;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+// END BLOG
+
 // START RESPONSIVE
 @include large-desktop {
   #home-about {
@@ -835,6 +908,14 @@ h6 {
     }
     .heading-block {
       width: 50%;
+    }
+  }
+
+  .blog {
+    .blog-slider {
+      .slider-button-next {
+        right: -22px;
+      }
     }
   }
 }
@@ -853,6 +934,14 @@ h6 {
   .project {
     .project-group {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .blog {
+    .blog-slider {
+      .slider-button {
+        display: none;
+      }
     }
   }
 
@@ -905,6 +994,14 @@ h6 {
     }
     .testimonials-item {
       max-width: 450px;
+    }
+  }
+
+  .blog {
+    .blog-heading {
+      flex-direction: column;
+      align-items: start;
+      gap: 20px;
     }
   }
 
@@ -1049,6 +1146,30 @@ h6 {
       }
     }
   }
+
+  .blog {
+    .blog-slider {
+      .swiper-slide {
+        max-width: 207px;
+      }
+      .blog-item {
+        .image {
+          border-radius: 10px;
+        }
+        .content {
+          .date {
+            font-size: 10px;
+            line-height: 19px;
+          }
+          .title {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+
   #fhm-footer {
     .footer-mid {
       grid-column-gap: 40px;
