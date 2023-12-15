@@ -50,8 +50,6 @@
     max-width: 604px;
     position: relative;
     z-index: 2;
-    position: relative;
-    z-index: 2;
   }
 }
 
@@ -169,6 +167,8 @@
   .services-item {
     position: relative;
     .image {
+      border-radius: 20px;
+      overflow: hidden;
       width: 100%;
       height: 310px;
       a {
@@ -361,6 +361,65 @@
 
 #home-video {
   margin-top: 130px;
+}
+
+#home-blog {
+  margin-top: 139px;
+  overflow: hidden;
+  .blog-heading {
+    @include flex(space-between, end, unset);
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+  .blog-slider {
+    margin-top: 66px;
+  }
+  .blog-item {
+    .image {
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      img {
+        height: 100%;
+        object-fit: cover;
+        transition: all ease 1s;
+      }
+    }
+    .content {
+      .date {
+        font-size: 12px;
+        line-height: 19px;
+        font-weight: $fw-l;
+        display: block;
+        margin-bottom: 10px;
+        color: $white;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      .title {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: $fw-b;
+        color: $white;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
 // START RESPONSIVE

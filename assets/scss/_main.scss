@@ -48,7 +48,7 @@ h6 {
 
 @include min-extra-desktop {
   .container {
-    max-width: 1184px;
+    max-width: 1160px;
   }
   .testimonials {
     .container {
@@ -259,12 +259,102 @@ h6 {
 
             &:hover {
               background-color: $pink;
-              &::before {
-                content: none;
-              }
             }
           }
         }
+      }
+    }
+    .button-open {
+      outline: none;
+      border: none;
+      width: 18px;
+      background-color: transparent;
+      display: none;
+    }
+  }
+  .nav-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20px;
+    overflow: hidden;
+    // background-color: $blue-2;
+    transform: translateX(100%);
+
+    background-color: #ef66a9;
+    @include flex(center, center, unset);
+    transition: all $cubic 1s;
+    &.open {
+      transform: translateX(0%);
+      // animation: openMenu $cubic 2.5s;
+      // animation-fill-mode: forwards;
+    }
+
+    &.close {
+      transform: translateX(100%);
+      // animation: closeMenu $cubic 2.5s;
+      // animation-fill-mode: forwards;
+    }
+
+    .nav {
+      .list {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+        .item {
+          @include flex(unset, center, 15px);
+          .icon {
+            width: 40px;
+          }
+          a {
+            font-size: 25px;
+            font-weight: $fw-m;
+          }
+          &:last-child {
+            width: 100%;
+            a {
+              width: 100%;
+              text-align: center;
+              padding: 20px 0;
+            }
+          }
+        }
+      }
+    }
+    .bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      .decor-el {
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+      }
+    }
+    .button-close {
+      outline: none;
+      border: none;
+      width: 40px;
+      aspect-ratio: 1;
+      @include flex(center, center, unset);
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: $white;
+      border-radius: 500px;
+      &:hover {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+      img {
+        width: 50%;
+        transition: all ease 1s;
       }
     }
     .button-open {
@@ -578,7 +668,6 @@ h6 {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    // aspect-ratio: 1160/550;
     &.play {
       &::before {
         opacity: 0;
@@ -667,8 +756,6 @@ h6 {
     }
   }
   .heading-block {
-    position: relative;
-    z-index: 2;
     .title {
       font-size: 50px;
       line-height: 59px;
