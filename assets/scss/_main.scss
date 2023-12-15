@@ -517,6 +517,58 @@ h6 {
       }
     }
   }
+
+  .project-pagination {
+    margin-top: 99px;
+    padding-top: 38px;
+    border-top: 1px solid #e4e4e4;
+    @include flex(end, center, unset);
+    position: relative;
+    .button-wrapper {
+      @include flex(center, center, 20px);
+      position: absolute;
+      top: 38px;
+      left: 50%;
+      transform: translateX(-50%);
+      .button {
+        @include flex(center, center, 10px);
+        &.button-prev {
+          border: 2px solid $yellow;
+          &:hover {
+            .icon {
+              img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+                  saturate(0%) hue-rotate(108deg) brightness(106%)
+                  contrast(104%);
+              }
+            }
+          }
+        }
+      }
+    }
+    .select {
+      @include flex(unset, center, 8px);
+      .text {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: $fw-l;
+      }
+      .input {
+        background-color: transparent;
+        border: 1px solid #616161;
+        border-radius: 5px;
+        padding: 6px 14px 6px 25px;
+        input {
+          outline: none;
+          border: none;
+          background-color: transparent;
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: $fw-m;
+        }
+      }
+    }
+  }
   .button-show-all {
     display: none;
     margin-top: 55px;
@@ -778,6 +830,11 @@ h6 {
   }
 }
 // END CTA
+
+// START BENEFIT
+.benefit {
+}
+// END BENEFIT
 
 // START FOOTER
 #fhm-footer {
@@ -1255,6 +1312,9 @@ h6 {
   }
 
   .blog {
+    .blog-heading {
+      align-items: baseline;
+    }
     .blog-slider {
       .swiper-slide {
         max-width: 207px;
