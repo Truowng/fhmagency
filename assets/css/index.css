@@ -860,6 +860,93 @@ h6 {
   margin-top: 100px;
 }
 
+.benefit {
+  margin-top: 250px;
+}
+.benefit .benefit-content {
+  margin-top: 88px;
+}
+.benefit .benefit-content .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 140px;
+}
+.benefit .benefit-content .content-wrapper .content-image {
+  max-width: 444px;
+  aspect-ratio: 1;
+  border-radius: 500px;
+  overflow: hidden;
+}
+.benefit .benefit-content .content-wrapper .content-image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.benefit .benefit-content .content-wrapper .content {
+  max-width: 562px;
+}
+.benefit .benefit-content .content-wrapper .content p {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.benefit .benefit-content .content-wrapper .content p:last-child {
+  margin-bottom: 0;
+}
+.benefit .benefit-content .quote {
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+}
+.benefit .benefit-content .quote.quote-m {
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 61px;
+}
+.benefit .benefit-content .quote.quote-l {
+  font-size: 40px;
+  line-height: 70px;
+  text-align: center;
+  font-weight: 200;
+}
+.benefit .benefit-content .content-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 75px;
+  grid-row-gap: 20px;
+  margin-bottom: 145px;
+}
+.benefit .benefit-content .content-group .item {
+  max-width: 370px;
+  min-height: 320px;
+  border-radius: 10px 75px 75px 75px;
+  background: linear-gradient(127deg, #632c8a 0%, #c6328a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  flex-direction: column;
+}
+.benefit .benefit-content .content-group .item:nth-child(2) {
+  background: linear-gradient(127deg, #a10377 0%, #fe6813 100%);
+}
+.benefit .benefit-content .content-group .item .icon {
+  width: 85px;
+}
+.benefit .benefit-content .content-group .item .text {
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.015em;
+  font-weight: 700;
+  color: #fff;
+}
+
 #fhm-footer .footer-top {
   display: flex;
   justify-content: space-between;
