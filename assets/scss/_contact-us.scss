@@ -47,6 +47,13 @@
       }
     }
 
+    input[type="number"] {
+      &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+    }
+
     select {
       appearance: none;
     }

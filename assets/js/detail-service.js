@@ -19,20 +19,9 @@ const servicePartner = new Swiper(".services-partner-slider", {
   spaceBetween: 0,
 });
 
-const industryList = document.querySelectorAll(".industry-item");
-const industryPopup = document.querySelector(".industry-popup");
-const industryPopupImg = industryPopup.querySelector("img");
-const industryPopupTitle = industryPopup.querySelector("h3");
-const industryPopupDesc = industryPopup.querySelector("p");
-industryPopupTitle.addEventListener("click", () => {
-  industryPopup.classList.remove("show");
-});
-Array.from(industryList).forEach((item) => {
-  item.addEventListener("click", () => {
-    const img = item.querySelector("img");
-    industryPopupImg.src = item.querySelector("img").src;
-    industryPopupTitle.textContent = item.querySelector("h3").textContent;
-    industryPopupDesc.textContent = item.querySelector("p").textContent;
-    industryPopup.classList.add("show");
-  });
-});
+const industryItems = [...document.querySelectorAll('.industry-item')]
+industryItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    item.classList.add('active')
+  })
+})
