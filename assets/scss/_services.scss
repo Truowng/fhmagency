@@ -174,9 +174,9 @@
     transform: translateY(-50%);
     width: 100%;
     border-radius: 20px;
-    
+
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -569,7 +569,7 @@
     &.active {
       .industry-content {
         opacity: 1;
-        background: #2B1A93;
+        background: #2b1a93;
       }
     }
 
@@ -614,7 +614,6 @@
       transition: all 0.5s ease;
     }
   }
-
 }
 // END INDUSTRY
 

@@ -13,7 +13,7 @@ body {
 }
 
 main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 ul,
@@ -48,7 +48,7 @@ h6 {
 
 @include min-extra-desktop {
   .container {
-    max-width: 1160px;
+    max-width: 1184px;
   }
   .testimonials {
     .container {
@@ -177,6 +177,28 @@ h6 {
   }
 }
 
+.image-border {
+  width: 100%;
+  position: relative;
+
+  > img {
+    border-radius: 20px 50px 20px 50px;
+    border: 7px solid $white;
+  }
+
+  .decor-el {
+    &:nth-child(1) {
+      top: calc(-209px / 2);
+      right: 0;
+      animation: shaking ease-in-out 1s infinite alternate-reverse;
+    }
+    &:nth-child(2) {
+      bottom: calc(-87px / 2);
+      left: calc(-87px / 2);
+    }
+  }
+}
+
 // END INIT
 
 // START HEADER
@@ -256,6 +278,9 @@ h6 {
             padding: 7px 20px;
             border-radius: 5px;
             background-color: $yellow;
+            &::before {
+              content: unset;
+            }
 
             &:hover {
               background-color: $pink;
@@ -514,6 +539,58 @@ h6 {
       }
     }
   }
+
+  .project-pagination {
+    margin-top: 99px;
+    padding-top: 38px;
+    border-top: 1px solid #e4e4e4;
+    @include flex(end, center, unset);
+    position: relative;
+    .button-wrapper {
+      @include flex(center, center, 20px);
+      position: absolute;
+      top: 38px;
+      left: 50%;
+      transform: translateX(-50%);
+      .button {
+        @include flex(center, center, 10px);
+        &.button-prev {
+          border: 2px solid $yellow;
+          &:hover {
+            .icon {
+              img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+                  saturate(0%) hue-rotate(108deg) brightness(106%)
+                  contrast(104%);
+              }
+            }
+          }
+        }
+      }
+    }
+    .select {
+      @include flex(unset, center, 8px);
+      .text {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: $fw-l;
+      }
+      .input {
+        background-color: transparent;
+        border: 1px solid #616161;
+        border-radius: 5px;
+        padding: 6px 14px 6px 25px;
+        input {
+          outline: none;
+          border: none;
+          background-color: transparent;
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: $fw-m;
+        }
+      }
+    }
+  }
   .button-show-all {
     display: none;
     margin-top: 55px;
@@ -527,6 +604,53 @@ h6 {
   }
 }
 // END PROJECT
+
+// START GALLERY
+.gallery {
+  position: relative;
+  padding: 142px 0 70px;
+  background-color: $blue;
+  .decor-el {
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+  }
+  .gallery-wrapper {
+    @include flex(space-between, center, 20px);
+    height: 300px;
+    .image {
+      position: relative;
+      flex: 1;
+      height: 100%;
+      transform: rotate(6deg);
+      img {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        object-fit: cover;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        background-color: $white;
+        z-index: 0;
+      }
+      &:nth-last-child(1),
+      &:nth-last-child(2) {
+        margin-top: 20px;
+      }
+      &:nth-child(odd) {
+        transform: rotate(-6deg);
+      }
+    }
+  }
+}
+// END GALLERY
 
 // START TESTIMONIALS
 .testimonials {
@@ -776,6 +900,88 @@ h6 {
 }
 // END CTA
 
+// START BENEFIT
+.benefit {
+  margin-top: 250px;
+  .benefit-content {
+    margin-top: 88px;
+    .content-wrapper {
+      @include flex(space-between, center, 30px);
+      margin-bottom: 140px;
+      .content-image {
+        max-width: 444px;
+        height: 444px;
+        border-radius: 500px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .content {
+        max-width: 562px;
+        p {
+          font-size: 20px;
+          line-height: 40px;
+          font-weight: $fw-l;
+          color: $white;
+          margin-bottom: 30px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .quote {
+      font-weight: $fw-l;
+      color: $white;
+      text-align: center;
+      &.quote-m {
+        font-size: 20px;
+        line-height: 40px;
+        margin-bottom: 61px;
+      }
+      &.quote-l {
+        font-size: 40px;
+        line-height: 70px;
+        text-align: center;
+        font-weight: $fw-el;
+      }
+    }
+    .content-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 75px;
+      grid-row-gap: 20px;
+      margin-bottom: 145px;
+      .item {
+        max-width: 370px;
+        min-height: 320px;
+        border-radius: 10px 75px 75px 75px;
+        background: linear-gradient(127deg, #632c8a 0%, #c6328a 100%);
+        @include flex(center, center, 35px);
+        flex-direction: column;
+        &:nth-child(2) {
+          background: linear-gradient(127deg, #a10377 0%, #fe6813 100%);
+        }
+        .icon {
+          width: 85px;
+        }
+        .text {
+          font-size: 20px;
+          line-height: 27px;
+          letter-spacing: 0.015em;
+          font-weight: $fw-b;
+          color: $white;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+// END BENEFIT
+
 // START FOOTER
 #fhm-footer {
   .footer-top {
@@ -1023,6 +1229,35 @@ h6 {
   }
 }
 
+@include desktop {
+  .benefit {
+    .benefit-content {
+      .content-wrapper {
+        flex-direction: column-reverse;
+        gap: 65px;
+        margin-bottom: 65px;
+        .content {
+          max-width: unset;
+        }
+      }
+      .content-group {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 47px;
+        .item {
+          max-width: unset;
+          border-radius: 50px;
+        }
+      }
+      .quote {
+        &.quote-l {
+          font-size: 25px;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+}
+
 @include tablet {
   #fhm-header {
     .nav {
@@ -1252,6 +1487,9 @@ h6 {
   }
 
   .blog {
+    .blog-heading {
+      align-items: baseline;
+    }
     .blog-slider {
       .swiper-slide {
         max-width: 207px;
@@ -1269,6 +1507,37 @@ h6 {
             font-size: 14px;
             line-height: 24px;
           }
+        }
+      }
+    }
+  }
+
+  .project {
+    padding: 100px 0 44px;
+  }
+
+  .benefit {
+    margin-top: 98px;
+    .benefit-content {
+      margin-top: 41px;
+
+      .content-wrapper {
+        .content {
+          p {
+            font-size: 14px;
+            line-height: 32px;
+            margin-bottom: 19px;
+          }
+        }
+      }
+      .quote {
+        &.quote-m {
+          font-size: 14px;
+          line-height: 32px;
+        }
+        &.quote-l {
+          font-size: 20px;
+          line-height: 40px;
         }
       }
     }
