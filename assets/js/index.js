@@ -124,3 +124,12 @@ if (counterItems) {
     hackerEffect(counterItem);
   });
 }
+
+// ANIMATE LINES
+const lines = document.querySelectorAll("#multiLines path");
+if (lines) {
+  lines.forEach((line, index) => {
+    line.style.animation = `moveVertical ease 1.5s infinite alternate-reverse`;
+    line.style.animationDelay = `${index / 10}s`;
+  });
+}

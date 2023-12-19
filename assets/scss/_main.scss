@@ -177,6 +177,28 @@ h6 {
   }
 }
 
+.image-border {
+  width: 100%;
+  position: relative;
+
+  > img {
+    border-radius: 20px 50px 20px 50px;
+    border: 7px solid $white;
+  }
+
+  .decor-el {
+    &:nth-child(1) {
+      top: calc(-209px / 2);
+      right: 0;
+      animation: shaking ease-in-out 1s infinite alternate-reverse;
+    }
+    &:nth-child(2) {
+      bottom: calc(-87px / 2);
+      left: calc(-87px / 2);
+    }
+  }
+}
+
 // END INIT
 
 // START HEADER
@@ -583,6 +605,53 @@ h6 {
 }
 // END PROJECT
 
+// START GALLERY
+.gallery {
+  position: relative;
+  padding: 142px 0 70px;
+  background-color: $blue;
+  .decor-el {
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+  }
+  .gallery-wrapper {
+    @include flex(space-between, center, 20px);
+    height: 300px;
+    .image {
+      position: relative;
+      flex: 1;
+      height: 100%;
+      transform: rotate(6deg);
+      img {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        object-fit: cover;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        background-color: $white;
+        z-index: 0;
+      }
+      &:nth-last-child(1),
+      &:nth-last-child(2) {
+        margin-top: 20px;
+      }
+      &:nth-child(odd) {
+        transform: rotate(-6deg);
+      }
+    }
+  }
+}
+// END GALLERY
+
 // START TESTIMONIALS
 .testimonials {
   overflow: hidden;
@@ -841,7 +910,7 @@ h6 {
       margin-bottom: 140px;
       .content-image {
         max-width: 444px;
-        aspect-ratio: 1;
+        height: 444px;
         border-radius: 500px;
         overflow: hidden;
         img {
@@ -901,10 +970,11 @@ h6 {
         }
         .text {
           font-size: 20px;
-          line-height: 40px;
+          line-height: 27px;
           letter-spacing: 0.015em;
           font-weight: $fw-b;
           color: $white;
+          text-align: center;
         }
       }
     }
@@ -1159,6 +1229,35 @@ h6 {
   }
 }
 
+@include desktop {
+  .benefit {
+    .benefit-content {
+      .content-wrapper {
+        flex-direction: column-reverse;
+        gap: 65px;
+        margin-bottom: 65px;
+        .content {
+          max-width: unset;
+        }
+      }
+      .content-group {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 47px;
+        .item {
+          max-width: unset;
+          border-radius: 50px;
+        }
+      }
+      .quote {
+        &.quote-l {
+          font-size: 25px;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+}
+
 @include tablet {
   #fhm-header {
     .nav {
@@ -1408,6 +1507,37 @@ h6 {
             font-size: 14px;
             line-height: 24px;
           }
+        }
+      }
+    }
+  }
+
+  .project {
+    padding: 100px 0 44px;
+  }
+
+  .benefit {
+    margin-top: 98px;
+    .benefit-content {
+      margin-top: 41px;
+
+      .content-wrapper {
+        .content {
+          p {
+            font-size: 14px;
+            line-height: 32px;
+            margin-bottom: 19px;
+          }
+        }
+      }
+      .quote {
+        &.quote-m {
+          font-size: 14px;
+          line-height: 32px;
+        }
+        &.quote-l {
+          font-size: 20px;
+          line-height: 40px;
         }
       }
     }
