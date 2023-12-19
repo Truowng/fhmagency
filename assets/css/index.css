@@ -1185,21 +1185,22 @@ h6 {
 .blog .slider-button-next {
   right: -127px;
 }
-.blog .blog-item .image {
+
+.blog-item .image {
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 28px;
 }
-.blog .blog-item .image:hover img {
+.blog-item .image:hover img {
   transform: scale(1.1);
 }
-.blog .blog-item .image img {
+.blog-item .image img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: all ease 1s;
 }
-.blog .blog-item .content .date {
+.blog-item .content .date {
   font-size: 12px;
   line-height: 19px;
   font-weight: 300;
@@ -1209,7 +1210,7 @@ h6 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.blog .blog-item .content .title {
+.blog-item .content .title {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -1221,7 +1222,7 @@ h6 {
   overflow: hidden;
   -webkit-line-clamp: 2;
 }
-.blog .blog-item .content .title:hover {
+.blog-item .content .title:hover {
   text-decoration: underline;
 }
 

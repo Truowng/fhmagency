@@ -1162,47 +1162,48 @@ h6 {
   .slider-button-next {
     right: -127px;
   }
-  .blog-item {
-    .image {
-      border-radius: 20px;
-      overflow: hidden;
-      margin-bottom: 28px;
-      &:hover {
-        img {
-          transform: scale(1.1);
-        }
-      }
+}
+
+.blog-item {
+  .image {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    &:hover {
       img {
-        height: 100%;
-        object-fit: cover;
-        transition: all ease 1s;
+        transform: scale(1.1);
       }
     }
-    .content {
-      .date {
-        font-size: 12px;
-        line-height: 19px;
-        font-weight: $fw-l;
-        display: block;
-        margin-bottom: 10px;
-        color: $white;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-      }
-      .title {
-        font-size: 18px;
-        line-height: 30px;
-        font-weight: $fw-b;
-        color: $white;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        -ms-text-overflow: ellipsis;
-        overflow: hidden;
-        -webkit-line-clamp: 2;
-        &:hover {
-          text-decoration: underline;
-        }
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition: all ease 1s;
+    }
+  }
+  .content {
+    .date {
+      font-size: 12px;
+      line-height: 19px;
+      font-weight: $fw-l;
+      display: block;
+      margin-bottom: 10px;
+      color: $white;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .title {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: $fw-b;
+      color: $white;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
