@@ -3011,6 +3011,15 @@ h6 {
 .blog-orther .blog-orther-list {
   position: relative;
 }
+.blog-orther .blog-orther-list .slider-button {
+  top: 35%;
+}
+.blog-orther .blog-orther-list .slider-button-prev {
+  left: -27px;
+}
+.blog-orther .blog-orther-list .slider-button-next {
+  right: -27px;
+}
 
 @media only screen and (max-width: 1199px) {
   .blog-highlight .blog-highlight-list {
@@ -3038,6 +3047,9 @@ h6 {
     line-height: 32px;
   }
   .blog-highlight .blog-item:nth-child(6) {
+    display: none;
+  }
+  .blog-orther .blog-orther-list .slider-button {
     display: none;
   }
 }
