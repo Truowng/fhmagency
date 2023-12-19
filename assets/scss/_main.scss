@@ -199,6 +199,23 @@ h6 {
   }
 }
 
+.quote {
+  font-weight: $fw-l;
+  color: $white;
+  text-align: center;
+  &.quote-m {
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 61px;
+  }
+  &.quote-l {
+    font-size: 40px;
+    line-height: 70px;
+    text-align: center;
+    font-weight: $fw-el;
+  }
+}
+
 // END INIT
 
 // START HEADER
@@ -933,22 +950,7 @@ h6 {
         }
       }
     }
-    .quote {
-      font-weight: $fw-l;
-      color: $white;
-      text-align: center;
-      &.quote-m {
-        font-size: 20px;
-        line-height: 40px;
-        margin-bottom: 61px;
-      }
-      &.quote-l {
-        font-size: 40px;
-        line-height: 70px;
-        text-align: center;
-        font-weight: $fw-el;
-      }
-    }
+
     .content-group {
       display: grid;
       grid-template-columns: repeat(3, 1fr);

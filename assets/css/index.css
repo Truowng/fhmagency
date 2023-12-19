@@ -263,6 +263,23 @@ h6 {
   left: -43.5px;
 }
 
+.quote {
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+}
+.quote.quote-m {
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 61px;
+}
+.quote.quote-l {
+  font-size: 40px;
+  line-height: 70px;
+  text-align: center;
+  font-weight: 200;
+}
+
 #fhm-header {
   padding: 20px 0;
   position: absolute;
@@ -964,22 +981,6 @@ h6 {
 }
 .benefit .benefit-content .content-wrapper .content p:last-child {
   margin-bottom: 0;
-}
-.benefit .benefit-content .quote {
-  font-weight: 300;
-  color: #fff;
-  text-align: center;
-}
-.benefit .benefit-content .quote.quote-m {
-  font-size: 20px;
-  line-height: 40px;
-  margin-bottom: 61px;
-}
-.benefit .benefit-content .quote.quote-l {
-  font-size: 40px;
-  line-height: 70px;
-  text-align: center;
-  font-weight: 200;
 }
 .benefit .benefit-content .content-group {
   display: grid;
@@ -3724,4 +3725,11 @@ h6 {
   transform: translateY(86px);
   padding: 0;
   background: transparent;
+}
+
+#about-video {
+  margin-top: 133px;
+}
+#about-video .quote {
+  margin-bottom: 144px;
 }
