@@ -208,6 +208,19 @@
       }
     }
   }
+
+  #about-value {
+    .value-group {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  #about-team {
+    .gallery {
+      margin-top: 100px;
+      transform: translateY(30px);
+    }
+  }
 }
 
 // END RESPONSIVE

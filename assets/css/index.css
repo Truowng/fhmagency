@@ -1256,7 +1256,7 @@ h6 {
     max-width: unset;
     border-radius: 50px;
   }
-  .benefit .benefit-content .quote.quote-l {
+  .quote.quote-l {
     font-size: 25px;
     line-height: 50px;
   }
@@ -1466,11 +1466,11 @@ h6 {
     line-height: 32px;
     margin-bottom: 19px;
   }
-  .benefit .benefit-content .quote.quote-m {
+  .quote.quote-m {
     font-size: 14px;
     line-height: 32px;
   }
-  .benefit .benefit-content .quote.quote-l {
+  .quote.quote-l {
     font-size: 20px;
     line-height: 40px;
   }
@@ -5205,5 +5205,12 @@ h6 {
   }
   #about-advantage .advantage-item .image-border {
     max-width: 100%;
+  }
+  #about-value .value-group {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #about-team .gallery {
+    margin-top: 100px;
+    transform: translateY(30px);
   }
 }

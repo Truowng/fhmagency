@@ -1252,12 +1252,12 @@ h6 {
           border-radius: 50px;
         }
       }
-      .quote {
-        &.quote-l {
-          font-size: 25px;
-          line-height: 50px;
-        }
-      }
+    }
+  }
+  .quote {
+    &.quote-l {
+      font-size: 25px;
+      line-height: 50px;
     }
   }
 }
@@ -1546,16 +1546,16 @@ h6 {
           }
         }
       }
-      .quote {
-        &.quote-m {
-          font-size: 14px;
-          line-height: 32px;
-        }
-        &.quote-l {
-          font-size: 20px;
-          line-height: 40px;
-        }
-      }
+    }
+  }
+  .quote {
+    &.quote-m {
+      font-size: 14px;
+      line-height: 32px;
+    }
+    &.quote-l {
+      font-size: 20px;
+      line-height: 40px;
     }
   }
 
