@@ -48,24 +48,6 @@ const servicePartner = new Swiper(".services-partner-slider", {
   spaceBetween: 0,
 });
 
-// const industryList = document.querySelectorAll(".industry-item");
-// const industryPopup = document.querySelector(".industry-popup");
-// const industryPopupImg = industryPopup.querySelector("img");
-// const industryPopupTitle = industryPopup.querySelector("h3");
-// const industryPopupDesc = industryPopup.querySelector("p");
-// industryPopupTitle.addEventListener("click", () => {
-//   industryPopup.classList.remove("show");
-// });
-// Array.from(industryList).forEach((item) => {
-//   item.addEventListener("click", () => {
-//     const img = item.querySelector("img");
-//     industryPopupImg.src = item.querySelector("img").src;
-//     industryPopupTitle.textContent = item.querySelector("h3").textContent;
-//     industryPopupDesc.textContent = item.querySelector("p").textContent;
-//     industryPopup.classList.add("show");
-//   });
-// });
-
 const sayingSlider = new Swiper(".saying-slider", {
   loop: true,
   slidesPerView: "auto",
@@ -83,3 +65,20 @@ const sayingSliderRev = new Swiper(".saying-slider-rev", {
   spaceBetween: 20,
   speed: 1500,
 });
+
+const galleryContainer = document.getElementById("gallery-container");
+if (galleryContainer) {
+  const lg = lightGallery(galleryContainer, {
+    selector: ".photo-slide-item",
+    animateThumb: true,
+    allowMediaOverlap: true,
+    toggleThumb: true,
+    download: false,
+    speed: 500,
+    slideShowAutoplay: true,
+    plugins: [lgThumbnail, lgFullscreen, lgZoom],
+    fullScreen: true,
+    showZoomInOutIcons: true,
+    actualSize: true,
+  });
+}
