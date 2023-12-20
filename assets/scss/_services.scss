@@ -1,3 +1,23 @@
+@keyframes elementor-animation-wobble-horizontal {
+  10% {
+    transform: translateX(8px);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  30% {
+    transform: translateX(4px);
+  }
+  40% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 #lg-actual-size-1 {
   display: none;
 }
@@ -563,7 +583,6 @@
     transition: all 0.45s ease-in-out;
     position: relative;
     z-index: 5;
-
     background: linear-gradient(135deg, #a30576 0%, #f7601c 100%);
     &::after {
       content: "";
@@ -641,6 +660,57 @@
         opacity: 1;
         height: 84px;
       }
+    }
+  }
+}
+#reason-popup-btn {
+  display: none;
+}
+.reason-popup {
+  .modal-dialog {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .reason-popup-container {
+    background: linear-gradient(135deg, #a30576 0%, #f7601c 100%);
+    padding: 24px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 350px;
+    h3 {
+      font-weight: $fw-m;
+      font-size: 24px;
+      line-height: 1.3333;
+      margin-bottom: 13px;
+    }
+    p {
+      font-weight: $fw-l;
+      font-size: 16px;
+      line-height: 1.75;
+      color: white;
+    }
+  }
+  .reason-popup-icon {
+    width: 68px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 26px;
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+        saturate(7463%) hue-rotate(128deg) brightness(131%) contrast(91%);
     }
   }
 }
@@ -828,6 +898,56 @@
           opacity: 1;
         }
       }
+    }
+  }
+}
+.adv-popup-btn {
+  display: none;
+}
+.adv-popup {
+  .modal-dialog {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modal-content {
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px dashed #a79bf0;
+    background-color: #2b1a93;
+  }
+  .adv-popup-container {
+    padding: 30px 20px;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    color: white;
+    .adv-popup-icon {
+      width: 56px;
+      height: 56px;
+      img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    h3,
+    p {
+      text-align: center;
+    }
+    h3 {
+      font-weight: $fw-r;
+      font-size: 22px;
+      letter-spacing: 0.015em;
+    }
+    p {
+      font-weight: $fw-l;
+      font-size: 14px;
+      line-height: 2;
+      letter-spacing: 0.015em;
     }
   }
 }
@@ -1650,6 +1770,24 @@
 // END PROVIDE
 
 // START QUOTE POPUP
+#quoteSuccess {
+  &.show {
+    display: block;
+  }
+}
+
+.quote-popup-close {
+  position: absolute;
+  top: 27px;
+  right: 26px;
+  background: transparent;
+  width: 21px;
+  aspect-ratio: 1;
+  opacity: 1;
+  &:focus {
+    box-shadow: none;
+  }
+}
 .quote-popup {
   .modal-dialog {
     max-width: 617px;
@@ -1659,18 +1797,6 @@
     overflow: hidden;
     background-color: $pink;
     color: white;
-  }
-  .quote-popup-close {
-    position: absolute;
-    top: 27px;
-    right: 26px;
-    background: transparent;
-    width: 21px;
-    aspect-ratio: 1;
-    opacity: 1;
-    &:focus {
-      box-shadow: none;
-    }
   }
   h2 {
     font-weight: $fw-b;
@@ -1803,6 +1929,30 @@
   }
 }
 // END PRELUDE
+
+// START COLLAB
+.collab {
+  display: flex;
+  .collab-wrapper {
+    // width: ;
+  }
+  .collab-item {
+    width: 210px;
+    aspect-ratio: 210 / 72;
+    border-radius: 5px;
+    border: 1px dashed white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: auto;
+      height: auto;
+      max-width: 70%;
+      max-height: 60%;
+    }
+  }
+}
+// END COLLAB
 
 @include extra-desktop {
   .reason {
@@ -1961,6 +2111,9 @@
     }
   }
   .reason {
+    .reason-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
     .reason-item {
       h3 {
         font-size: 20px;
@@ -2044,15 +2197,39 @@
     margin-top: -50px;
     .reason-list {
       margin-top: 40px;
-      grid-template-columns: repeat(3, 1fr);
+    }
+    .reason-item {
+      &:hover {
+        padding-bottom: 40px;
+        &::after {
+          opacity: 1;
+        }
+        .reason-item-icon {
+          margin-bottom: 32px;
+        }
+        h3 {
+          margin-bottom: 0;
+        }
+        p {
+          opacity: 0;
+          height: 0;
+        }
+      }
     }
   }
   .process {
     .process-list {
       margin-top: 40px;
       gap: 26px;
+      animation-name: elementor-animation-wobble-horizontal;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
       &::after {
         top: 45px;
+      }
+      &:hover {
+        animation-play-state: paused;
       }
     }
     .process-item {
@@ -2498,13 +2675,33 @@
   .reason {
     padding-top: 170px;
     .reason-list {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 24px;
+      gap: 12px;
       padding: 0 20px;
       margin-bottom: 40px;
     }
     .reason-item {
-      aspect-ratio: auto;
+      aspect-ratio: 169 / 150;
+      padding: 9px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      .reason-item-icon {
+        width: 40px;
+        margin-bottom: 19px;
+      }
+      h3 {
+        text-align: center;
+        font-size: 12px;
+        line-height: 2;
+        min-height: 48px;
+      }
+      &:hover {
+        padding-bottom: 9px;
+        .reason-item-icon {
+          margin-bottom: 19px;
+        }
+      }
     }
   }
   .industry {
@@ -2578,8 +2775,9 @@
       margin-bottom: 50px;
     }
     .adv-item {
-      aspect-ratio: 169 / 150;
+      aspect-ratio: auto;
       .adv-item-content {
+        position: relative;
         padding: 12px;
         padding-top: 30px;
         p {
@@ -2588,7 +2786,15 @@
       }
       &:hover {
         .adv-item-content {
-          min-height: calc(200% + 12px);
+          min-height: 100%;
+          h3 {
+            -webkit-line-clamp: 2;
+          }
+          p {
+            height: 0;
+            opacity: 0;
+            margin: 0;
+          }
         }
       }
     }
