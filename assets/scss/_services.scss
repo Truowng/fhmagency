@@ -406,6 +406,52 @@
       }
     }
   }
+  &.display-software {
+    margin-top: 0;
+    background-color: #e8f3ff;
+    padding-top: 80px;
+    .display-slider {
+      z-index: 2;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      width: 125%;
+      aspect-ratio: 2000 / 516;
+      clip-path: ellipse(50% 49% at 50% 50%);
+      background-color: #e8f3ff;
+    }
+    &::before {
+      top: 0;
+      transform: translateY(-22%) translateX(-50%);
+    }
+    &::after {
+      bottom: 0;
+      transform: translateY(22%) translateX(-50%);
+    }
+    .display-bg {
+      z-index: 1;
+    }
+    .display-heading {
+      h2,
+      p {
+        color: black;
+      }
+    }
+    .display-statistic {
+      .display-statistic-el {
+        h4 {
+          color: $blue;
+        }
+        p {
+          color: black;
+        }
+      }
+    }
+  }
 }
 // END DISPLAY
 
@@ -688,6 +734,7 @@
 .adv {
   margin-top: 80px;
   position: relative;
+  z-index: 5;
   .adv-list {
     margin-top: 48px;
     display: grid;
@@ -695,10 +742,12 @@
     gap: 18px;
     position: relative;
     z-index: 5px;
+    z-index: 5;
   }
   .adv-item {
     aspect-ratio: 375 / 200;
     position: relative;
+    z-index: 5;
     .adv-item-content {
       border-radius: 5px;
       border: 2px dashed #8072d5;
@@ -708,10 +757,9 @@
       align-items: center;
       padding: 30px;
       padding-top: 45px;
-      // padding-bottom: 40px;
       overflow: hidden;
       position: absolute;
-      z-index: 10;
+      z-index: 5;
       top: 0;
       left: 0;
       width: 100%;
@@ -752,9 +800,10 @@
       }
     }
     &:hover {
+      z-index: 6;
       .adv-item-content {
         background-color: #2b1a93;
-        z-index: 11;
+        z-index: 8;
         min-height: calc(100% * 2 + 21px);
         h3 {
           -webkit-line-clamp: 3;
@@ -1681,6 +1730,64 @@
   }
 }
 // END QUOTE POPUP
+
+// START PRELUDE
+.prelude {
+  padding-top: 110px;
+  padding-bottom: 235px;
+  background-color: $blue;
+  position: relative;
+  .prelude-bg {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .prelude-container {
+    position: relative;
+    z-index: 2;
+  }
+  .prelude-list {
+    margin-top: 110px;
+    display: flex;
+    gap: 69px;
+    margin-bottom: 60px;
+  }
+  .prelude-item {
+    flex: 1;
+    .prelude-img {
+      width: 217px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 28px;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    p {
+      font-weight: $fw-l;
+      font-size: 20px;
+      line-height: 2;
+      letter-spacing: 0.015em;
+      text-align: center;
+      color: white;
+    }
+    &:nth-child(even) {
+      padding-top: 15%;
+    }
+  }
+  .prelude-btn {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 60px;
+  }
+}
+// END PRELUDE
 
 @include extra-desktop {
   .reason {
