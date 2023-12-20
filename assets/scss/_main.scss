@@ -1286,6 +1286,12 @@ h6 {
     }
   }
 
+  .gallery {
+    .gallery-wrapper {
+      height: 200px;
+    }
+  }
+
   #fhm-footer {
     .footer-mid {
       grid-template-columns: repeat(3, 1fr);
@@ -1343,6 +1349,12 @@ h6 {
       flex-direction: column;
       align-items: start;
       gap: 20px;
+    }
+  }
+
+  .gallery {
+    .gallery-wrapper {
+      height: 150px;
     }
   }
 
@@ -1541,6 +1553,21 @@ h6 {
         &.quote-l {
           font-size: 20px;
           line-height: 40px;
+        }
+      }
+    }
+  }
+
+  .gallery {
+    padding-bottom: 40px;
+    .gallery-wrapper {
+      height: 100px;
+      .image {
+        &::before {
+          top: -7px;
+          left: -8px;
+          width: calc(100% + 14px);
+          height: calc(100% + 14px);
         }
       }
     }

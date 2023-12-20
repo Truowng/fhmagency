@@ -178,6 +178,37 @@
 }
 
 // START RESPONSIVE
+@include tablet {
+  #about-banner {
+    .banner-wrapper {
+      flex-direction: column;
+    }
+    .image-border {
+      margin-top: 50px;
+      transform: translateY(0) rotate(6.85deg);
+    }
+  }
+
+  #about-advantage {
+    .advantage-item {
+      flex-direction: column-reverse;
+      gap: 82px;
+      &:nth-child(even) {
+        flex-direction: column-reverse;
+        gap: 82px;
+        .image-border {
+          transform: rotate(6.85deg);
+        }
+      }
+      .content {
+        max-width: unset;
+      }
+      .image-border {
+        max-width: 100%;
+      }
+    }
+  }
+}
 
 // END RESPONSIVE
 

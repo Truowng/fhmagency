@@ -1273,6 +1273,9 @@ h6 {
   .blog .blog-slider .slider-button {
     display: none;
   }
+  .gallery .gallery-wrapper {
+    height: 200px;
+  }
   #fhm-footer .footer-mid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1312,6 +1315,9 @@ h6 {
     flex-direction: column;
     align-items: start;
     gap: 20px;
+  }
+  .gallery .gallery-wrapper {
+    height: 150px;
   }
   #fhm-footer .footer-mid {
     grid-template-columns: repeat(2, 1fr);
@@ -1466,6 +1472,18 @@ h6 {
   .benefit .benefit-content .quote.quote-l {
     font-size: 20px;
     line-height: 40px;
+  }
+  .gallery {
+    padding-bottom: 40px;
+  }
+  .gallery .gallery-wrapper {
+    height: 100px;
+  }
+  .gallery .gallery-wrapper .image::before {
+    top: -7px;
+    left: -8px;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
   }
   #fhm-footer .footer-mid {
     grid-column-gap: 40px;
@@ -3732,4 +3750,31 @@ h6 {
 }
 #about-video .quote {
   margin-bottom: 144px;
+}
+
+@media only screen and (max-width: 991px) {
+  #about-banner .banner-wrapper {
+    flex-direction: column;
+  }
+  #about-banner .image-border {
+    margin-top: 50px;
+    transform: translateY(0) rotate(6.85deg);
+  }
+  #about-advantage .advantage-item {
+    flex-direction: column-reverse;
+    gap: 82px;
+  }
+  #about-advantage .advantage-item:nth-child(even) {
+    flex-direction: column-reverse;
+    gap: 82px;
+  }
+  #about-advantage .advantage-item:nth-child(even) .image-border {
+    transform: rotate(6.85deg);
+  }
+  #about-advantage .advantage-item .content {
+    max-width: unset;
+  }
+  #about-advantage .advantage-item .image-border {
+    max-width: 100%;
+  }
 }
