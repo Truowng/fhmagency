@@ -5,7 +5,7 @@
 }
 
 .blog-highlight {
-  padding: 75px 0 120px;
+  padding: 189px 0 120px;
   background: $blue;
 
   .heading-block {
@@ -67,6 +67,15 @@
 
   .blog-orther-list {
     position: relative;
+    .slider-button {
+      top: 35%;
+    }
+    .slider-button-prev {
+      left: -27px;
+    }
+    .slider-button-next {
+      right: -27px;
+    }
   }
 }
 
@@ -109,6 +118,13 @@
       }
 
       &:nth-child(6) {
+        display: none;
+      }
+    }
+  }
+  .blog-orther {
+    .blog-orther-list {
+      .slider-button {
         display: none;
       }
     }
