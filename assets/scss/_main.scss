@@ -522,40 +522,6 @@ h6 {
     grid-column-gap: 25px;
     grid-row-gap: 65px;
   }
-  .project-item {
-    .image {
-      border-radius: 20px;
-      overflow: hidden;
-      margin-bottom: 28px;
-      &:hover {
-        img {
-          transform: scale(1.1);
-        }
-      }
-      img {
-        height: 100%;
-        object-fit: cover;
-        transition: all ease 1s;
-      }
-    }
-    .title {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -o-text-overflow: ellipsis;
-      -ms-text-overflow: ellipsis;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      -webkit-line-clamp: 2;
-      font-size: 18px;
-      line-height: 30px;
-      font-weight: $fw-b;
-      color: $blue;
-      margin-bottom: 24px;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
 
   .project-pagination {
     margin-top: 99px;
@@ -618,6 +584,41 @@ h6 {
     font-size: 10px;
     line-height: 12px;
     font-weight: $fw-m;
+  }
+}
+
+.project-item {
+  .image {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition: all ease 1s;
+    }
+  }
+  .title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: $fw-b;
+    color: $blue;
+    margin-bottom: 24px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 // END PROJECT
