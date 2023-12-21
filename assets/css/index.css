@@ -5300,3 +5300,105 @@ h6 {
     margin-bottom: 65px;
   }
 }
+#notfound {
+  position: relative;
+  padding: 103px 0 747px;
+}
+#notfound .bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+#notfound .notfound-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+}
+#notfound .notfound-content {
+  max-width: 667px;
+  width: 100%;
+}
+#notfound .notfound-content .main-title {
+  font-size: 200px;
+  color: #fff;
+  font-weight: 800;
+}
+#notfound .notfound-content .sub-title {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+#notfound .notfound-content .desc {
+  font-size: 24px;
+  color: #fff;
+}
+#notfound .notfound-content .button {
+  max-width: 387px;
+  margin-top: 40px;
+}
+#notfound .notfound-image {
+  max-width: 760px;
+  width: 100%;
+  transform: translateY(80px);
+}
+
+@media (min-width: 1400px) {
+  #notfound .container {
+    max-width: 1320px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #notfound {
+    padding-bottom: 500px;
+  }
+  #notfound .notfound-wrapper {
+    flex-direction: column-reverse;
+    gap: 80px;
+  }
+  #notfound .notfound-content {
+    max-width: unset;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #notfound {
+    padding-bottom: 360px;
+  }
+  #notfound .notfound-content .main-title,
+  #notfound .notfound-content .sub-title,
+  #notfound .notfound-content .desc {
+    text-align: center;
+  }
+  #notfound .notfound-content .button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #notfound {
+    padding-top: 0;
+    padding-bottom: 240px;
+  }
+  #notfound .notfound-wrapper {
+    gap: 150px;
+  }
+  #notfound .notfound-content .main-title {
+    font-size: 90px;
+  }
+  #notfound .notfound-content .sub-title {
+    font-size: 25px;
+  }
+  #notfound .notfound-content .desc {
+    font-size: 14px;
+  }
+  #notfound .notfound-content .button {
+    padding: 30px;
+    font-size: 14px;
+  }
+}
