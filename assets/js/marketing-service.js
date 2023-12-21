@@ -47,4 +47,16 @@ if (window.innerWidth < 481) {
       advBtn.click();
     });
   });
+
+  const provideBtn = document.getElementById("provide-popup-btn");
+  const provideTitle = document.querySelector(".provide-popup h3");
+  const provideDesc = document.querySelector(".provide-popup p");
+  const provideItems = document.querySelectorAll(".provide-item");
+  Array.from(provideItems).forEach((item) => {
+    item.addEventListener("click", () => {
+      provideTitle.textContent = item.querySelector("h3").textContent;
+      provideDesc.textContent = item.querySelector("p").textContent;
+      provideBtn.click();
+    });
+  });
 }
