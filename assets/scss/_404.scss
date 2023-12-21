@@ -1,0 +1,112 @@
+// START 404
+#notfound {
+  position: relative;
+  padding: 103px 0 747px;
+  .bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  .notfound-wrapper {
+    @include flex(space-between, start, 30px);
+  }
+  .notfound-content {
+    max-width: 667px;
+    width: 100%;
+    .main-title {
+      font-size: 200px;
+      color: $white;
+      font-weight: $fw-eb;
+    }
+    .sub-title {
+      font-size: 36px;
+      color: $white;
+      font-weight: $fw-b;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .desc {
+      font-size: 24px;
+      color: $white;
+    }
+    .button {
+      max-width: 387px;
+      margin-top: 40px;
+    }
+  }
+  .notfound-image {
+    max-width: 760px;
+    width: 100%;
+    transform: translateY(80px);
+  }
+}
+
+// START RESPONSIVE
+@include min-extra-desktop {
+  #notfound {
+    .container {
+      max-width: 1320px;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@include tablet {
+  #notfound {
+    padding-bottom: 500px;
+    .notfound-wrapper {
+      flex-direction: column-reverse;
+      gap: 80px;
+    }
+    .notfound-content {
+      max-width: unset;
+    }
+  }
+}
+
+@include landscape-phone {
+  #notfound {
+    padding-bottom: 360px;
+    .notfound-content {
+      .main-title,
+      .sub-title,
+      .desc {
+        text-align: center;
+      }
+      .button {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@include mobile {
+  #notfound {
+    padding-top: 0;
+    padding-bottom: 240px;
+    .notfound-wrapper {
+      gap: 150px;
+    }
+    .notfound-content {
+      .main-title {
+        font-size: 90px;
+      }
+      .sub-title {
+        font-size: 25px;
+      }
+      .desc {
+        font-size: 14px;
+      }
+      .button {
+        padding: 30px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+// END RESPONSIVE
+// END 404
