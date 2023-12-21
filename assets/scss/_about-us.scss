@@ -208,8 +208,104 @@
       }
     }
   }
+
+  #about-value {
+    .value-group {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  #about-team {
+    .gallery {
+      margin-top: 100px;
+      transform: translateY(30px);
+    }
+  }
 }
 
+@include mobile {
+  #about-banner {
+    padding: 142px 0 95px;
+    .heading-block {
+      .title {
+        line-height: 34px;
+        width: 85%;
+      }
+    }
+
+    > .decor-el {
+      &:nth-child(1) {
+        width: 43px;
+        right: 24px;
+        left: initial;
+        top: 235px;
+      }
+      &:nth-child(2) {
+        width: 120px;
+        right: initial;
+        left: -20px;
+      }
+      &:nth-child(3) {
+        display: none;
+      }
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+  #about-benefit {
+    padding-top: 44px;
+    margin-top: 0;
+    .benefit-content {
+      margin-top: 0;
+      .content-image {
+        width: 100%;
+        height: unset;
+        aspect-ratio: 445/484;
+      }
+    }
+    .decor-el {
+      width: 300%;
+      right: -335px;
+      svg {
+        width: 100%;
+      }
+    }
+  }
+  #about-advantage {
+    padding-bottom: 140px;
+    .advantage-item {
+      align-items: center;
+      .content {
+        .title {
+          font-size: 22px;
+          line-height: 32px;
+        }
+        .desc {
+          font-size: 14px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+  #about-value {
+    padding-bottom: 50px;
+    .value-group {
+      margin-top: 30px;
+    }
+  }
+  #about-team {
+    .gallery {
+      margin-top: 50px;
+    }
+  }
+  #about-video {
+    margin-top: 70px;
+    .quote {
+      margin-bottom: 65px;
+    }
+  }
+}
 // END RESPONSIVE
 
 // END ABOUT US
