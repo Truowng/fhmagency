@@ -32,3 +32,19 @@ if (photoContainer) {
     actualSize: true,
   });
 }
+
+if (window.innerWidth < 481) {
+  const advBtn = document.getElementById("adv-popup-btn");
+  const advIcon = document.querySelector(".adv-popup-icon img");
+  const advTitle = document.querySelector(".adv-popup h3");
+  const advDesc = document.querySelector(".adv-popup p");
+  const advItems = document.querySelectorAll(".adv-item");
+  Array.from(advItems).forEach((item) => {
+    item.addEventListener("click", () => {
+      advIcon.src = item.querySelector(".adv-item-icon img").src;
+      advTitle.textContent = item.querySelector("h3").textContent;
+      advDesc.textContent = item.querySelector("p").textContent;
+      advBtn.click();
+    });
+  });
+}

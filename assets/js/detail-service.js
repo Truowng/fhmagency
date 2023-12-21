@@ -82,3 +82,19 @@ if (galleryContainer) {
     actualSize: true,
   });
 }
+
+if (window.innerWidth < 991) {
+  const reasonBtn = document.getElementById("reason-popup-btn");
+  const reasonIcon = document.querySelector(".reason-popup-icon img");
+  const reasonTitle = document.querySelector(".reason-popup h3");
+  const reasonDesc = document.querySelector(".reason-popup p");
+  const reasonItems = document.querySelectorAll(".reason-item");
+  Array.from(reasonItems).forEach((item) => {
+    item.addEventListener("click", () => {
+      reasonIcon.src = item.querySelector(".reason-item-icon img").src;
+      reasonTitle.textContent = item.querySelector("h3").textContent;
+      reasonDesc.textContent = item.querySelector("p").textContent;
+      reasonBtn.click();
+    });
+  });
+}
