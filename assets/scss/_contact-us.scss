@@ -76,6 +76,7 @@
           right 23px;
         padding: 23px 30px 7px 20px;
         color: #fff;
+        font-weight: $fw-m;
 
         option {
           color: #000;
@@ -202,8 +203,21 @@
 }
 
 .contact-us {
+  .intro {
+    .intro-content {
+      padding: 20% 0 20% 0;
+    }
+    .intro-bg {
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
   .cta {
     position: relative;
+    background-size: 50% 100%;
 
     .heading-block {
       position: relative;
@@ -247,8 +261,13 @@
 }
 
 @include desktop {
-  .contact-us {
+  .contact-us {    
+    .intro {
+      aspect-ratio: 12/7;
+    }
+
     .cta {
+      background-size: 100%;
       margin-top: 0;
       padding-top: 0;
       overflow: hidden;
@@ -292,6 +311,18 @@
 }
 
 @include tablet {
+  .contact-us {
+    .intro {
+      aspect-ratio: 4/3;
+
+      .intro-content {
+        h2 {
+
+        }
+      }
+    }
+  }
+
   .contact-form {
     margin: 85px 0 0px;
   }
@@ -330,6 +361,24 @@
 }
 
 @include landscape-phone {
+  .contact-us {
+    .intro {
+      .intro-content {
+        h2 {
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 32px;
+          letter-spacing: 0.21px;
+
+        }
+      }
+    }
+  }
+
   .contact-map {
     .contact-map-content {
       padding: 50px calc(50vw - 258px);
@@ -344,6 +393,16 @@
 }
 
 @include extra-mobile {
+  .contact-us {
+    .intro {
+      aspect-ratio: 39/48;
+
+      .intro-content {
+        padding: 30% 0 20% 0;
+      }
+    }
+  }
+
   .contact-map {
     .contact-map-content {
       padding: 50px 12px;
@@ -369,6 +428,12 @@
 }
 
 @include small-mobile {
+  .contact-us {
+    .intro {
+      aspect-ratio: 39/59;
+    }
+  }
+
   .contact-form-row {
     .contact-form-line {
       width: 100%;
