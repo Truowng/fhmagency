@@ -430,7 +430,7 @@
     left: 50%;
     width: 125%;
     aspect-ratio: 4/1;
-    background: #E8F3FF;
+    background: #e8f3ff;
     clip-path: ellipse(50% 50% at 50% 50%);
     -webkit-clip-path: ellipse(50% 50% at 50% 50%);
     bottom: 0;
@@ -438,9 +438,13 @@
   }
 }
 
+#project-detail-cta {
+  margin-top: 0;
+}
+
 .project-detail-related {
   padding: 32px 0 122px;
-  background: #E8F3FF;
+  background: #e8f3ff;
 
   .heading-block {
     margin-bottom: 80px;
