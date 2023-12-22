@@ -1,0 +1,204 @@
+
+  
+  // START SERVICES
+  .list-services {
+    .services {
+        margin-top: 70px;
+        h2 {
+          font-weight: $fw-r;
+          font-size: 14px;
+          letter-spacing: 0.5em;
+          text-align: center;
+          text-transform: uppercase;
+          color: white;
+          margin-bottom: 100px;
+        }
+        .services-list {
+          position: relative;
+        }
+      
+        .services-slider {
+          width: 100%;
+          aspect-ratio: 1136/1200;
+          z-index: 3;
+      
+          .swiper-wrapper {
+            transition-timing-function: $cubic;
+          }
+      
+          .services-slider-item {
+            height: fit-content;
+            border-radius: 20px;
+            height: 106px;
+            transition: all 0.45s ease-in-out;
+      
+            .services-slider-content {
+              position: absolute;
+              z-index: 5;
+              left: 105px;
+              top: 50%;
+              transform: translateY(-50%);
+      
+              a {
+                font-weight: $fw-eb;
+                font-size: 46px;
+                line-height: 66px;
+                letter-spacing: 0.015em;
+                color: #6351d0;
+                padding-top: 16px;
+                margin-bottom: 10px;
+                position: relative;
+                transition: color 1s ease;
+      
+                &:hover {
+                  text-decoration: underline;
+                }
+      
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 0;
+                  height: 4px;
+                  background-color: #6351d0;
+                  transition: all 1s ease;
+                }
+              }
+              p {
+                font-weight: $fw-sb;
+                font-size: 18px;
+                line-height: 30px;
+                letter-spacing: 0.015em;
+                color: #6351d0;
+                transition: color 1s ease;
+              }
+            }
+            &.swiper-slide-active {
+              .services-slider-content {
+                a,
+                p {
+                  color: white;
+                }
+                a {
+                  &::after {
+                    width: 70px;
+                    background-color: white;
+                  }
+                }
+              }
+            }
+          }
+        }
+      
+        .services-pagination {
+          position: absolute;
+          right: -63px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+      
+          .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: #3522aa;
+            opacity: 1;
+            transition: all 0.45s ease-in-out;
+            &.swiper-pagination-bullet-active {
+              width: 1px;
+              height: 89px;
+              background-color: rgba($color: #8e7df0, $alpha: 0.5);
+            }
+          }
+        }
+      
+        .services-slider-img {
+          position: absolute;
+          aspect-ratio: 1136/550;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          border-radius: 20px;
+          
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            background: rgba(#000, 0.4);
+            z-index: 2;
+          }
+      
+          .swiper-wrapper {
+            transition-timing-function: $cubic;
+          }
+        }
+      }
+  }
+
+  //**Responsive**//
+  @include tablet {
+    .list-services {
+        .services {
+            .services-slider {
+              .services-slider-item {
+                .services-slider-content {
+                  a {
+                    font-size: 32px;
+                    line-height: normal;
+                  }
+        
+                  p {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+    }
+  }
+  
+  @include landscape-phone {
+    .list-services {
+        .services {
+            h2 {
+              margin-bottom: 40px;
+            }
+        
+            .services-slider {
+              .services-slider-item {
+                .services-slider-content {
+                  left: 50px;
+                }
+              }
+            }
+          }
+    }
+  }
+  
+  @include extra-mobile {
+    .list-services {
+        .services {
+            .services-slider {
+              .services-slider-item {
+                .services-slider-content {
+                  left: 20px;
+        
+                  a {
+                    font-size: 20px;
+                  }
+        
+                  p {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+    }
+  }

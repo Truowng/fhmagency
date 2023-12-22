@@ -1,3 +1,6 @@
+// INIT
+AOS.init();
+
 const testimonialsThumb =
   new Swiper(".blog-orther .blog-orther-list .swiper", {
     direction: "horizontal",

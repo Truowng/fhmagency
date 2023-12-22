@@ -149,7 +149,7 @@
 @include landscape-phone {
   .blog-detail-main {
     background: $blue;
-    padding: 40px 0 145px;
+    padding: 189px 0 48px;
 
     .back-page {
       margin-bottom: 24px;
@@ -170,6 +170,14 @@
       padding: 15px 0;
       flex-wrap: wrap;
       margin-bottom: 24px;
+
+      .blog-detail-head-left {
+        font-size: 14px;
+      }
+
+      .blog-detail-share {
+        font-size: 14px;
+      }
     }
 
     .blog-detail-content {
@@ -202,6 +210,10 @@
         }
       }
     }
+  }
+
+  .blog-orther {
+    padding: 45px 0 54px;
   }
 }
 

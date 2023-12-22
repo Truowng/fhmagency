@@ -9,6 +9,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -112,11 +113,11 @@
       <!-- START INTRODUCE -->
       <section class="intro">
         <div class="intro-bg">
-          <img src="assets/images/services/intro-bg.png" alt="intro bg" />
+          <img src="assets/images/background/contact-intro-bg.png" alt="intro bg" />
         </div>
         <div class="intro-container text-center">
           <div class="container">
-            <div class="intro-content">
+            <div class="intro-content" data-aos="fade-up">
               <h2>What' <span>FHM Agency</span> Company</h2>
               <p>
                 At FHM Vietnam, we always provide comprehensive development
@@ -135,12 +136,12 @@
       <!--Contact Us Form-->
       <section class="contact-form">
         <div class="container">
-          <div class="heading-block heading-center">
+          <div class="heading-block heading-center" data-aos="fade-up">
             <div class="title">We're happy to help!</div>
           </div>
 
           <div class="contact-form-wrap">
-            <div class="contact-form-main">
+            <div class="contact-form-main" data-aos="fade-right">
               <p class="contact-form-required">*Required</p>
 
               <form action="contactForm" id="contactForm">
@@ -385,6 +386,21 @@
                     </div>
                   </div>
 
+                  <div class="contact-form-line contact-form-line-full">
+                    <input
+                      type="text"
+                      id="addressContact"
+                      placeholder="Address"
+                    />
+                    <div class="clear-input">
+                      <img
+                        src="./assets/images/icons/clear-btn.svg"
+                        alt="Clear"
+                        title="Clear"
+                      />
+                    </div>
+                  </div>
+
                   <div class="contact-form-line">
                     <input
                       type="number"
@@ -440,7 +456,7 @@
               </form>
             </div>
 
-            <div class="contact-info">
+            <div class="contact-info" data-aos="fade-left">
               <div class="contact-info-item">
                 <h5 class="contact-info-city">Hanoi City</h5>
                 <p class="contact-info-address">
@@ -476,7 +492,7 @@
       </section>
 
       <!-- START CTA -->
-      <section class="cta">
+      <section class="cta" data-aos="fade-up">
         <div class="decor-el">
           <img src="./assets/images/els/planet.svg" alt="planet" />
         </div>
@@ -698,6 +714,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="./assets/js/index.js"></script>
     <script src="./assets/js/contact.js"></script>
   </body>
