@@ -18,6 +18,14 @@
       bottom: 30%;
       animation: moveHorizontal ease 2.5s infinite alternate;
     }
+    &:nth-of-type(4) {
+      width: 399px;
+      height: 399px;
+      top: -248px;
+      left: -164px;
+      z-index: 0;
+      display: none;
+    }
   }
   .bg {
     position: absolute;
@@ -78,7 +86,7 @@
   .about-wrapper {
     @include flex(space-between, center, 20px);
   }
-  .about-image {
+  .image-border {
     max-width: 602px;
     position: relative;
 
@@ -155,6 +163,8 @@
   .services-content {
     margin-top: 60px;
     .services-item {
+      max-height: 427px;
+      height: 100%;
       .content {
         a {
           font-size: 36px;
@@ -173,6 +183,9 @@
     }
     .slider-button-prev {
       left: -23px;
+    }
+    .services-item {
+      max-height: 297px;
     }
   }
   .services-item {
@@ -632,6 +645,9 @@
         bottom: 27%;
         width: 23px;
         left: 40px;
+      }
+      &:nth-of-type(4) {
+        display: block;
       }
     }
   }
