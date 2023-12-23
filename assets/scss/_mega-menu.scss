@@ -66,6 +66,10 @@
 
           &:hover {
             background: none;
+
+            &:before {
+              content: '';
+            }
           }
         }
       }

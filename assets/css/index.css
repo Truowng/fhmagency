@@ -6301,6 +6301,9 @@ h6 {
 #fhm-header .mega-menu-wrap .mega-menu-col .item:last-child .link:hover {
   background: none;
 }
+#fhm-header .mega-menu-wrap .mega-menu-col .item:last-child .link:hover:before {
+  content: "";
+}
 #fhm-header .mega-menu-wrap .mega-menu-col .item .link {
   color: #214336;
   font-size: 16px;
@@ -6545,6 +6548,9 @@ h6 {
 }
 #fhm-header .mega-menu-wrap .mega-menu-col .item:last-child .link:hover {
   background: none;
+}
+#fhm-header .mega-menu-wrap .mega-menu-col .item:last-child .link:hover:before {
+  content: "";
 }
 #fhm-header .mega-menu-wrap .mega-menu-col .item .link {
   color: #214336;
