@@ -255,6 +255,17 @@
   aspect-ratio: 1600 / 775;
   overflow: hidden;
   position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1600 / 183;
+    opacity: 0.7;
+    background: linear-gradient(180deg, #0c043d 0%, rgba(12, 4, 61, 0) 100%);
+  }
   .adver-bg {
     width: 100%;
     height: 100%;
@@ -495,6 +506,7 @@
 .services-partner {
   position: relative;
   z-index: 2;
+  background-color: $blue-2;
   .services-partner-slider {
     margin-top: 46px;
     position: relative;
@@ -527,14 +539,14 @@
   }
   .services-partner-item {
     aspect-ratio: 223 / 121;
-    border: 1px dashed white;
+    border: 1px dashed rgba(#8072d5, 1);
     display: flex;
     justify-content: center;
     align-items: center;
     img {
       width: auto;
       height: auto;
-      max-width: 80%;
+      max-width: 70%;
       max-height: 80%;
     }
   }
@@ -740,16 +752,12 @@
       display: flex;
       gap: 10px;
       padding-top: 30px;
-      padding-right: 37px;
       padding-left: 20px;
       border-radius: 5px;
-      border: 1px dashed white;
+      border: 1px dashed #8072d5;
       min-height: 100%;
       transition: all 0.5s ease-in-out;
       overflow: hidden;
-      background-image: url("../images/services/arrow-down.svg");
-      background-repeat: no-repeat;
-      background-position: top 40px right 20px;
     }
     .industry-item-icon {
       width: 22px;
@@ -764,6 +772,7 @@
       }
     }
     h3 {
+      padding-right: 37px;
       font-size: 18px;
       line-height: 22px;
       letter-spacing: 0.015em;
@@ -772,6 +781,9 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       -webkit-line-clamp: 1;
+      background-image: url("../images/services/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-position: top 8px right 20px;
     }
     p {
       font-weight: $fw-l;
@@ -790,7 +802,8 @@
       opacity: 0;
       visibility: hidden;
     }
-    &:hover {
+    &:hover,
+    .active {
       .industry-item-container {
         z-index: 11;
         background-color: #2b1a93;
@@ -1076,6 +1089,9 @@
     }
     .process-item {
       flex: 0 0 150px;
+      .process-item-icon {
+        background-color: $blue-2;
+      }
       &:nth-child(6) {
         position: absolute;
         right: 0;
@@ -2597,6 +2613,9 @@
     margin-top: -160px;
   }
   .adver {
+    &::after {
+      content: none;
+    }
     .adver-container {
       align-items: end;
       .heading-block {
@@ -2613,6 +2632,9 @@
   .display {
     margin-top: -150px;
     padding-bottom: 100px;
+    .display-bg {
+      height: 70%;
+    }
     .display-heading {
       margin-bottom: 42px;
       h2,
@@ -2636,13 +2658,25 @@
       }
     }
   }
+  .services-partner {
+    .heading-block {
+      padding: 0 20px;
+    }
+  }
   .reason {
     margin-top: -50px;
+    &::before {
+      background: linear-gradient(
+        180deg,
+        rgba(29, 14, 120, 0) 0%,
+        #1d0e78 73.09%
+      );
+    }
     .reason-list {
       margin-top: 40px;
     }
     .reason-item {
-      background-color: $blue-2;
+      background: transparent;
       &:hover {
         padding-bottom: 40px;
         &::after {
@@ -2662,7 +2696,9 @@
     }
   }
   .process {
+    padding-top: 50px;
     .process-list {
+      padding: 0 20px;
       margin-top: 40px;
       gap: 26px;
       animation-name: elementor-animation-wobble-horizontal;
@@ -2679,6 +2715,7 @@
     .process-item {
       min-width: 110px;
       .process-item-icon {
+        background-color: $blue-2;
         &::before {
           top: 40px;
           left: -35px;
@@ -2805,6 +2842,9 @@
     margin-top: -150px;
     .saying-container {
       margin-top: 32px;
+    }
+    .saying-slider {
+      margin-left: 10px;
     }
   }
   .photo {
@@ -3042,7 +3082,7 @@
   .provide {
     .provide-item {
       .provide-content {
-        padding: 24px 20px;
+        padding: 24px 10px 24px 20px;
         h3 {
           font-size: 20px;
         }
@@ -3112,6 +3152,43 @@
       }
     }
   }
+  .industry {
+    margin-bottom: 50px;
+    .heading-block {
+      .desc {
+        max-width: 266px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .industry-list {
+      margin-top: 32px;
+    }
+    .industry-item {
+      &:not(.active) {
+        .industry-item-container {
+          background-color: transparent;
+        }
+        h3 {
+          -webkit-line-clamp: 1;
+        }
+        p,
+        button {
+          opacity: 0;
+          visibility: hidden;
+        }
+        p {
+          margin: 0;
+          max-height: 0;
+        }
+        button {
+          height: 0 !important;
+          margin-bottom: 0 !important;
+          padding: 0;
+        }
+      }
+    }
+  }
 }
 
 @include landscape-phone {
@@ -3131,7 +3208,7 @@
     }
   }
   .display {
-    margin-top: -80px;
+    margin-top: -60px;
     .display-slider {
       .display-slider-item {
         &:first-child {
@@ -3263,6 +3340,9 @@
     }
   }
   .display {
+    .display-bg {
+      height: 65%;
+    }
     .display-heading {
       h2 {
         font-size: 20px;
@@ -3339,7 +3419,16 @@
     &.saying-marketing {
       margin-top: -30px;
       .saying-marketing-slider {
+        padding: 0 10px;
         .swiper-slide {
+          .feedback {
+            &.feedback-col {
+              width: 100%;
+            }
+          }
+          &:first-child {
+            margin-left: 0;
+          }
           &:nth-child(2n),
           &:nth-child(4n) {
             padding-top: 0;
@@ -3352,14 +3441,15 @@
     .photo-slide {
       padding: 0;
       &:first-child {
-        margin-top: -50px;
+        margin-top: -40px;
       }
     }
     .photo-slide-item {
       width: 120px;
     }
-    .photo-up-item {
-      // width: 100px;
+    .photo-up-item,
+    .photo-bottom-item {
+      // width: 50%;
     }
   }
   .service-contact {
@@ -3379,6 +3469,13 @@
   .associate {
     padding-top: 60px;
     margin-top: -60px;
+    .associate-content {
+      h2 {
+        font-size: 22px;
+        line-height: 34px;
+        padding: 0 20px;
+      }
+    }
     .associate-list {
       margin-top: 20px;
       min-height: 400px;
@@ -3520,6 +3617,19 @@
     }
     .picture-item {
       width: 95px;
+    }
+  }
+}
+
+@include small-mobile {
+  .service-contact {
+    .contact-form-row {
+      .contact-form-line {
+        width: calc(50% - 9px);
+      }
+      .contact-form-line-full {
+        width: 100%;
+      }
     }
   }
 }

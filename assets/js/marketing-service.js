@@ -1,7 +1,7 @@
 const sayingMarketing = new Swiper(".saying-marketing-slider", {
   speed: 2000,
-  slidesPerView: 1,
-  spaceBetween: 0,
+  slidesPerView: 2,
+  spaceBetween: 12,
   breakpoints: {
     480: {
       spaceBetween: 23,
