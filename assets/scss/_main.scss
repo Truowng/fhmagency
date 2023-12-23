@@ -199,6 +199,12 @@ h6 {
   }
 }
 
+.curve-bg {
+  img {
+    height: 100%;
+  }
+}
+
 .quote {
   font-weight: $fw-l;
   color: $white;
@@ -1619,6 +1625,10 @@ h6 {
         }
       }
     }
+  }
+
+  .curve-bg {
+    height: 27px;
   }
 
   #fhm-footer {

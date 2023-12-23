@@ -263,6 +263,10 @@ h6 {
   left: -43.5px;
 }
 
+.curve-bg img {
+  height: 100%;
+}
+
 .quote {
   font-weight: 300;
   color: #fff;
@@ -1532,6 +1536,9 @@ h6 {
   .video .video-wrapper .button-control img {
     width: 11px;
     height: 14px;
+  }
+  .curve-bg {
+    height: 27px;
   }
   #fhm-footer .footer-mid {
     grid-column-gap: 10px;
