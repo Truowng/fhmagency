@@ -25,6 +25,11 @@
     left: 0;
     width: 100%;
     z-index: -1;
+    img {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
   }
   .banner-wrapper {
     @include flex(space-between, start, unset);
@@ -115,6 +120,12 @@
   padding: 77px 0 289px;
   position: relative;
   overflow: hidden;
+  .curve-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
   .decor-el {
     &:nth-of-type(1) {
       left: 76px;
@@ -204,7 +215,7 @@
         color: $white;
         letter-spacing: 0.015em;
         text-transform: capitalize;
-        font-weight: $fw-bl;
+        font-weight: $fw-b;
         text-align: center;
         display: block;
         &:hover {
@@ -226,12 +237,6 @@
     z-index: 1;
   }
 
-  .curve-bg {
-    position: absolute;
-    top: 0;
-    transform: translateY(-99%);
-    width: 100%;
-  }
   .counter-wrapper {
     @include flex(space-between, center, 20px);
     padding-top: 60px;
@@ -257,29 +262,29 @@
 }
 
 #home-advantage {
-  margin-top: 252px;
+  padding-top: 252px;
   position: relative;
+
   .decor-el {
     position: absolute;
-    top: -200px;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
   }
+  .curve-bg {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+  }
+
   .bg {
     margin-top: -200px;
     position: relative;
     z-index: -1;
   }
   .heading-block {
-    .badge {
-      font-size: 28px;
-      background-color: transparent;
-      padding: 0;
-      margin-bottom: 20px;
-      text-transform: capitalize;
-      letter-spacing: 0;
-    }
     .title {
       font-size: 70px;
       line-height: normal;
@@ -339,11 +344,16 @@
       position: absolute;
       left: -30px;
       top: 50%;
+      width: 100px;
       transform: translateY(-50%);
+      lord-icon {
+        width: 100% !important;
+      }
     }
     .text {
       font-size: 18px;
       line-height: 28px;
+      font-weight: $fw-b;
       color: $blue;
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -410,6 +420,10 @@
   }
 
   #home-advantage {
+    padding-top: 180px;
+    .decor-el {
+      top: 50px;
+    }
     .advantage-group {
       .advantage-image {
         position: unset;
@@ -424,13 +438,6 @@
           transform: unset;
         }
       }
-    }
-  }
-
-  #home-advantage {
-    margin-top: 180px;
-    .decor-el {
-      top: -120px;
     }
   }
 }
@@ -527,9 +534,9 @@
   }
 
   #home-advantage {
-    margin-top: 111px;
+    padding-top: 111px;
     .decor-el {
-      top: -80px;
+      top: 30px;
     }
     .advantage-row {
       gap: 21px;
@@ -539,12 +546,14 @@
       height: unset;
       padding-top: 10px;
       padding-bottom: 10px;
+      max-width: 247px;
       .text {
         font-size: 14px;
         line-height: 21px;
       }
       .icon {
-        left: -10px;
+        left: -20px;
+        width: 60px;
       }
       img {
         width: 50%;
@@ -581,11 +590,22 @@
 
 @include mobile {
   #home-banner {
-    padding-bottom: 0;
+    padding: 130px 0 0;
+    .bg {
+      img {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+    }
     .heading-block {
       .title {
         font-size: 26px;
         line-height: 34px;
+        margin-bottom: 0;
       }
       .button {
         display: none;
@@ -593,19 +613,23 @@
     }
     .banner-image {
       width: 75%;
+      transform: unset;
+      margin-top: -6px;
     }
     .decor-el {
       &:nth-of-type(1) {
         width: 65px;
-        bottom: 98px;
+        bottom: 0;
+        left: 15px;
+        z-index: 2;
       }
       &:nth-of-type(2) {
-        top: 52%;
+        top: 53%;
         width: 50px;
         left: 60px;
       }
       &:nth-of-type(3) {
-        bottom: 37%;
+        bottom: 27%;
         width: 23px;
         left: 40px;
       }
@@ -613,27 +637,42 @@
   }
 
   #home-about {
-    padding-top: 200px;
+    padding-top: 61px;
     padding-bottom: 38px;
     background: $blue-2;
+    .heading-block {
+      .button {
+        margin-top: 20px;
+      }
+    }
+    .about-wrapper {
+      gap: 50px;
+    }
     > .decor-el {
       display: none;
     }
     .bg {
       background: $blue;
       bottom: initial;
-      top: 0;
+      top: -25px;
+    }
+    .image-border {
+      width: 100%;
+
+      > .decor-el {
+        z-index: 1;
+        &:nth-child(2) {
+          width: 62px;
+        }
+      }
     }
   }
 
   #home-services {
-    padding-bottom: 100px;
-    background: linear-gradient(
-        0deg,
-        rgba($color: $blue, $alpha: 0.5) 0%,
-        rgba($color: $blue, $alpha: 0.5) 100%
-      ),
-      url(../images/background/home-services-bg.svg) no-repeat center;
+    padding-top: 53px;
+    padding-bottom: 87px;
+    background: url(../images/background/home-service-bg-m.svg) no-repeat center;
+    background-size: cover;
 
     .decor-el {
       &:nth-of-type(1) {
@@ -647,62 +686,25 @@
           &:nth-child(1) {
             margin-bottom: 0;
           }
+          &:nth-child(2) {
+            margin-top: -10px;
+          }
         }
       }
       &:nth-of-type(3) {
         width: 54px;
         right: 0;
+        bottom: 38px;
       }
     }
-  }
 
-  #home-counter {
-    .decor-el {
-      display: none;
-    }
-    .counter-wrapper {
-      height: 180px;
-    }
-    .counter-item {
-      .num {
-        font-size: 30px;
-        line-height: 35px;
-      }
-      .text {
-        font-size: 10px;
-        line-height: 12px;
-      }
-    }
-  }
-
-  #home-advantage {
-    padding-bottom: 78px;
-    .decor-el {
-      width: 100%;
-      top: -100px;
-    }
-    .heading-block {
-      .badge {
-        font-size: 16px;
-        line-height: 36px;
-        margin-bottom: 0;
-      }
-      .title {
-        font-size: 22px;
-        line-height: 36px;
-      }
-    }
-    .advantage-item {
-      .text {
-        font-size: 12px;
-        line-height: 18px;
-      }
-    }
-  }
-
-  #home-services {
     .services-item {
+      .image {
+        border-radius: 10px;
+      }
       .content {
+        border-radius: 0 0 10px 10px;
+        padding-bottom: 23px;
         a {
           font-size: 14px;
           line-height: 19px;
@@ -710,6 +712,7 @@
       }
     }
     .services-slider {
+      margin-top: 11px;
       .swiper {
         overflow: visible;
       }
@@ -730,12 +733,84 @@
     }
   }
 
+  #home-counter {
+    .decor-el {
+      display: none;
+    }
+    .counter-wrapper {
+      padding-top: 10px;
+      height: 128px;
+      gap: 0;
+    }
+    .counter-item {
+      .num {
+        font-size: 30px;
+        line-height: 35px;
+      }
+      .text {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
+
+  #home-advantage {
+    padding-bottom: 84px;
+    .bg {
+      bottom: -140px;
+    }
+    .decor-el {
+      width: 100%;
+      top: 10px;
+    }
+    .heading-block {
+      .title {
+        font-size: 22px;
+        line-height: 36px;
+      }
+    }
+    .advantage-group {
+      margin-top: 32px;
+      .advantage-image {
+        margin-bottom: 0;
+      }
+    }
+
+    .advantage-item {
+      max-width: 181px;
+      min-height: 70px;
+      margin-bottom: 29px;
+      padding-left: 33px;
+      padding-right: 10px;
+      .text {
+        font-size: 12px;
+        line-height: 18px;
+      }
+      .icon {
+        left: -15px;
+        width: 45px;
+      }
+    }
+  }
+
+  #home-project {
+    padding-top: 46px;
+    .project-group {
+      margin-top: 28px;
+    }
+  }
+
   #home-client {
+    margin-top: 58px;
     .client-item {
       img {
         width: 60%;
       }
     }
+  }
+
+  #home-video {
+    margin-top: 58px;
   }
 }
 // END RESPONSIVE

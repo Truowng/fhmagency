@@ -9,6 +9,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -298,7 +299,7 @@
       <!--Orther Blogs-->
       <section class="blog-orther">
         <div class="container">
-          <div class="heading-block heading-center">
+          <div class="heading-block heading-center" data-aos="fade-up">
             <div class="title">Other News Event</div>
             <p class="desc">
               Understand the difficulties of startups and small businesses on
@@ -307,7 +308,7 @@
             </p>
           </div>
 
-          <div class="blog-orther-list">
+          <div class="blog-orther-list" data-aos="fade-up">
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -392,20 +393,22 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-next">
-                <img
-                  src="./assets/images/icons/caret-right-black.svg"
-                  alt="Next"
-                  title="Next"
-                />
-              </div>
-              <div class="swiper-button-prev">
-                <img
-                  src="./assets/images/icons/caret-left-black.svg"
-                  alt="Prev"
-                  title="Prev"
-                />
-              </div>
+            </div>
+
+            <div class="slider-button slider-button-next">
+              <img
+                src="./assets/images/icons/caret-right-black.svg"
+                alt="Next"
+                title="Next"
+              />
+            </div>
+            
+            <div class="slider-button slider-button-prev">
+              <img
+                src="./assets/images/icons/caret-left-black.svg"
+                alt="Prev"
+                title="Prev"
+              />
             </div>
           </div>
         </div>
@@ -625,6 +628,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/blog-list.js"></script>
   </body>
 </html>
