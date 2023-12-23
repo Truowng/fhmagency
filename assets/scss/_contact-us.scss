@@ -22,12 +22,12 @@
     select {
       width: 100%;
       border-radius: 3px;
-      border: 0.5px solid #797495;
-      padding: 15px 30px 15px 15px;
+      border: 0.5px solid #8278bd;
+      padding: 14px 30px 14px 20px;
       color: #fff;
       background: transparent;
       font-size: 14px;
-      font-weight: 300;
+      font-weight: $fw-el;
       line-height: normal;
       letter-spacing: 0.21px;
       -webkit-appearance: none;
@@ -66,17 +66,16 @@
         left: 20px;
         color: #fff;
         font-size: 10px;
-        font-weight: 300;
+        font-weight: $fw-el;
         line-height: normal;
         letter-spacing: 0.15px;
       }
 
       select {
-        background: url("../images/icons/arrow-select.svg") no-repeat center
-          right 23px;
+        background: url("../images/icons/arrow-select.svg") no-repeat center right 23px;
         padding: 23px 30px 7px 20px;
         color: #fff;
-        font-weight: $fw-m;
+        font-weight: $fw-r;
 
         option {
           color: #000;
@@ -155,12 +154,13 @@
 
   form {
     .contact-form-row {
-      margin-bottom: 50px;
+      margin-bottom: 42px;
     }
 
     .button {
       width: 100%;
-      font-weight: 600;
+      font-weight: $fw-m;
+      letter-spacing: 4.8px;
     }
   }
 }
@@ -168,7 +168,7 @@
 .contact-info {
   max-width: 26.5%;
   flex: 0 0 26.5%;
-  margin-top: 70px;
+  margin-top: 25px;
 
   .contact-info-item {
     margin-bottom: 50px;
@@ -176,7 +176,7 @@
     .contact-info-city {
       color: #fff;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: $fw-m;
       line-height: normal;
       letter-spacing: 0.21px;
       text-transform: uppercase;
@@ -204,13 +204,31 @@
 
 .contact-us {
   .intro {
+    aspect-ratio: 1600/830;
+    
     .intro-content {
-      padding: 20% 0 20% 0;
+      padding: 12% 0 20% 0;
+      margin-top: -50px;
+
+      h2 {
+        letter-spacing: 0.69px;
+        font-weight: $fw-sb;
+        line-height: normal;
+      }
+
+      p {
+        line-height: 40px;
+        letter-spacing: 0.3px;
+        max-width: 737px;
+        color: #e3e3e3;
+      }
     }
+
     .intro-bg {
       img {
         height: 100%;
         object-fit: cover;
+        background: #170a64;
       }
     }
   }
