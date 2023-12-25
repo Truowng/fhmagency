@@ -152,8 +152,9 @@ h6 {
   margin-top: 25px;
   font-size: 20px;
   line-height: 40px;
-  font-weight: 300;
+  font-weight: 200;
   color: #fff;
+  letter-spacing: 0.3px;
 }
 .heading-block.heading-center .badge {
   margin-left: auto;
@@ -259,6 +260,10 @@ h6 {
 .image-border .decor-el:nth-child(2) {
   bottom: -43.5px;
   left: -43.5px;
+}
+
+.curve-bg img {
+  height: 100%;
 }
 
 .quote {
@@ -1524,6 +1529,9 @@ h6 {
     width: 11px;
     height: 14px;
   }
+  .curve-bg {
+    height: 27px;
+  }
   #fhm-footer .footer-mid {
     grid-column-gap: 10px;
   }
@@ -1554,6 +1562,14 @@ h6 {
   left: 417px;
   bottom: 30%;
   animation: moveHorizontal ease 2.5s infinite alternate;
+}
+#home-banner .decor-el:nth-of-type(4) {
+  width: 399px;
+  height: 399px;
+  top: -248px;
+  left: -164px;
+  z-index: 0;
+  display: none;
 }
 #home-banner .bg {
   position: absolute;
@@ -1617,24 +1633,24 @@ h6 {
   align-items: center;
   gap: 20px;
 }
-#home-about .about-image {
+#home-about .image-border {
   max-width: 602px;
   position: relative;
 }
-#home-about .about-image > img {
+#home-about .image-border > img {
   border-radius: 20px 50px 20px 50px;
   border: 7px solid #fff;
   height: 100%;
   object-fit: cover;
 }
-#home-about .about-image .decor-el:nth-of-type(1) {
+#home-about .image-border .decor-el:nth-of-type(1) {
   top: -80px;
   right: -20px;
   animation: shaking ease 1s infinite alternate;
   animation-delay: 2s;
   z-index: 1;
 }
-#home-about .about-image .decor-el:nth-of-type(2) {
+#home-about .image-border .decor-el:nth-of-type(2) {
   bottom: -30px;
   left: -40px;
   z-index: 1;
@@ -1686,6 +1702,10 @@ h6 {
 #home-services .services-content {
   margin-top: 60px;
 }
+#home-services .services-content .services-item {
+  max-height: 427px;
+  height: 100%;
+}
 #home-services .services-content .services-item .content a {
   font-size: 36px;
   line-height: 66px;
@@ -1700,6 +1720,9 @@ h6 {
 }
 #home-services .services-slider .slider-button-prev {
   left: -23px;
+}
+#home-services .services-slider .services-item {
+  max-height: 297px;
 }
 #home-services .services-item {
   position: relative;
@@ -2088,6 +2111,9 @@ h6 {
     bottom: 27%;
     width: 23px;
     left: 40px;
+  }
+  #home-banner .decor-el:nth-of-type(4) {
+    display: block;
   }
   #home-about {
     padding-top: 61px;
