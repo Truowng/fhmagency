@@ -6242,11 +6242,6 @@ h6 {
   line-height: 30px;
   letter-spacing: 0.27px;
 }
-.contact-us .cta .heading-block .button {
-  padding: 20px 49px;
-  line-height: 24px;
-  font-weight: 500;
-}
 .contact-us .cta .decor-el {
   top: 50%;
 }
@@ -8012,12 +8007,6 @@ h6 {
 }
 .list-services .cta {
   margin-top: 53px;
-}
-.list-services .cta .heading-block .button {
-  padding: 20px 50px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 4.8px;
 }
 
 @media only screen and (max-width: 1199px) {
