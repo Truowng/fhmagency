@@ -1,12 +1,56 @@
 .project-detail {
   .testimonials {
     padding: 150px 0 125px;
+    background: $blue;
+
+    .heading-block {
+      .title {
+        font-weight: $fw-b;
+      }
+
+      .desc {
+        margin-top: 35px;
+      }
+    }
+
+    .testimonials-slider {
+      &:after {
+        width: min(7%, 145px);
+        background: linear-gradient(90deg, rgba(23, 10, 100, 0.00) -34.32%, #170A64 35.95%);
+      }
+
+      &:before {
+        width: min(7%, 145px);
+        background: linear-gradient(270deg, rgba(23, 10, 100, 0.00) -34.32%, #170A64 35.95%);
+      }
+    }
+  }
+
+  .cta {
+    .cta-wrapper {
+      position: relative;
+      z-index: 2;
+    }
+
+    .button {
+      padding: 20px 48px;
+      font-weight: $fw-r;
+    }
+
+    .cta-image {
+      margin-top: 31px;
+    }
   }
 }
 
 .project-highlight {
   padding: 250px 0 0;
   background: $blue;
+  overflow: hidden;
+
+  .project-container {
+    position: relative;
+  }
 
   .heading-block {
     position: relative;
@@ -55,20 +99,22 @@
 
   }
 
-  .swiper-wrapper {
-    padding-top: 29%;
-    align-items: end;
+  .swiper  {
+    aspect-ratio: 1334/705;
   }
 
+
   .swiper-slide {
-    transition: all 1.5s ease;
+    transition: all 1.25s $cubic;
+    display: flex;
+    align-items: end;
 
     img {
-      transition: all 1.5s ease;
+      transition: all 1.25s $cubic;
       border-radius: 20px 20px 0px 0px;
       border-style: solid;
       border-color: transparent;
-      border-width: 0px;
+      border-width: 7px 7px 0 7px;
       box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
     }
   }
@@ -103,11 +149,18 @@
   }
 
   .decor-el {
-    top: 5%;
+    top: 50%;
     left: 0;
     width: 100%;
+    transform: translateY(-55%);
     object-fit: contain;
     overflow: hidden;
+
+    svg {
+      width: 100%;
+      object-fit: contain;
+      height: initial;
+    }
   }
 }
 
@@ -178,13 +231,18 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    column-gap: 9.5%;
+    column-gap: 7.4%;
     row-gap: 35px;
   }
 
   .heading-block {
     flex: 0 0 50%;
     max-width: 50%;
+
+    .overview-content {
+      padding-right: 24px;
+      margin-bottom: 40px;
+    }
 
     h3 {
       margin-bottom: 20px;
@@ -205,15 +263,16 @@
     .button {
       margin-top: 20px;
       padding: 20px 60px;
-      font-weight: $fw-sb;
+      font-weight: $fw-m;
     }
   }
 
   .overview-image {
     position: relative;
+    margin-top: 30px;
 
     .overview-image-main {
-      max-width: 620px;
+      max-width: 637px;
       width: initial;
     }
 
@@ -269,7 +328,8 @@
 
   .button {
     margin: 0 auto;
-    font-weight: $fw-sb;
+    font-weight: $fw-m;
+    padding: 20px 57px;
   }
 }
 
@@ -367,6 +427,7 @@
 .project-detail-cta {
   position: relative;
   padding-bottom: 281px;
+  background: $blue;
   overflow: hidden;
 
   .heading-block {
@@ -383,11 +444,12 @@
     .title {
       letter-spacing: 0.6px;
       margin-bottom: 10px;
+      font-weight: $fw-b;
     }
 
     .desc {
       font-size: 26px;
-      font-weight: $fw-m;
+      font-weight: $fw-r;
       line-height: 40px;
       letter-spacing: 0.39px;
       max-width: initial;
@@ -404,6 +466,8 @@
     margin: 35px auto 0;
 
     .button {
+      padding: 20px 58px;
+
       &:first-child {
         background: $white;
         color: $pink;
@@ -492,6 +556,12 @@
       }
     }
   }
+
+  .project-item {
+    .title {
+      font-weight: $fw-sb;
+    }
+  }
 }
 
 @include min-extra-desktop {
@@ -510,10 +580,24 @@
       }
     }
   }
+
+  .project-detail {
+    .testimonials .testimonials-slider {
+      &:before {
+        content: none;
+      }
+
+      &:after {
+        content: none;
+      }
+    }
+  }
 }
 
 @include desktop {
   .project-highlight {
+    padding: 160px 0 0;
+
     .project-container {
       max-width: 100%;
       padding: 0;
@@ -637,14 +721,58 @@
   }
 }
 
-@include extra-mobile {
+@include landscape-phone {
   .project-highlight {
+    .button-group {
+      .button {
+        &:first-child, &:nth-child(2) {
+          padding: 20px 30px;
+        }
+      }
+    }
+  }
+}
+
+@include extra-mobile {
+  .project-detail {
+    .testimonials {
+      padding: 45px 0 59px;
+
+      .heading-block {
+        .title {
+          font-weight: $fw-sb;
+          line-height: 34px;
+          letter-spacing: 0.33px;
+        }
+
+        .desc {
+          margin-top: 5px;
+        }
+      }
+
+      .testimonials-slider {
+        &:after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 46%;
+          transform: translateX(64%);
+          background: linear-gradient(90deg, transparent 15%, #1D0E78 51%);
+        }
+      }
+    }
+  }
+  
+  .project-highlight {
+    padding: 115px 0 0;
+
     .heading-block {
       margin-top: 31px;
+      padding-bottom: 20px;
 
       .title {
         font-size: 22px;
-        font-weight: $fw-bl;
+        font-weight: $fw-b;
         line-height: 34px;
         letter-spacing: 0.33px;
         margin-bottom: 5px;
@@ -659,17 +787,43 @@
       }
     }
 
+    .swiper {
+      z-index: 3;
+    }
+
+    .swiper-slide {
+      img {
+        box-shadow: none;
+      }
+    }
+
+    .swiper-slide-active {
+      img {
+        border-width: 4px 4px 0 4px;
+      }
+    }
+
     .button-group {
       column-gap: 20px;
       flex-wrap: wrap;
 
       .button {
         font-size: 10px;
-        font-weight: $fw-b;
         line-height: normal;
         letter-spacing: 3px;
-        min-width: 152px;
+
+        &:first-child, &:nth-child(2) {
+          padding: 10px 15px;
+          font-weight: $fw-r;
+        }
       }
+    }
+
+    .decor-el {
+      width: 120%;
+      left: -10%;
+      top: -50px;
+      transform: none;
     }
   }
 
@@ -692,12 +846,14 @@
         h5 {
           font-size: 10px;
           letter-spacing: 3px;
+          margin-bottom: 6px;
         }
 
         p {
           font-size: 14px;
           letter-spacing: 0.21px;
           line-height: 20px;
+          font-weight: $fw-r;
         }
       }
     }
@@ -721,14 +877,23 @@
       .button {
         padding: 10px 15px;
         font-size: 10px;
+        font-weight: $fw-r;
         line-height: normal;
         letter-spacing: 3px;
       }
+    }
+
+    .overview-image {
+      margin-top: 0;
     }
   }
 
   .screenshoots {
     padding: 43px 0 44px;
+
+    .heading-block {
+      margin-bottom: 25px;
+    }
 
     .screenshoots-list {
       gap: 12px;
@@ -739,6 +904,7 @@
       width: 100%;
       padding: 15px;
       font-size: 10px;
+      font-weight: $fw-r;
       letter-spacing: 3px;
     }
   }
@@ -806,16 +972,48 @@
         display: none;
       }
     }
+
+    .project-item {
+      .title {
+        font-size: 16px;
+        font-weight: $fw-sb;
+        line-height: 30px;
+        letter-spacing: 0.24px;
+      }
+
+      .button {
+        font-size: 10px;
+        font-weight: $fw-r;
+        line-height: normal;
+        letter-spacing: 3px;
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  .responsive {
+    .responsive-image-light {
+      display: none;
+    }
   }
 }
 
-@include small-mobile {
-  .project-statistic {
-    .project-statistic-list {
-      .project-statistic-item {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
+
+@include mobile {
+  .project-detail {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: #1C0B81;
+      border-radius: 50%;
+      width: 399px;
+      height: 399px;
+      top: 0;
+      left: 0;
+      transform: translate(-40%, -62%);
+      z-index: 2;
     }
   }
 }

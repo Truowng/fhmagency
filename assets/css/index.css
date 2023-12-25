@@ -6551,11 +6551,41 @@ h6 {
 }
 .project-detail .testimonials {
   padding: 150px 0 125px;
+  background: #170a64;
+}
+.project-detail .testimonials .heading-block .title {
+  font-weight: 700;
+}
+.project-detail .testimonials .heading-block .desc {
+  margin-top: 35px;
+}
+.project-detail .testimonials .testimonials-slider:after {
+  width: min(7%, 145px);
+  background: linear-gradient(90deg, rgba(23, 10, 100, 0) -34.32%, #170A64 35.95%);
+}
+.project-detail .testimonials .testimonials-slider:before {
+  width: min(7%, 145px);
+  background: linear-gradient(270deg, rgba(23, 10, 100, 0) -34.32%, #170A64 35.95%);
+}
+.project-detail .cta .cta-wrapper {
+  position: relative;
+  z-index: 2;
+}
+.project-detail .cta .button {
+  padding: 20px 48px;
+  font-weight: 400;
+}
+.project-detail .cta .cta-image {
+  margin-top: 31px;
 }
 
 .project-highlight {
   padding: 250px 0 0;
   background: #170a64;
+  overflow: hidden;
+}
+.project-highlight .project-container {
+  position: relative;
 }
 .project-highlight .heading-block {
   position: relative;
@@ -6594,19 +6624,20 @@ h6 {
 .project-highlight .button-group .button:nth-child(2):hover {
   color: #fff;
 }
-.project-highlight .swiper-wrapper {
-  padding-top: 29%;
-  align-items: end;
+.project-highlight .swiper {
+  aspect-ratio: 1334/705;
 }
 .project-highlight .swiper-slide {
-  transition: all 1.5s ease;
+  transition: all 1.25s cubic-bezier(0.77, 0, 0.175, 1);
+  display: flex;
+  align-items: end;
 }
 .project-highlight .swiper-slide img {
-  transition: all 1.5s ease;
+  transition: all 1.25s cubic-bezier(0.77, 0, 0.175, 1);
   border-radius: 20px 20px 0px 0px;
   border-style: solid;
   border-color: transparent;
-  border-width: 0px;
+  border-width: 7px 7px 0 7px;
   box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
 }
 .project-highlight .swiper-slide-prev {
@@ -6633,11 +6664,17 @@ h6 {
   border-width: 7px 7px 0 7px;
 }
 .project-highlight .decor-el {
-  top: 5%;
+  top: 50%;
   left: 0;
   width: 100%;
+  transform: translateY(-55%);
   object-fit: contain;
   overflow: hidden;
+}
+.project-highlight .decor-el svg {
+  width: 100%;
+  object-fit: contain;
+  height: initial;
 }
 
 .project-statistic {
@@ -6699,12 +6736,16 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  column-gap: 9.5%;
+  column-gap: 7.4%;
   row-gap: 35px;
 }
 .project-overview .heading-block {
   flex: 0 0 50%;
   max-width: 50%;
+}
+.project-overview .heading-block .overview-content {
+  padding-right: 24px;
+  margin-bottom: 40px;
 }
 .project-overview .heading-block h3 {
   margin-bottom: 20px;
@@ -6723,13 +6764,14 @@ h6 {
 .project-overview .heading-block .button {
   margin-top: 20px;
   padding: 20px 60px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .project-overview .overview-image {
   position: relative;
+  margin-top: 30px;
 }
 .project-overview .overview-image .overview-image-main {
-  max-width: 620px;
+  max-width: 637px;
   width: initial;
 }
 .project-overview .overview-image .overview-image-mb {
@@ -6773,7 +6815,8 @@ h6 {
 }
 .screenshoots .button {
   margin: 0 auto;
-  font-weight: 600;
+  font-weight: 500;
+  padding: 20px 57px;
 }
 
 .responsive {
@@ -6857,6 +6900,7 @@ h6 {
 .project-detail-cta {
   position: relative;
   padding-bottom: 281px;
+  background: #170a64;
   overflow: hidden;
 }
 .project-detail-cta .heading-block {
@@ -6872,10 +6916,11 @@ h6 {
 .project-detail-cta .heading-block .title {
   letter-spacing: 0.6px;
   margin-bottom: 10px;
+  font-weight: 700;
 }
 .project-detail-cta .heading-block .desc {
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 40px;
   letter-spacing: 0.39px;
   max-width: initial;
@@ -6888,6 +6933,9 @@ h6 {
   column-gap: 45px;
   row-gap: 24px;
   margin: 35px auto 0;
+}
+.project-detail-cta .project-detail-cta-button .button {
+  padding: 20px 58px;
 }
 .project-detail-cta .project-detail-cta-button .button:first-child {
   background: #fff;
@@ -6963,6 +7011,9 @@ h6 {
 .project-detail-related .project-detail-related-wrap .swiper-button-next:after {
   content: none;
 }
+.project-detail-related .project-item .title {
+  font-weight: 600;
+}
 
 @media (min-width: 1400px) {
   .project-highlight .project-container {
@@ -6973,8 +7024,17 @@ h6 {
   .project-overview .overview-image .overview-image-main {
     max-width: 100%;
   }
+  .project-detail .testimonials .testimonials-slider:before {
+    content: none;
+  }
+  .project-detail .testimonials .testimonials-slider:after {
+    content: none;
+  }
 }
 @media only screen and (max-width: 1199px) {
+  .project-highlight {
+    padding: 160px 0 0;
+  }
   .project-highlight .project-container {
     max-width: 100%;
     padding: 0;
@@ -7062,13 +7122,41 @@ h6 {
     aspect-ratio: 31/10;
   }
 }
+@media only screen and (max-width: 767px) {
+  .project-highlight .button-group .button:first-child, .project-highlight .button-group .button:nth-child(2) {
+    padding: 20px 30px;
+  }
+}
 @media only screen and (max-width: 576px) {
+  .project-detail .testimonials {
+    padding: 45px 0 59px;
+  }
+  .project-detail .testimonials .heading-block .title {
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0.33px;
+  }
+  .project-detail .testimonials .heading-block .desc {
+    margin-top: 5px;
+  }
+  .project-detail .testimonials .testimonials-slider:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 46%;
+    transform: translateX(64%);
+    background: linear-gradient(90deg, transparent 15%, #1D0E78 51%);
+  }
+  .project-highlight {
+    padding: 115px 0 0;
+  }
   .project-highlight .heading-block {
     margin-top: 31px;
+    padding-bottom: 20px;
   }
   .project-highlight .heading-block .title {
     font-size: 22px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 34px;
     letter-spacing: 0.33px;
     margin-bottom: 5px;
@@ -7080,16 +7168,33 @@ h6 {
     letter-spacing: 0.21px;
     margin-bottom: 20px;
   }
+  .project-highlight .swiper {
+    z-index: 3;
+  }
+  .project-highlight .swiper-slide img {
+    box-shadow: none;
+  }
+  .project-highlight .swiper-slide-active img {
+    border-width: 4px 4px 0 4px;
+  }
   .project-highlight .button-group {
     column-gap: 20px;
     flex-wrap: wrap;
   }
   .project-highlight .button-group .button {
     font-size: 10px;
-    font-weight: 700;
     line-height: normal;
     letter-spacing: 3px;
-    min-width: 152px;
+  }
+  .project-highlight .button-group .button:first-child, .project-highlight .button-group .button:nth-child(2) {
+    padding: 10px 15px;
+    font-weight: 400;
+  }
+  .project-highlight .decor-el {
+    width: 120%;
+    left: -10%;
+    top: -50px;
+    transform: none;
   }
   .project-statistic {
     padding: 140px 0 50px 0;
@@ -7109,11 +7214,13 @@ h6 {
   .project-statistic .project-statistic-list .project-statistic-item h5 {
     font-size: 10px;
     letter-spacing: 3px;
+    margin-bottom: 6px;
   }
   .project-statistic .project-statistic-list .project-statistic-item p {
     font-size: 14px;
     letter-spacing: 0.21px;
     line-height: 20px;
+    font-weight: 400;
   }
   .project-overview {
     padding: 40px 0 60px;
@@ -7130,11 +7237,18 @@ h6 {
   .project-overview .heading-block .button {
     padding: 10px 15px;
     font-size: 10px;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: 3px;
   }
+  .project-overview .overview-image {
+    margin-top: 0;
+  }
   .screenshoots {
     padding: 43px 0 44px;
+  }
+  .screenshoots .heading-block {
+    margin-bottom: 25px;
   }
   .screenshoots .screenshoots-list {
     gap: 12px;
@@ -7144,6 +7258,7 @@ h6 {
     width: 100%;
     padding: 15px;
     font-size: 10px;
+    font-weight: 400;
     letter-spacing: 3px;
   }
   .project-detail-cta .container {
@@ -7195,11 +7310,38 @@ h6 {
   .project-detail-related .project-detail-related-wrap .slider-button {
     display: none;
   }
+  .project-detail-related .project-item .title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0.24px;
+  }
+  .project-detail-related .project-item .button {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+  }
+  .responsive .responsive-image-light {
+    display: none;
+  }
 }
-@media only screen and (max-width: 391px) {
-  .project-statistic .project-statistic-list .project-statistic-item {
-    flex: 0 0 100%;
-    max-width: 100%;
+@media only screen and (max-width: 480px) {
+  .project-detail {
+    position: relative;
+  }
+  .project-detail:before {
+    content: "";
+    position: absolute;
+    background: #1C0B81;
+    border-radius: 50%;
+    width: 399px;
+    height: 399px;
+    top: 0;
+    left: 0;
+    transform: translate(-40%, -62%);
+    z-index: 2;
   }
 }
 #fhm-header .nav {
