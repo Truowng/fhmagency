@@ -64,11 +64,17 @@
           background: none;
           border-radius: 0;
 
+          &:before {
+            content: '';
+            width: 0;
+          }
+
           &:hover {
             background: none;
 
             &:before {
               content: '';
+              width: 100%;
             }
           }
         }
