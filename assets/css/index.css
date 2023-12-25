@@ -566,7 +566,7 @@ h6 {
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 9;
   display: none;
 }
 .navbar-size .navbar-size-wrapper {
@@ -983,7 +983,12 @@ h6 {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
   margin-top: 38px;
+}
+.cta .heading-block .button.button-l {
+  padding: 20px 50px;
+  font-weight: 400;
 }
 .cta .cta-image {
   margin-top: 100px;
@@ -1382,10 +1387,6 @@ h6 {
   .image-border {
     width: 85%;
   }
-  .image-border img {
-    border-width: 4px;
-    border-radius: 10px;
-  }
   .image-border .decor-el:nth-child(1) {
     width: 70px;
     top: -40px;
@@ -1517,6 +1518,10 @@ h6 {
     width: 100%;
     font-size: 12px;
     line-height: 24px;
+  }
+  .cta .heading-block .button.button-l {
+    padding: 10px 25px;
+    min-width: 160px;
   }
   .cta .cta-image {
     margin-top: 43px;
@@ -2155,10 +2160,9 @@ h6 {
   #home-banner .heading-block .button {
     display: none;
   }
-  #home-banner .banner-image {
-    width: 75%;
-    transform: unset;
-    margin-top: -6px;
+  #home-banner .image-border img {
+    border-width: 4px;
+    border-radius: 10px;
   }
   #home-banner .decor-el:nth-of-type(1) {
     width: 65px;
@@ -6686,6 +6690,11 @@ h6 {
 #about-banner > .decor-el:nth-child(4) {
   right: 37px;
   bottom: 0;
+  z-index: 2;
+}
+#about-banner > .decor-el:nth-child(5) {
+  left: -70px;
+  bottom: 69px;
 }
 #about-banner .banner-wrapper {
   display: flex;
@@ -6717,6 +6726,9 @@ h6 {
 #about-benefit .decor-el {
   top: 130px;
   right: -150px;
+}
+#about-benefit .benefit-content {
+  margin-top: 0;
 }
 
 #about-advantage {
@@ -6764,7 +6776,8 @@ h6 {
   font-size: 20px;
   line-height: 40px;
   color: #fff;
-  font-weight: 300;
+  font-weight: 200;
+  letter-spacing: 0.3px;
 }
 #about-advantage .advantage-item .image-border {
   max-width: 500px;
@@ -6824,12 +6837,21 @@ h6 {
   padding: 0;
   background: transparent;
 }
+#about-team .heading-block .desc {
+  margin-top: 35px;
+  max-width: 921px;
+}
 
 #about-video {
-  margin-top: 133px;
+  padding: 133px 0 132px;
+  background-color: #1d0e78;
 }
 #about-video .quote {
   margin-bottom: 144px;
+}
+
+#about-cta {
+  margin-top: 0;
 }
 
 @media only screen and (max-width: 991px) {
@@ -6905,6 +6927,7 @@ h6 {
   #about-benefit .decor-el {
     width: 300%;
     right: -335px;
+    z-index: 0;
   }
   #about-benefit .decor-el svg {
     width: 100%;

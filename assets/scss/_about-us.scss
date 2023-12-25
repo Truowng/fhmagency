@@ -34,6 +34,11 @@
     &:nth-child(4) {
       right: 37px;
       bottom: 0;
+      z-index: 2;
+    }
+    &:nth-child(5) {
+      left: -70px;
+      bottom: 69px;
     }
   }
   .banner-wrapper {
@@ -64,6 +69,9 @@
   .decor-el {
     top: 130px;
     right: -150px;
+  }
+  .benefit-content {
+    margin-top: 0;
   }
 }
 
@@ -106,7 +114,8 @@
         font-size: 20px;
         line-height: 40px;
         color: $white;
-        font-weight: $fw-l;
+        font-weight: $fw-el;
+        letter-spacing: 0.3px;
       }
     }
     .image-border {
@@ -168,13 +177,24 @@
     padding: 0;
     background: transparent;
   }
+  .heading-block {
+    .desc {
+      margin-top: 35px;
+      max-width: 921px;
+    }
+  }
 }
 
 #about-video {
-  margin-top: 133px;
+  padding: 133px 0 132px;
+  background-color: $blue-2;
   .quote {
     margin-bottom: 144px;
   }
+}
+
+#about-cta {
+  margin-top: 0;
 }
 
 // START RESPONSIVE
@@ -267,6 +287,7 @@
     .decor-el {
       width: 300%;
       right: -335px;
+      z-index: 0;
       svg {
         width: 100%;
       }
