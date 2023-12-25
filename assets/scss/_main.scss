@@ -86,8 +86,9 @@ h6 {
     margin-top: 25px;
     font-size: 20px;
     line-height: 40px;
-    font-weight: $fw-l;
+    font-weight: $fw-el;
     color: $white;
+    letter-spacing: 0.3px;
   }
   &.heading-center {
     .badge {
@@ -196,6 +197,12 @@ h6 {
       bottom: calc(-87px / 2);
       left: calc(-87px / 2);
     }
+  }
+}
+
+.curve-bg {
+  img {
+    height: 100%;
   }
 }
 
@@ -1043,7 +1050,7 @@ h6 {
       color: $white;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      font-weight: $fw-m;
+      font-weight: $fw-b;
       margin-bottom: 15px;
     }
   }
@@ -1057,7 +1064,8 @@ h6 {
           line-height: 19px;
           color: $white;
           text-transform: capitalize;
-          letter-spacing: 0.015em;
+          letter-spacing: 0.21px;
+          font-weight: $fw-l;
           &:hover {
             text-decoration: underline;
           }
@@ -1368,10 +1376,16 @@ h6 {
 }
 
 @include mobile {
+  .container {
+    padding: 0 20px;
+  }
+
   .image-border {
     width: 85%;
+
     img {
       border-width: 4px;
+      border-radius: 10px;
     }
     .decor-el {
       &:nth-child(1) {
@@ -1410,6 +1424,7 @@ h6 {
       font-size: 8px;
       line-height: 15px;
       padding: 5px 10px;
+      margin-bottom: 5px;
     }
     .title {
       font-size: 22px;
@@ -1445,10 +1460,17 @@ h6 {
   }
 
   .testimonials {
+    .testimonials-slider {
+      margin-top: 73px;
+    }
     .testimonials-item {
       max-width: 302px;
-
+      border-radius: 10px 45px 45px 45px;
       padding: 54px 17px 34px;
+      .image {
+        width: 63px;
+        height: 63px;
+      }
       .rating {
         margin-bottom: 10px;
       }
@@ -1477,6 +1499,8 @@ h6 {
   }
 
   .cta {
+    padding-top: 52px;
+    margin-top: 78px;
     .decor-el {
       &:nth-child(1) {
         top: 206px;
@@ -1490,6 +1514,7 @@ h6 {
       &:nth-child(3) {
         top: -50px;
         right: 0;
+        width: 79px;
       }
     }
     .heading-block {
@@ -1514,10 +1539,15 @@ h6 {
   }
 
   .blog {
+    margin-top: 53px;
     .blog-heading {
       align-items: baseline;
+      .button {
+        display: none;
+      }
     }
     .blog-slider {
+      margin-top: 29px;
       .swiper-slide {
         max-width: 207px;
       }
@@ -1585,14 +1615,38 @@ h6 {
     }
   }
 
+  .video {
+    .video-wrapper {
+      .button-control {
+        width: 33px;
+        height: 33px;
+        img {
+          width: 11px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  .curve-bg {
+    height: 27px;
+  }
+
   #fhm-footer {
     .footer-mid {
-      grid-column-gap: 40px;
+      grid-column-gap: 10px;
     }
     .footer-social {
       .footer-social-list {
         gap: 27px;
         flex-wrap: wrap;
+      }
+    }
+    .footer-social,
+    .footer-link {
+      .title {
+        letter-spacing: 0.21px;
+        font-weight: $fw-m;
       }
     }
   }
