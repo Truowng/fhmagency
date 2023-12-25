@@ -249,9 +249,6 @@
     aspect-ratio: 1600/830;
     
     .intro-content {
-      padding: 12% 0 20% 0;
-      margin-top: -50px;
-
       h2 {
         letter-spacing: 0.69px;
         font-weight: $fw-sb;
@@ -318,18 +315,6 @@
 
 //**Responsive Contact Us Page**//
 
-@include desktop {
-  .contact-us {
-    .intro {
-      .intro-content {
-        padding: 50px 0 0;
-        margin-top: 130px;
-        height: calc(100% - 130px);
-        justify-content: start;
-      }
-    }
-  }
-}
 
 @include desktop {
   .contact-us {    
@@ -385,12 +370,6 @@
   .contact-us {
     .intro {
       aspect-ratio: 4/3;
-
-      .intro-content {
-        h2 {
-
-        }
-      }
     }
   }
 
