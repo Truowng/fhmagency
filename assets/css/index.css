@@ -578,6 +578,8 @@ h6 {
 .navbar-size .navbar-size-item {
   border-right: 1px solid #e3e3e3;
   padding: 14px 0 12px;
+}
+.navbar-size .navbar-size-item a {
   display: flex;
   justify-content: center;
   align-items: center;

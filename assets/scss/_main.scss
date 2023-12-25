@@ -521,8 +521,11 @@ h6 {
   .navbar-size-item {
     border-right: 1px solid #e3e3e3;
     padding: 14px 0 12px;
-    @include flex(center, center, 7px);
-    flex-direction: column;
+    a {
+      @include flex(center, center, 7px);
+      flex-direction: column;
+    }
+
     .icon {
       width: 19px;
     }
