@@ -6982,10 +6982,6 @@ h6 {
   position: relative;
   z-index: 2;
 }
-.project-detail .cta .button {
-  padding: 20px 48px;
-  font-weight: 400;
-}
 .project-detail .cta .cta-image {
   margin-top: 31px;
 }
