@@ -86,8 +86,9 @@ h6 {
     margin-top: 25px;
     font-size: 20px;
     line-height: 40px;
-    font-weight: $fw-l;
+    font-weight: $fw-el;
     color: $white;
+    letter-spacing: 0.3px;
   }
   &.heading-center {
     .badge {
@@ -196,6 +197,12 @@ h6 {
       bottom: calc(-87px / 2);
       left: calc(-87px / 2);
     }
+  }
+}
+
+.curve-bg {
+  img {
+    height: 100%;
   }
 }
 
@@ -1619,6 +1626,10 @@ h6 {
         }
       }
     }
+  }
+
+  .curve-bg {
+    height: 27px;
   }
 
   #fhm-footer {

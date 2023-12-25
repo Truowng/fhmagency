@@ -1,7 +1,7 @@
 const sayingMarketing = new Swiper(".saying-marketing-slider", {
-  speed: 2000,
-  slidesPerView: 1,
-  spaceBetween: 0,
+  speed: 1500,
+  slidesPerView: 2,
+  spaceBetween: 12,
   breakpoints: {
     480: {
       spaceBetween: 23,
@@ -13,7 +13,7 @@ const sayingMarketing = new Swiper(".saying-marketing-slider", {
 const photoSlider = new Swiper(".photo-up-slider", {
   speed: 2000,
   slidesPerView: "auto",
-  spaceBetween: 10,
+  spaceBetween: 20,
   breakpoints: {
     991: {
       spaceBetween: 17,
