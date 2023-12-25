@@ -38,7 +38,9 @@ const reviewSlider = new Swiper(".review-slider", {
   },
   breakpoints: {
     991: {
-      rows: 2,
+      grid: {
+        rows: 2,
+      },
     },
   },
 });

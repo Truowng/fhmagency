@@ -33,7 +33,7 @@
   </head>
   <body>
     <!-- START HEADER -->
-    <header id="fhm-header">
+    <header id="fhm-header" class="header-service">
       <div class="container">
         <div class="topbar">
           <div class="info">
@@ -130,7 +130,14 @@
       <!-- START ADVER -->
       <section class="adver">
         <div class="adver-bg">
-          <img src="assets/images/services/adver.png" alt="adver bg" />
+          <picture>
+            <source
+              media="(max-width:479px)"
+              srcset="./assets/images/services/adver-mobile.png"
+            />
+
+            <img src="./assets/images/services/adver.png" alt="bg" />
+          </picture>
         </div>
         <div class="adver-container">
           <div class="container">
@@ -896,7 +903,14 @@ to insight standards"
           >Contact with us</a
         >
         <div class="reason-img">
-          <img src="./assets/images/els/to-the-moon.svg" alt="bg" />
+          <picture>
+            <source
+              media="(max-width:479px)"
+              srcset="./assets/images/els/to-the-moon-m.png"
+            />
+
+            <img src="./assets/images/els/to-the-moon.svg" alt="bg" />
+          </picture>
         </div>
         <button
           id="reason-popup-btn"
@@ -2605,7 +2619,7 @@ to insight standards"
           >
             <h2 class="title">
               Want to get in touch?<br />
-              Have a few faqs? We’re here to help.
+              Have a few questions? We’re here to help.
             </h2>
           </div>
           <div class="faq-container">
@@ -3131,7 +3145,14 @@ to insight standards"
           </div>
         </div>
         <div class="cta-image">
-          <img src="./assets/images/els/to-the-moon.svg" alt="bg" />
+          <picture>
+            <source
+              media="(max-width:479px)"
+              srcset="./assets/images/els/to-the-moon-m.png"
+            />
+
+            <img src="./assets/images/els/to-the-moon.svg" alt="bg" />
+          </picture>
         </div>
       </section>
       <!-- END CTA -->
@@ -3340,25 +3361,6 @@ to insight standards"
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <button
-            type="button"
-            class="btn-close quote-popup-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          >
-            <svg
-              width="21"
-              height="21"
-              viewBox="0 0 21 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0.782419C0.0267008 0.730236 0.0566879 0.678874 0.0801025 0.625457C0.361488 -0.0212906 1.17566 -0.205782 1.70598 0.258939C1.77786 0.321806 1.84359 0.392069 1.91096 0.459456C4.70879 3.25724 7.50663 6.05502 10.3036 8.85321C10.3616 8.91115 10.4104 8.97771 10.4782 9.05784C10.5563 8.98346 10.615 8.93005 10.6709 8.87417C13.5028 6.04269 16.3352 3.21204 19.1642 0.377688C19.4682 0.0732151 19.8108 -0.0755287 20.2364 0.0395217C20.9873 0.242915 21.2485 1.14401 20.7276 1.72337C20.673 1.78418 20.6135 1.84088 20.5551 1.89882C17.7528 4.70153 14.95 7.50424 12.1472 10.3065C12.0893 10.3645 12.0261 10.4167 11.9476 10.4873C12.0162 10.5592 12.0696 10.6176 12.1255 10.6735C14.957 13.5054 17.7877 16.3381 20.6213 19.1675C20.9565 19.5024 21.0908 19.8804 20.9298 20.3381C20.8032 20.6972 20.5169 20.8809 20.1764 20.9997H19.7664C19.4781 20.9089 19.2599 20.7215 19.0496 20.5107C16.2604 17.7154 13.4667 14.9242 10.6766 12.1297C10.6204 12.0734 10.5941 11.9879 10.5538 11.916C10.41 12.0187 10.3649 12.0886 10.3073 12.1461C7.52553 14.9299 4.74207 17.7117 1.96148 20.4967C1.74706 20.7116 1.52934 20.9121 1.2307 20.9997H0.820742C0.404209 20.8694 0.128164 20.5986 0.000410782 20.1795V19.7694C0.0887289 19.4707 0.289191 19.2534 0.50403 19.0389C3.29283 16.2547 6.07834 13.4676 8.86427 10.6809C8.92095 10.6242 8.97477 10.565 9.06637 10.468C8.98873 10.4109 8.9152 10.3702 8.8581 10.3131C6.10915 7.56711 3.36225 4.81864 0.612887 2.07222C0.372579 1.83225 0.126932 1.6001 0 1.27467C0 1.11072 0 0.946777 0 0.782419Z"
-                fill="white"
-              />
-            </svg>
-          </button>
           <div class="reason-popup-container">
             <div class="reason-popup-icon">
               <img
