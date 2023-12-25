@@ -15,7 +15,7 @@ const testimonialsThumb =
         slidesPerView: 1,
         spaceBetween: 20,
       },
-      392: {
+      375: {
         slidesPerView: 1.75,
         spaceBetween: 20,
       },
