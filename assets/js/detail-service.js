@@ -27,7 +27,10 @@ if (window.innerWidth < 991) {
       });
   });
 
-  document.querySelector('.saying-slider[dir="rtl"]').removeAttribute("dir");
+  const sayingReverse = document.querySelector('.saying-slider[dir="rtl"]');
+  if (sayingReverse) {
+    sayingReverse.removeAttribute("dir");
+  }
 }
 const displaySlider = new Swiper(".display-slider", {
   slidesPerView: "auto",

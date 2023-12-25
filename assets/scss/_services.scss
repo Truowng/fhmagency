@@ -21,6 +21,11 @@
 #lg-actual-size-1 {
   display: none;
 }
+#fhm-header.header-service {
+  .topbar {
+    background: transparent;
+  }
+}
 .lg-sub-html {
   display: none;
 }
@@ -237,7 +242,7 @@
       }
       .desc {
         margin-top: 0;
-        font-weight: $fw-sb;
+        font-weight: $fw-m;
         font-size: 24px;
       }
     }
@@ -323,7 +328,7 @@
       margin-bottom: 20px;
     }
     p {
-      font-weight: $fw-l;
+      font-weight: 300;
       font-size: 20px;
       line-height: 2;
       letter-spacing: 0.015em;
@@ -335,6 +340,7 @@
     margin-bottom: 82px;
     .display-slider-item {
       width: 77.6875%;
+      aspect-ratio: 1243 / 680;
       position: relative;
       overflow: hidden;
       border-radius: 20px;
@@ -389,7 +395,7 @@
         margin-bottom: 9px;
       }
       p {
-        font-weight: $fw-l;
+        font-weight: 300;
         font-size: 22px;
         letter-spacing: 0.015em;
         color: white;
@@ -862,6 +868,9 @@
     background-color: $blue;
     margin-top: 0;
     padding-top: 150px;
+    .adv-item {
+      background-color: $blue-2;
+    }
     .wave-bg {
       .wave-bg-item {
         img {
@@ -1451,6 +1460,23 @@
     }
   }
   &.saying-marketing {
+    .saying-container {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        width: 100%;
+        aspect-ratio: 1600 / 132;
+        background: linear-gradient(
+          0deg,
+          #1d0e78 0%,
+          rgba(29, 14, 120, 0) 100%
+        );
+        z-index: 5;
+      }
+    }
     .saying-marketing-slider {
       .swiper-slide {
         width: fit-content;
@@ -1508,7 +1534,7 @@
     .general-content {
       max-width: 440px;
       h3 {
-        font-weight: $fw-sb;
+        font-weight: $fw-m;
         font-size: 26px;
         letter-spacing: 0.015em;
         margin-bottom: 13px;
@@ -1517,6 +1543,7 @@
         font-weight: $fw-l;
         font-size: 20px;
         line-height: 2;
+        letter-spacing: 0.015em;
         margin-bottom: 25px;
       }
     }
@@ -1563,7 +1590,7 @@
     min-height: 521px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 12px;
+    padding: 0 20px;
   }
   .associate-icon {
     aspect-ratio: 1;
@@ -2883,7 +2910,7 @@
       background-color: #e8f3ff;
     }
     .general-container {
-      padding: 0 12px;
+      padding: 0 20px;
       max-width: 720px;
       margin-left: auto;
       margin-right: auto;
@@ -2929,79 +2956,83 @@
     }
     .associate-icon {
       &:nth-child(1) {
-        width: 6%;
+        width: 5.128%;
         top: 6%;
-        left: auto;
-        right: 12%;
+        left: 16.1538%;
       }
       &:nth-child(2) {
-        width: 12%;
-        left: 20%;
+        top: 6%;
+        width: 12.82%;
+        left: 24.615%;
       }
       &:nth-child(3) {
-        width: 10%;
-        top: 18%;
-        left: 32%;
+        width: 10.25%;
+        top: 3%;
+        left: 45.641%;
       }
       &:nth-child(4) {
-        width: 11%;
-        top: 30%;
-        left: 20.08%;
+        width: 10.25%;
+        top: 5%;
+        left: auto;
+        right: 10.256%;
       }
       &:nth-child(5) {
-        width: 7%;
-        top: 20%;
-        right: 40%;
+        width: 5.128%;
+        top: 23%;
+        right: 5.128%;
       }
       &:nth-child(6) {
-        width: 8%;
-        top: 30%;
-        right: 48%;
+        width: 10.25%;
+        top: 25%;
+        right: 17.6923%;
       }
       &:nth-child(7) {
-        width: 9%;
-        top: 35%;
-        right: 30%;
+        width: 12.82%;
+        top: 17%;
+        right: 29.7436%;
       }
       &:nth-child(8) {
-        width: 14%;
-        top: 50%;
-        right: 35%;
+        width: 7.6923%;
+        top: 23%;
+        left: 39.487%;
+        right: auto;
       }
       &:nth-child(9) {
-        width: 8%;
-        top: 42%;
-        left: 35%;
+        width: 10.2564%;
+        top: 26%;
+        left: 15.641%;
       }
       &:nth-child(10) {
-        width: 12%;
-        top: 45%;
-        right: 15%;
+        width: 7.6923%;
+        top: 16%;
+        right: auto;
+        left: 5.1282%;
       }
       &:nth-child(11) {
-        width: 13%;
-        top: 13%;
-        left: 5%;
+        width: 10.2564%;
+        top: 42%;
+        left: 5.8974%;
       }
       &:nth-child(12) {
-        width: 9%;
-        top: 26%;
-        right: 5%;
+        width: 10.2564%;
+        top: 38%;
+        left: 28.205%;
+        right: auto;
       }
       &:nth-child(13) {
-        width: 8%;
-        top: 58%;
-        left: 40%;
+        width: 20.5128%;
+        top: 38%;
+        left: 40.5128%;
       }
       &:nth-child(14) {
-        width: 8%;
-        top: 25%;
-        right: 18%;
+        width: 7.6923%;
+        top: 50%;
+        right: 26.923%;
       }
       &:nth-child(15) {
-        width: 8%;
-        top: 10%;
-        right: 25%;
+        width: 12.82%;
+        top: 45%;
+        right: 5.8974%;
       }
       &:nth-child(16) {
         width: 13%;
@@ -3242,6 +3273,11 @@
       }
     }
   }
+  #fhm-marketing-service {
+    .display {
+      margin-top: -100px;
+    }
+  }
 }
 
 @include extra-mobile {
@@ -3285,7 +3321,7 @@
   }
   .display {
     .display-bg {
-      height: 65%;
+      height: 63%;
     }
     .display-heading {
       h2 {
@@ -3304,9 +3340,31 @@
     .display-slider {
       .display-slider-item {
         border-radius: 8px;
+        aspect-ratio: 300 / 206;
         &:first-child {
           margin-left: 20px;
         }
+      }
+    }
+    .display-statistic {
+      gap: 35px;
+      .display-statistic-el {
+        width: fit-content;
+      }
+    }
+    &.display-software {
+      padding-top: 10px;
+      padding-bottom: 40px;
+      &::before,
+      &::after {
+        aspect-ratio: 430 / 148;
+        width: 110%;
+      }
+      &::before {
+        transform: translateY(-32%) translateX(-50%);
+      }
+      &::after {
+        transform: translateY(32%) translateX(-50%);
       }
     }
   }
@@ -3362,12 +3420,38 @@
     margin-bottom: 50px;
     &.saying-marketing {
       margin-top: -30px;
+      .saying-container {
+        &::after {
+          aspect-ratio: 390 / 252;
+        }
+      }
       .saying-marketing-slider {
-        padding: 0 20px;
+        padding: 0 10px;
         .swiper-slide {
           .feedback {
             &.feedback-col {
               width: 100%;
+              height: 100%;
+              padding: 20px 10px;
+              .feedback-img {
+                aspect-ratio: 159 / 109;
+              }
+              .feedback-content {
+                span {
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  -webkit-line-clamp: 1;
+                }
+                p {
+                  line-height: 18px;
+                  height: 90px;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  -webkit-line-clamp: 5;
+                }
+              }
             }
           }
           &:first-child {
@@ -3395,7 +3479,7 @@
       width: 300%;
       transform: scale(0.333) translateX(-100%);
       &:first-child {
-        margin-bottom: -63%;
+        margin-bottom: -250px;
       }
     }
     .photo-up-item,
@@ -3416,7 +3500,7 @@
   .service-contact {
     padding-bottom: 56px;
     .service-contact-container {
-      margin: 0 -12px;
+      margin: 0 -20px;
     }
     .service-contact-main {
       padding: 42px 20px;
@@ -3428,8 +3512,20 @@
     }
   }
   .associate {
-    padding-top: 60px;
-    margin-top: -60px;
+    padding-top: 75px;
+    margin-top: -70px;
+    min-height: 470px;
+    &::before,
+    &::after {
+      aspect-ratio: 434 / 112;
+      width: 111%;
+    }
+    &::before {
+      transform: translateX(-50%) translateY(-70%);
+    }
+    &::after {
+      transform: translateX(-50%) translateY(70%);
+    }
     .associate-content {
       h2 {
         font-size: 22px;
@@ -3439,10 +3535,11 @@
     }
     .associate-list {
       margin-top: 20px;
-      min-height: 400px;
+      min-height: 250px;
     }
   }
   .adv {
+    margin-top: 40px;
     .adv-list {
       gap: 12px;
       margin-bottom: 50px;
@@ -3499,6 +3596,9 @@
   .process {
     &.process-marketing {
       padding-top: 50px;
+      .process-list {
+        padding-bottom: 40px;
+      }
     }
   }
   .feedback {
@@ -3513,7 +3613,7 @@
     .general-row {
       margin-bottom: 24px;
       .general-wrapper {
-        padding: 28px;
+        padding: 28px 27px 28px 28px;
       }
       .general-content {
         h3 {
@@ -3530,10 +3630,16 @@
           padding: 10px 20px !important;
         }
       }
+      &:nth-child(even) {
+        .general-wrapper {
+          padding: 28px 27px 28px 28px;
+        }
+      }
     }
   }
   .prelude {
     padding-top: 38px;
+    padding-bottom: 110px;
     .prelude-list {
       margin-top: 40px;
       gap: 40px;
@@ -3572,7 +3678,7 @@
     padding-bottom: 40px;
   }
   .picture {
-    height: 212px;
+    height: 213px;
     .picture-list {
       gap: 3px;
     }
