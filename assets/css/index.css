@@ -1433,14 +1433,14 @@ h6 {
     padding: 0;
   }
   #fhm-header .topbar {
-    padding: 11px var(--bs-gutter-x, 0.75rem);
+    padding: 11px 20px;
     transform: unset;
     background-color: #170a64;
     justify-content: space-between;
     margin-bottom: 18px;
   }
   #fhm-header .header-wrapper {
-    padding: 0 var(--bs-gutter-x, 0.75rem);
+    padding: 0 20px;
   }
   #fhm-header .logo {
     width: 126px;
@@ -6888,7 +6888,7 @@ h6 {
 }
 #about-banner > .decor-el:nth-child(4) {
   right: 37px;
-  bottom: 0;
+  bottom: -1px;
   z-index: 2;
 }
 #about-banner > .decor-el:nth-child(5) {
@@ -8513,7 +8513,7 @@ h6 {
 
 #notfound {
   position: relative;
-  padding: 103px 0 747px;
+  padding: 103px 0 796px;
 }
 #notfound .bg {
   position: absolute;
@@ -8553,16 +8553,29 @@ h6 {
   margin-top: 40px;
 }
 #notfound .notfound-image {
+  position: absolute;
+  right: -102px;
+  top: 183px;
   max-width: 760px;
   width: 100%;
-  transform: translateY(80px);
 }
 
-@media (min-width: 1400px) {
-  #notfound .container {
-    max-width: 1320px;
-    margin-right: 0;
-    padding-right: 0;
+@media only screen and (max-width: 1199px) {
+  #notfound {
+    padding-bottom: 460px;
+  }
+  #notfound .notfound-image {
+    display: none;
+  }
+  #notfound .notfound-wrapper {
+    justify-content: center;
+  }
+  #notfound .notfound-wrapper * {
+    text-align: center;
+  }
+  #notfound .notfound-wrapper .button {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -8595,6 +8608,11 @@ h6 {
   #notfound {
     padding-top: 0;
     padding-bottom: 240px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: unset;
   }
   #notfound .notfound-wrapper {
     gap: 150px;

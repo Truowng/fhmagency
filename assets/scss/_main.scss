@@ -1487,14 +1487,14 @@ h6 {
       padding: 0;
     }
     .topbar {
-      padding: 11px var(--bs-gutter-x, 0.75rem);
+      padding: 11px 20px;
       transform: unset;
       background-color: $blue;
       justify-content: space-between;
       margin-bottom: 18px;
     }
     .header-wrapper {
-      padding: 0 var(--bs-gutter-x, 0.75rem);
+      padding: 0 20px;
     }
     .logo {
       width: 126px;

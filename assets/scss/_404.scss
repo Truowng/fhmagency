@@ -1,7 +1,7 @@
 // START 404
 #notfound {
   position: relative;
-  padding: 103px 0 747px;
+  padding: 103px 0 796px;
   .bg {
     position: absolute;
     bottom: 0;
@@ -37,19 +37,30 @@
     }
   }
   .notfound-image {
+    position: absolute;
+    right: -102px;
+    top: 183px;
     max-width: 760px;
     width: 100%;
-    transform: translateY(80px);
   }
 }
 
 // START RESPONSIVE
-@include min-extra-desktop {
+@include desktop {
   #notfound {
-    .container {
-      max-width: 1320px;
-      margin-right: 0;
-      padding-right: 0;
+    padding-bottom: 460px;
+    .notfound-image {
+      display: none;
+    }
+    .notfound-wrapper {
+      justify-content: center;
+      * {
+        text-align: center;
+      }
+      .button {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }
@@ -88,6 +99,8 @@
   #notfound {
     padding-top: 0;
     padding-bottom: 240px;
+    height: 100vh;
+    @include flex(center, center, unset);
     .notfound-wrapper {
       gap: 150px;
     }
