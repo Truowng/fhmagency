@@ -7925,6 +7925,24 @@ h6 {
 .list-services .services .services-list {
   position: relative;
 }
+.list-services .services .services-list:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 33%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+.list-services .services .services-list:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 33%;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+}
 .list-services .services .services-slider {
   width: 100%;
   aspect-ratio: 1136/1200;
@@ -8030,6 +8048,11 @@ h6 {
 .list-services .services .services-slider-img .swiper-wrapper {
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }
+.list-services .services .services-slider-img .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .list-services .cta {
   margin-top: 53px;
 }
@@ -8080,6 +8103,9 @@ h6 {
     line-height: 44px;
     letter-spacing: 0.33px;
   }
+  .list-services .services h2 {
+    margin-bottom: 10px;
+  }
   .list-services .services .services-slider .services-slider-item .services-slider-content {
     left: 20px;
   }
@@ -8100,6 +8126,12 @@ h6 {
   }
   .intro .intro-content p {
     font-weight: 200;
+  }
+  .list-services .services .services-slider {
+    aspect-ratio: 350/600;
+  }
+  .list-services .services .services-slider-img {
+    aspect-ratio: 350/264;
   }
 }
 #fhm-header .nav {
