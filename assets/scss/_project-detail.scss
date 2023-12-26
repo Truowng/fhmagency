@@ -997,4 +997,12 @@
       z-index: 2;
     }
   }
+
+  .responsive {
+    padding: 40px 0 385px;
+
+    .responsive-image {
+      transform: translate(10%, 0);
+    }
+  }
 }

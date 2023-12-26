@@ -7744,6 +7744,12 @@ h6 {
     transform: translate(-40%, -62%);
     z-index: 2;
   }
+  .responsive {
+    padding: 40px 0 385px;
+  }
+  .responsive .responsive-image {
+    transform: translate(10%, 0);
+  }
 }
 #fhm-header .nav {
   transform: none;
