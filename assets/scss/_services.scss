@@ -2590,7 +2590,7 @@
   }
   .adver {
     &::after {
-      content: none;
+      aspect-ratio: 390 / 35;
     }
     .adver-container {
       align-items: end;
