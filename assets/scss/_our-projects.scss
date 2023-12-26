@@ -2,15 +2,26 @@
 #project-banner {
   position: relative;
   padding: 206px 0 235px;
+  background: $blue;
   .decor-el {
-    left: 50%;
-    top: 100px;
-    transform: translateX(-40%);
-    width: 100%;
+    &:nth-child(1) {
+      left: 50%;
+      top: 100px;
+      transform: translateX(-40%);
+      width: 100%;
+    }
+    &:nth-child(2) {
+      top: -248px;
+      left: -164px;
+      z-index: 0;
+      display: none;
+    }
   }
   .curve-bg {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
   }
 
   .heading-block {
@@ -20,6 +31,22 @@
       display: none;
     }
   }
+}
+
+#project-benefit {
+  position: relative;
+  padding: 250px 0 151px;
+  margin-top: 0;
+  .curve-bg {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+#project-cta {
+  margin-top: 0;
 }
 
 @include landscape-phone {
@@ -35,14 +62,27 @@
 }
 
 @include mobile {
+  #project {
+    .heading-block {
+      display: none;
+    }
+    .project-group {
+      margin-top: 0;
+    }
+  }
   #project-banner {
     padding: 140px 0 66px;
     .decor-el {
-      width: 180%;
-      top: 50%;
-      transform: translate(-50%, -40%);
-      svg {
-        width: 100%;
+      &:nth-child(1) {
+        width: 180%;
+        top: 50%;
+        transform: translate(-50%, -40%);
+        svg {
+          width: 100%;
+        }
+      }
+      &:nth-child(2) {
+        display: block;
       }
     }
     .heading-block {
@@ -59,6 +99,10 @@
         text-align: left;
       }
     }
+  }
+
+  #project-benefit {
+    padding: 100px 0 60px;
   }
 
   .project {
