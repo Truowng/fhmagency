@@ -277,12 +277,18 @@ h6 {
   font-size: 20px;
   line-height: 40px;
   margin-bottom: 61px;
+  letter-spacing: 0.3px;
 }
 .quote.quote-l {
   font-size: 40px;
   line-height: 70px;
   text-align: center;
   font-weight: 200;
+  letter-spacing: 0.6px;
+}
+
+.bg-blue {
+  background-color: #1d0e78;
 }
 
 #fhm-header {
@@ -1031,9 +1037,10 @@ h6 {
 .benefit .benefit-content .content-wrapper .content p {
   font-size: 20px;
   line-height: 40px;
-  font-weight: 300;
+  font-weight: 200;
   color: #fff;
   margin-bottom: 30px;
+  letter-spacing: 0.3px;
 }
 .benefit .benefit-content .content-wrapper .content p:last-child {
   margin-bottom: 0;
@@ -1571,6 +1578,9 @@ h6 {
   .benefit .benefit-content {
     margin-top: 41px;
   }
+  .benefit .benefit-content .content-wrapper {
+    gap: 29px;
+  }
   .benefit .benefit-content .content-wrapper .content p {
     font-size: 14px;
     line-height: 32px;
@@ -1579,22 +1589,23 @@ h6 {
   .quote.quote-m {
     font-size: 14px;
     line-height: 32px;
+    margin-bottom: 32px;
   }
   .quote.quote-l {
     font-size: 20px;
     line-height: 40px;
   }
   .gallery {
-    padding-bottom: 40px;
+    padding: 60px 0 40px;
   }
   .gallery .gallery-wrapper {
     height: 100px;
   }
   .gallery .gallery-wrapper .image::before {
-    top: -7px;
-    left: -8px;
-    width: calc(100% + 14px);
-    height: calc(100% + 14px);
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 9px);
+    height: calc(100% + 9px);
   }
   .video .video-wrapper .button-control {
     width: 33px;
@@ -6757,6 +6768,7 @@ h6 {
 }
 #about-banner > .decor-el:nth-child(2) img:nth-child(1) {
   margin-bottom: 15px;
+  width: 70%;
   animation: moveHorizontal ease-in-out 5s infinite alternate-reverse;
 }
 #about-banner > .decor-el:nth-child(2) img:nth-child(2) {
@@ -6853,6 +6865,7 @@ h6 {
   line-height: 60px;
   margin-bottom: 5px;
   font-weight: 700;
+  letter-spacing: 0.48px;
 }
 #about-advantage .advantage-item .content .desc {
   font-size: 20px;
@@ -6905,6 +6918,7 @@ h6 {
   font-weight: 300;
   line-height: 32px;
   letter-spacing: 0.27px;
+  font-weight: 200;
 }
 
 #about-team {
@@ -6994,6 +7008,10 @@ h6 {
   #about-banner > .decor-el:nth-child(4) {
     display: none;
   }
+  #about-banner > .decor-el:nth-child(5) {
+    left: 156px;
+    bottom: 47px;
+  }
   #about-benefit {
     padding-top: 44px;
     margin-top: 0;
@@ -7015,10 +7033,19 @@ h6 {
     width: 100%;
   }
   #about-advantage {
+    margin-top: 43px;
     padding-bottom: 140px;
+  }
+  #about-advantage .advantage-list {
+    margin-top: 57px;
   }
   #about-advantage .advantage-item {
     align-items: center;
+    gap: 52px;
+    margin-bottom: 80px;
+  }
+  #about-advantage .advantage-item:nth-child(even) {
+    gap: 52px;
   }
   #about-advantage .advantage-item .content .title {
     font-size: 22px;
@@ -7034,11 +7061,14 @@ h6 {
   #about-value .value-group {
     margin-top: 30px;
   }
+  #about-value .value-item {
+    border-radius: 50px;
+  }
   #about-team .gallery {
-    margin-top: 50px;
+    margin-top: 25px;
   }
   #about-video {
-    margin-top: 70px;
+    padding-top: 70px;
   }
   #about-video .quote {
     margin-bottom: 65px;
