@@ -1,9 +1,10 @@
 const projectHighlight = new Swiper(".project-highlight .swiper", {
     direction: "horizontal",
     loop: true,
-    speed: 1000,
+    speed: 300,
     centeredSlides: true,
     slideToClickedSlide: true,
+    slidesPerGroup: 1,
     slidesPerView: 3,
     spaceBetween: 0,
     watchSlidesProgress: true,
