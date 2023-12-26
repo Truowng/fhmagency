@@ -519,7 +519,7 @@ h6 {
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 9;
+  z-index: 15;
   display: none;
   .navbar-size-wrapper {
     display: grid;
@@ -1103,7 +1103,7 @@ h6 {
       background-color: transparent;
       color: $white;
       font-size: 14px;
-      letter-spacing: 0.015em;
+      letter-spacing: 0.18px;
       option {
         color: $black;
       }
@@ -1738,6 +1738,9 @@ h6 {
 
   #fhm-footer {
     margin-top: 26px;
+    .footer-logo {
+      max-width: 160px;
+    }
     .footer-mid {
       grid-column-gap: 10px;
     }
