@@ -2,6 +2,7 @@
 #project-banner {
   position: relative;
   padding: 206px 0 235px;
+  background: $blue;
   .decor-el {
     left: 50%;
     top: 100px;
@@ -22,6 +23,20 @@
   }
 }
 
+#project-benefit {
+  position: relative;
+  .curve-bg {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+#project-cta {
+  margin-top: 0;
+}
+
 @include landscape-phone {
   .project {
     .project-pagination {
@@ -35,6 +50,14 @@
 }
 
 @include mobile {
+  #project {
+    .heading-block {
+      display: none;
+    }
+    .project-group {
+      margin-top: 0;
+    }
+  }
   #project-banner {
     padding: 140px 0 66px;
     .decor-el {

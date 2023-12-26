@@ -1200,7 +1200,7 @@ h6 {
 
 // START SEO
 .seo {
-  padding: 58px 0;
+  padding: 58px 0 130px;
 
   background-color: $blue;
   p {
@@ -1654,7 +1654,9 @@ h6 {
   }
 
   .benefit {
-    margin-top: 98px;
+    margin-top: 0;
+    padding: 250px 0 132px;
+    background-color: $blue;
     .benefit-content {
       margin-top: 41px;
 

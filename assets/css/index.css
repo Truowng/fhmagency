@@ -1216,7 +1216,7 @@ h6 {
 }
 
 .seo {
-  padding: 58px 0;
+  padding: 58px 0 130px;
   background-color: #170a64;
 }
 .seo p {
@@ -1573,7 +1573,9 @@ h6 {
     padding: 100px 0 44px;
   }
   .benefit {
-    margin-top: 98px;
+    margin-top: 0;
+    padding: 250px 0 132px;
+    background-color: #170a64;
   }
   .benefit .benefit-content {
     margin-top: 41px;
@@ -2372,6 +2374,7 @@ h6 {
 #project-banner {
   position: relative;
   padding: 206px 0 235px;
+  background: #170a64;
 }
 #project-banner .decor-el {
   left: 50%;
@@ -2391,6 +2394,20 @@ h6 {
   display: none;
 }
 
+#project-benefit {
+  position: relative;
+}
+#project-benefit .curve-bg {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+}
+
+#project-cta {
+  margin-top: 0;
+}
+
 @media only screen and (max-width: 767px) {
   .project .project-pagination {
     justify-content: space-between;
@@ -2401,6 +2418,12 @@ h6 {
   }
 }
 @media only screen and (max-width: 480px) {
+  #project .heading-block {
+    display: none;
+  }
+  #project .project-group {
+    margin-top: 0;
+  }
   #project-banner {
     padding: 140px 0 66px;
   }
@@ -6759,6 +6782,7 @@ h6 {
   top: 288px;
   left: 60px;
   animation: spinMoving ease-in-out 5s infinite;
+  z-index: -1;
 }
 #about-banner > .decor-el:nth-child(2) {
   bottom: 197px;
@@ -6786,9 +6810,13 @@ h6 {
   bottom: 0;
   z-index: 2;
 }
-#about-banner > .decor-el:nth-child(5) {
-  left: -70px;
-  bottom: 69px;
+#about-banner > .decor-el:nth-child(6) {
+  width: 399px;
+  height: 399px;
+  top: -248px;
+  left: -164px;
+  z-index: -1;
+  display: none;
 }
 #about-banner .banner-wrapper {
   display: flex;
@@ -6940,7 +6968,7 @@ h6 {
 
 #about-video {
   padding: 133px 0 132px;
-  background-color: #1d0e78;
+  background-color: #170a64;
 }
 #about-video .quote {
   margin-bottom: 144px;
@@ -6984,6 +7012,9 @@ h6 {
   }
 }
 @media only screen and (max-width: 480px) {
+  .bg-blue {
+    background: transparent;
+  }
   #about-banner {
     padding: 142px 0 95px;
   }
@@ -7012,6 +7043,9 @@ h6 {
     left: 156px;
     bottom: 47px;
   }
+  #about-banner > .decor-el:nth-child(6) {
+    display: block;
+  }
   #about-benefit {
     padding-top: 44px;
     margin-top: 0;
@@ -7035,6 +7069,15 @@ h6 {
   #about-advantage {
     margin-top: 43px;
     padding-bottom: 140px;
+  }
+  #about-advantage .heading-block .title {
+    max-width: 292px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 34px;
+  }
+  #about-advantage .heading-block .desc {
+    max-width: 337px;
   }
   #about-advantage .advantage-list {
     margin-top: 57px;
@@ -7064,11 +7107,16 @@ h6 {
   #about-value .value-item {
     border-radius: 50px;
   }
+  #about-team {
+    background: linear-gradient(0deg, rgba(23, 10, 100, 0) 50%, #170a64 78%), url(../images/background/brands-backdrop.jpg) no-repeat center;
+    padding-top: 46px;
+  }
   #about-team .gallery {
     margin-top: 25px;
   }
   #about-video {
     padding-top: 70px;
+    padding-bottom: 83px;
   }
   #about-video .quote {
     margin-bottom: 65px;
