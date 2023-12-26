@@ -214,13 +214,20 @@ h6 {
     font-size: 20px;
     line-height: 40px;
     margin-bottom: 61px;
+    letter-spacing: 0.3px;
+    font-weight: $fw-el;
   }
   &.quote-l {
     font-size: 40px;
     line-height: 70px;
     text-align: center;
     font-weight: $fw-el;
+    letter-spacing: 0.6px;
   }
+}
+
+.bg-blue {
+  background-color: $blue-2;
 }
 
 // END INIT
@@ -971,8 +978,9 @@ h6 {
       margin-top: 38px;
     }
     .button.button-l {
-      padding: 20px 50px;
-      font-weight: $fw-r;
+      font-size: 16px !important;
+      padding: 20px 50px !important;
+      font-weight: $fw-r !important;
     }
   }
   .cta-image {
@@ -991,9 +999,11 @@ h6 {
       margin-bottom: 140px;
       .content-image {
         max-width: 444px;
-        height: 444px;
+        // height: 444px;
         border-radius: 500px;
         overflow: hidden;
+        width: 100%;
+        aspect-ratio: 1;
         img {
           height: 100%;
           object-fit: cover;
@@ -1005,9 +1015,10 @@ h6 {
         p {
           font-size: 20px;
           line-height: 40px;
-          font-weight: $fw-l;
+          font-weight: $fw-el;
           color: $white;
           margin-bottom: 30px;
+          letter-spacing: 0.3px;
           &:last-child {
             margin-bottom: 0;
           }
@@ -1193,7 +1204,7 @@ h6 {
 
 // START SEO
 .seo {
-  padding: 58px 0;
+  padding: 58px 0 130px;
 
   background-color: $blue;
   p {
@@ -1597,12 +1608,14 @@ h6 {
         padding: 10px;
         max-width: 160px;
         width: 100%;
-        font-size: 12px;
-        line-height: 24px;
+
+        line-height: 24px !important;
+        font-weight: $fw-r !important;
       }
       .button.button-l {
-        padding: 10px 25px;
+        padding: 10px 25px !important;
         min-width: 160px;
+        font-size: 12px !important;
       }
     }
     .cta-image {
@@ -1647,17 +1660,23 @@ h6 {
   }
 
   .benefit {
-    margin-top: 98px;
+    margin-top: 0;
+    padding: 250px 0 132px;
+    background-color: $blue;
     .benefit-content {
       margin-top: 41px;
 
       .content-wrapper {
+        gap: 29px;
         .content {
           p {
             font-size: 14px;
             line-height: 32px;
             margin-bottom: 19px;
           }
+        }
+        .content-image {
+          aspect-ratio: 1;
         }
       }
     }
@@ -1666,6 +1685,7 @@ h6 {
     &.quote-m {
       font-size: 14px;
       line-height: 32px;
+      margin-bottom: 32px;
     }
     &.quote-l {
       font-size: 20px;
@@ -1674,15 +1694,15 @@ h6 {
   }
 
   .gallery {
-    padding-bottom: 40px;
+    padding: 60px 0 40px;
     .gallery-wrapper {
       height: 100px;
       .image {
         &::before {
-          top: -7px;
-          left: -8px;
-          width: calc(100% + 14px);
-          height: calc(100% + 14px);
+          top: -5px;
+          left: -5px;
+          width: calc(100% + 9px);
+          height: calc(100% + 9px);
         }
       }
     }

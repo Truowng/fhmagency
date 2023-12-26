@@ -7,6 +7,7 @@
       top: 288px;
       left: 60px;
       animation: spinMoving ease-in-out 5s infinite;
+      z-index: -1;
     }
     &:nth-child(2) {
       bottom: 197px;
@@ -16,6 +17,7 @@
       img {
         &:nth-child(1) {
           margin-bottom: 15px;
+          width: 70%;
           animation: moveHorizontal ease-in-out 5s infinite alternate-reverse;
         }
         &:nth-child(2) {
@@ -36,9 +38,13 @@
       bottom: 0;
       z-index: 2;
     }
-    &:nth-child(5) {
-      left: -70px;
-      bottom: 69px;
+    &:nth-child(6) {
+      width: 399px;
+      height: 399px;
+      top: -248px;
+      left: -164px;
+      z-index: -1;
+      display: none;
     }
   }
   .banner-wrapper {
@@ -109,6 +115,7 @@
         line-height: 60px;
         margin-bottom: 5px;
         font-weight: $fw-b;
+        letter-spacing: 0.48px;
       }
       .desc {
         font-size: 20px;
@@ -160,6 +167,7 @@
         font-weight: 300;
         line-height: 32px;
         letter-spacing: 0.27px;
+        font-weight: $fw-el;
       }
     }
   }
@@ -187,7 +195,7 @@
 
 #about-video {
   padding: 133px 0 132px;
-  background-color: $blue-2;
+  background-color: $blue;
   .quote {
     margin-bottom: 144px;
   }
@@ -244,6 +252,9 @@
 }
 
 @include mobile {
+  .bg-blue {
+    background: transparent;
+  }
   #about-banner {
     padding: 142px 0 95px;
     .heading-block {
@@ -271,6 +282,13 @@
       &:nth-child(4) {
         display: none;
       }
+      &:nth-child(5) {
+        left: 156px;
+        bottom: 47px;
+      }
+      &:nth-child(6) {
+        display: block;
+      }
     }
   }
   #about-benefit {
@@ -294,9 +312,29 @@
     }
   }
   #about-advantage {
+    margin-top: 43px;
     padding-bottom: 140px;
+    .heading-block {
+      .title {
+        max-width: 292px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 34px;
+      }
+      .desc {
+        max-width: 337px;
+      }
+    }
+    .advantage-list {
+      margin-top: 57px;
+    }
     .advantage-item {
       align-items: center;
+      gap: 52px;
+      margin-bottom: 80px;
+      &:nth-child(even) {
+        gap: 52px;
+      }
       .content {
         .title {
           font-size: 22px;
@@ -314,14 +352,21 @@
     .value-group {
       margin-top: 30px;
     }
+    .value-item {
+      border-radius: 50px;
+    }
   }
   #about-team {
+    background: linear-gradient(0deg, rgba(23, 10, 100, 0) 50%, #170a64 78%),
+      url(../images/background/brands-backdrop.jpg) no-repeat center;
+    padding-top: 46px;
     .gallery {
-      margin-top: 50px;
+      margin-top: 25px;
     }
   }
   #about-video {
-    margin-top: 70px;
+    padding-top: 70px;
+    padding-bottom: 83px;
     .quote {
       margin-bottom: 65px;
     }
