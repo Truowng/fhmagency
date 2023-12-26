@@ -1,28 +1,6 @@
 // INIT
 AOS.init();
 
-//HACKER
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+~|,.?/{}[]-123456789";
-
-const hackerEffect = (el) => {
-  let iterations = 0;
-  const interval = setInterval(() => {
-    el.innerText = el.innerText
-      .split("")
-      .map((letter, index) => {
-        if (index < iterations) {
-          return el.dataset.value[index];
-        }
-        return letters[Math.floor(Math.random() * letters.split("").length)];
-      })
-      .join("");
-    if (iterations >= el.dataset.value.length) {
-      clearInterval(interval);
-    }
-    iterations += 1 / 5;
-  }, 30);
-};
-
 const testimonialsSlider = new Swiper(
   ".testimonials .testimonials-slider .swiper",
   {
@@ -116,14 +94,60 @@ if (navMobile) {
   });
 }
 
-// COUNTER
-const counterItems = document.querySelectorAll(".counter-item .num");
+// COUNT STATISTIC
+const valueDisplays = document.querySelectorAll(
+  ".display-statistic-el h4 span"
+);
 
-if (counterItems) {
-  counterItems.forEach((counterItem) => {
-    hackerEffect(counterItem);
-  });
+const counterDisplays = document.querySelectorAll(".counter-item .num span");
+const interval = 2500;
+let isRuned = false;
+function checkScroll(els) {
+  if (!isRuned) {
+    const triggerBottom = (window.innerHeight / 5) * 4;
+    els.forEach((el) => {
+      const boxTop = el.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        isRuned = true;
+        let startValue = 0;
+        let endValue = parseInt(el.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function () {
+          startValue += 1;
+          el.textContent = startValue;
+          if (startValue == endValue) {
+            clearInterval(counter);
+          }
+        }, duration);
+      }
+    });
+  }
 }
+// function checkScroll() {
+//   if (!isRuned) {
+//     const triggerBottom = (window.innerHeight / 5) * 4;
+//     valueDisplays.forEach((valueDisplay) => {
+//       const boxTop = valueDisplay.getBoundingClientRect().top;
+//       if (boxTop < triggerBottom) {
+//         isRuned = true;
+//         let startValue = 0;
+//         let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+//         let duration = Math.floor(interval / endValue);
+//         let counter = setInterval(function () {
+//           startValue += 1;
+//           valueDisplay.textContent = startValue;
+//           if (startValue == endValue) {
+//             clearInterval(counter);
+//           }
+//         }, duration);
+//       }
+//     });
+//   }
+// }
+window.addEventListener(
+  "scroll",
+  (checkScroll(valueDisplays), checkScroll(counterDisplays))
+);
 
 // ANIMATE LINES
 const lines = document.querySelectorAll("#multiLines path");
