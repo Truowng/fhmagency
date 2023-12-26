@@ -18,6 +18,7 @@
       line-height: 60px;
       letter-spacing: 0.6px;
       margin-bottom: 10px;
+      font-weight: $fw-b;
     }
 
     .desc {
@@ -25,6 +26,7 @@
       letter-spacing: 0.3px;
       margin-bottom: 52px;
       margin-top: 0;
+      max-width: 1107px;
     }
   }
 
@@ -33,14 +35,24 @@
     column-gap: 45px;
     row-gap: 20px;
 
-    .button-outline {
-      border: 1px solid $yellow;
-      color: $yellow;
+    .button {
+      &:first-child {
+        padding: 20px 57px;
+        font-weight: $fw-m;
+      }
 
-      &:hover {
-        color: #fff;
+      &:nth-child(2){
+        border: 1px solid $yellow;
+        color: $yellow;
+        padding: 20px 48px;
+        font-weight: $fw-m;
+  
+        &:hover {
+          color: #fff;
+        }
       }
     }
+
   }
 
   .swiper-wrapper {
@@ -140,7 +152,7 @@
 
       h5 {
         font-size: 12px;
-        font-weight: $fw-m;
+        font-weight: $fw-r;
         line-height: normal;
         letter-spacing: 3.6px;
         text-transform: uppercase;
@@ -149,7 +161,7 @@
 
       p {
         font-size: 18px;
-        font-weight: $fw-sb;
+        font-weight: $fw-m;
         line-height: normal;
         letter-spacing: 0.27px;
       }
@@ -201,7 +213,7 @@
     position: relative;
 
     .overview-image-main {
-      max-width: 661px;
+      max-width: 620px;
       width: initial;
     }
 

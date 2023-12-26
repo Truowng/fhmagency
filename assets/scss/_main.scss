@@ -78,7 +78,7 @@ h6 {
   .title {
     font-size: 40px;
     line-height: 47px;
-    font-weight: $fw-bl;
+    font-weight: $fw-b;
     color: $white;
     letter-spacing: 0.015em;
   }
@@ -124,7 +124,7 @@ h6 {
     padding: 20px 30px;
     font-size: 16px;
     line-height: 19px;
-    font-weight: $fw-b;
+    font-weight: $fw-m;
   }
   &.button-m {
     padding: 12px 20px;
@@ -214,13 +214,19 @@ h6 {
     font-size: 20px;
     line-height: 40px;
     margin-bottom: 61px;
+    letter-spacing: 0.3px;
   }
   &.quote-l {
     font-size: 40px;
     line-height: 70px;
     text-align: center;
     font-weight: $fw-el;
+    letter-spacing: 0.6px;
   }
+}
+
+.bg-blue {
+  background-color: $blue-2;
 }
 
 // END INIT
@@ -249,7 +255,7 @@ h6 {
       .link {
         font-size: 12px;
         line-height: 15px;
-        font-weight: $fw-l;
+        font-weight: $fw-el;
         letter-spacing: 0.015em;
       }
     }
@@ -265,6 +271,7 @@ h6 {
           text-transform: capitalize;
           transition: all ease 0.5s;
           position: relative;
+          font-weight: $fw-l;
           &:hover {
             &::before {
               width: 100%;
@@ -504,6 +511,54 @@ h6 {
 
 // END HEADER
 
+// START NAVBARSIZE
+.navbar-size {
+  position: fixed;
+  background-color: $white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  display: none;
+  .navbar-size-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .navbar-size-item {
+    border-right: 1px solid #e3e3e3;
+    padding: 14px 0 12px;
+    a {
+      @include flex(center, center, 7px);
+      flex-direction: column;
+    }
+
+    .icon {
+      width: 19px;
+    }
+    .text {
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: $fw-b;
+      color: $blue;
+      text-transform: uppercase;
+      transition: all ease 0.5s;
+    }
+
+    &.active {
+      .icon {
+        img {
+          filter: brightness(0) saturate(100%) invert(10%) sepia(100%)
+            saturate(5329%) hue-rotate(323deg) brightness(106%) contrast(101%);
+        }
+      }
+      .text {
+        color: $pink;
+      }
+    }
+  }
+}
+// END NAVBARSIZE
+
 // START PROJECT
 .project {
   padding: 120px 0 90px;
@@ -519,7 +574,7 @@ h6 {
   }
   .heading-block {
     .title {
-      color: $blue;
+      color: $black;
     }
   }
   .project-group {
@@ -773,7 +828,7 @@ h6 {
       font-size: 20px;
       line-height: 23px;
       font-weight: $fw-bl;
-      letter-spacing: 0.015em;
+      letter-spacing: 0.24px;
       margin-bottom: 10px;
       text-align: center;
       color: $blue;
@@ -784,7 +839,7 @@ h6 {
       line-height: 28px;
       font-weight: $fw-l;
       color: $blue;
-      letter-spacing: 0.015em;
+      letter-spacing: 0.18px;
       text-align: center;
       margin-bottom: 31px;
     }
@@ -797,6 +852,7 @@ h6 {
         font-weight: $fw-b;
         margin-bottom: 5px;
         transition: all ease 0.5s;
+        letter-spacing: 0.21px;
       }
       .address {
         text-align: center;
@@ -805,6 +861,7 @@ h6 {
         font-weight: $fw-l;
         color: $blue;
         transition: all ease 0.5s;
+        letter-spacing: 0.21px;
       }
     }
   }
@@ -916,7 +973,12 @@ h6 {
     }
     .button-wrapper {
       @include flex(center, center, 20px);
+      flex-wrap: wrap;
       margin-top: 38px;
+    }
+    .button.button-l {
+      padding: 20px 50px;
+      font-weight: $fw-r;
     }
   }
   .cta-image {
@@ -949,9 +1011,10 @@ h6 {
         p {
           font-size: 20px;
           line-height: 40px;
-          font-weight: $fw-l;
+          font-weight: $fw-el;
           color: $white;
           margin-bottom: 30px;
+          letter-spacing: 0.3px;
           &:last-child {
             margin-bottom: 0;
           }
@@ -1105,13 +1168,15 @@ h6 {
     font-size: 14px;
     line-height: 24px;
     color: $white;
+    letter-spacing: 0.21px;
+    font-weight: $fw-l;
   }
 
   .policy-list {
     @include flex(unset, center, unset);
     .item {
-      margin-right: 20px;
-      padding-right: 20px;
+      margin-right: 30px;
+      padding-right: 30px;
       border-right: 1px solid #ffffff2e;
       &:last-child {
         margin-right: 0;
@@ -1122,6 +1187,11 @@ h6 {
         font-size: 14px;
         line-height: normal;
         color: $white;
+        letter-spacing: 0.21px;
+        font-weight: $fw-l;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -1130,7 +1200,7 @@ h6 {
 
 // START SEO
 .seo {
-  padding: 58px 0;
+  padding: 58px 0 130px;
 
   background-color: $blue;
   p {
@@ -1205,7 +1275,7 @@ h6 {
     .title {
       font-size: 18px;
       line-height: 30px;
-      font-weight: $fw-b;
+      font-weight: $fw-m;
       color: $white;
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -1383,10 +1453,6 @@ h6 {
   .image-border {
     width: 85%;
 
-    img {
-      border-width: 4px;
-      border-radius: 10px;
-    }
     .decor-el {
       &:nth-child(1) {
         width: 70px;
@@ -1423,8 +1489,9 @@ h6 {
     .badge {
       font-size: 8px;
       line-height: 15px;
-      padding: 5px 10px;
+      padding: 7px 10px;
       margin-bottom: 5px;
+      font-weight: $fw-el;
     }
     .title {
       font-size: 22px;
@@ -1435,6 +1502,10 @@ h6 {
       margin-top: 5px;
       line-height: 32px;
     }
+  }
+
+  .navbar-size {
+    display: block;
   }
 
   .button.button-l {
@@ -1470,6 +1541,7 @@ h6 {
       .image {
         width: 63px;
         height: 63px;
+        border-width: 2px;
       }
       .rating {
         margin-bottom: 10px;
@@ -1535,6 +1607,13 @@ h6 {
         font-size: 12px;
         line-height: 24px;
       }
+      .button.button-l {
+        padding: 10px 25px;
+        min-width: 160px;
+      }
+    }
+    .cta-image {
+      margin-top: 43px;
     }
   }
 
@@ -1563,6 +1642,7 @@ h6 {
           .title {
             font-size: 14px;
             line-height: 24px;
+            letter-spacing: 0.21px;
           }
         }
       }
@@ -1574,11 +1654,14 @@ h6 {
   }
 
   .benefit {
-    margin-top: 98px;
+    margin-top: 0;
+    padding: 250px 0 132px;
+    background-color: $blue;
     .benefit-content {
       margin-top: 41px;
 
       .content-wrapper {
+        gap: 29px;
         .content {
           p {
             font-size: 14px;
@@ -1593,6 +1676,7 @@ h6 {
     &.quote-m {
       font-size: 14px;
       line-height: 32px;
+      margin-bottom: 32px;
     }
     &.quote-l {
       font-size: 20px;
@@ -1601,15 +1685,15 @@ h6 {
   }
 
   .gallery {
-    padding-bottom: 40px;
+    padding: 60px 0 40px;
     .gallery-wrapper {
       height: 100px;
       .image {
         &::before {
-          top: -7px;
-          left: -8px;
-          width: calc(100% + 14px);
-          height: calc(100% + 14px);
+          top: -5px;
+          left: -5px;
+          width: calc(100% + 9px);
+          height: calc(100% + 9px);
         }
       }
     }
@@ -1633,6 +1717,7 @@ h6 {
   }
 
   #fhm-footer {
+    margin-top: 26px;
     .footer-mid {
       grid-column-gap: 10px;
     }

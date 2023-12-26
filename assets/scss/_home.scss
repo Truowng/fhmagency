@@ -19,12 +19,11 @@
       animation: moveHorizontal ease 2.5s infinite alternate;
     }
     &:nth-of-type(4) {
-      width: 399px;
-      height: 399px;
-      top: -248px;
-      left: -164px;
+      width: 554px;
+      height: 554px;
+      left: -42px;
+      top: -242px;
       z-index: 0;
-      display: none;
     }
   }
   .bg {
@@ -190,6 +189,8 @@
   }
   .services-item {
     position: relative;
+    overflow: hidden;
+    border-radius: 20px;
     &:hover {
       .image {
         a {
@@ -200,8 +201,6 @@
       }
     }
     .image {
-      border-radius: 20px;
-      overflow: hidden;
       width: 100%;
 
       a {
@@ -226,7 +225,7 @@
         font-size: 22px;
         line-height: 30px;
         color: $white;
-        letter-spacing: 0.015em;
+        letter-spacing: 0.3px;
         text-transform: capitalize;
         font-weight: $fw-b;
         text-align: center;
@@ -270,6 +269,7 @@
       line-height: 26px;
       font-weight: $fw-l;
       text-align: center;
+      color: $black;
     }
   }
 }
@@ -624,10 +624,11 @@
         display: none;
       }
     }
-    .banner-image {
-      width: 75%;
-      transform: unset;
-      margin-top: -6px;
+    .image-border {
+      img {
+        border-width: 4px;
+        border-radius: 10px;
+      }
     }
     .decor-el {
       &:nth-of-type(1) {
@@ -647,7 +648,10 @@
         left: 40px;
       }
       &:nth-of-type(4) {
-        display: block;
+        width: 399px;
+        height: 399px;
+        top: -248px;
+        left: -164px;
       }
     }
   }
@@ -674,11 +678,20 @@
     }
     .image-border {
       width: 100%;
-
+      > img {
+        border-width: 4px;
+        border-radius: 10px;
+      }
       > .decor-el {
         z-index: 1;
+        &:nth-child(1) {
+          top: -36px;
+          width: 82px;
+        }
         &:nth-child(2) {
           width: 62px;
+          left: -16px;
+          bottom: -27px;
         }
       }
     }
@@ -715,9 +728,8 @@
     }
 
     .services-item {
-      .image {
-        border-radius: 10px;
-      }
+      border-radius: 10px;
+
       .content {
         border-radius: 0 0 10px 10px;
         padding-bottom: 23px;
@@ -726,6 +738,9 @@
           line-height: 19px;
         }
       }
+    }
+    .services-content {
+      margin-top: 24px;
     }
     .services-slider {
       margin-top: 11px;

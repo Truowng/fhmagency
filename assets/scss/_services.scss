@@ -41,7 +41,7 @@
   }
 }
 
-.bg-blue {
+.bg-service-blue {
   background-color: $blue;
 }
 
@@ -244,6 +244,7 @@
         margin-top: 0;
         font-weight: $fw-m;
         font-size: 24px;
+        min-height: 48px;
       }
     }
   }
@@ -1409,6 +1410,10 @@
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.015em;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
     }
   }
   &:hover {
@@ -2861,6 +2866,9 @@
       }
       .accordion-button {
         padding: 20px 0;
+        &::after {
+          content: none;
+        }
       }
     }
   }
@@ -2874,6 +2882,11 @@
     }
     .service-contact-main {
       width: 100%;
+    }
+    .service-contact-btn {
+      font-size: 12px !important;
+      line-height: 14px !important;
+      padding: 20px !important;
     }
   }
   .general {
@@ -3401,6 +3414,7 @@
     }
   }
   .industry {
+    margin-top: 30px;
     .industry-item {
       height: 59px;
       .industry-item-container {
@@ -3573,6 +3587,9 @@
     }
   }
   .provide {
+    .provide-list {
+      margin-top: 32px;
+    }
     .provide-item {
       .provide-content {
         p {
