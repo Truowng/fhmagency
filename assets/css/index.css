@@ -1997,7 +1997,17 @@ h6 {
 }
 
 #home-client {
-  margin-top: 160px;
+  margin-top: 40px;
+  padding-top: 120px;
+  background: linear-gradient(0deg, #170a64 0%, rgba(23, 10, 100, 0) 100%);
+  position: relative;
+}
+#home-client::before {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  height: 206px;
 }
 #home-client .client-wrapper {
   display: grid;
@@ -2011,7 +2021,19 @@ h6 {
 }
 
 #home-video {
-  margin-top: 130px;
+  padding-top: 130px;
+  background-color: #170a64;
+}
+
+#home-blog {
+  padding-top: 139px;
+  margin-top: 0;
+  background: #170a64;
+  padding-bottom: 132px;
+}
+
+#home-cta {
+  margin-top: 0;
 }
 
 @media (min-width: 1400px) {
@@ -2369,13 +2391,18 @@ h6 {
     margin-top: 28px;
   }
   #home-client {
-    margin-top: 58px;
+    margin-top: 18px;
+    padding-top: 40px;
   }
   #home-client .client-item img {
     width: 60%;
   }
   #home-video {
-    margin-top: 58px;
+    padding-top: 58px;
+  }
+  #home-blog {
+    padding-top: 53px;
+    padding-bottom: 71px;
   }
 }
 #project-banner {
@@ -6834,6 +6861,11 @@ h6 {
   right: 37px;
   bottom: 0;
   z-index: 2;
+}
+#about-banner > .decor-el:nth-child(5) {
+  left: -70px;
+  bottom: 69px;
+  z-index: 0;
 }
 #about-banner > .decor-el:nth-child(6) {
   width: 399px;
