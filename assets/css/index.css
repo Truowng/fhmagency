@@ -8041,14 +8041,15 @@ h6 {
 #fhm-header .mega-menu-wrap {
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 6.2%;
-       column-gap: 6.2%;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
 }
 #fhm-header .mega-menu-wrap .mega-menu-list {
   flex: 1;
   display: flex;
-  -moz-column-gap: 77px;
-       column-gap: 77px;
+  justify-content: space-between;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 45px;
 }
 #fhm-header .mega-menu-wrap .mega-menu-col h4 {
@@ -8059,7 +8060,10 @@ h6 {
   line-height: 125%;
   letter-spacing: 0.27px;
   text-transform: capitalize;
-  margin-bottom: 11px;
+  margin-bottom: 25px;
+}
+#fhm-header .mega-menu-wrap .mega-menu-col .mega-menu-col-list .item {
+  margin-bottom: 20px;
 }
 #fhm-header .mega-menu-wrap .mega-menu-col .item:last-child .link {
   padding: initial;
@@ -8081,7 +8085,7 @@ h6 {
   color: #214336;
   font-size: 16px;
   font-weight: 300;
-  line-height: 270%;
+  line-height: 26px;
   letter-spacing: 0.24px;
   text-transform: capitalize;
 }
@@ -8430,14 +8434,15 @@ h6 {
 #fhm-header .mega-menu-wrap {
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 6.2%;
-       column-gap: 6.2%;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
 }
 #fhm-header .mega-menu-wrap .mega-menu-list {
   flex: 1;
   display: flex;
-  -moz-column-gap: 77px;
-       column-gap: 77px;
+  justify-content: space-between;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 45px;
 }
 #fhm-header .mega-menu-wrap .mega-menu-col h4 {
@@ -8448,7 +8453,10 @@ h6 {
   line-height: 125%;
   letter-spacing: 0.27px;
   text-transform: capitalize;
-  margin-bottom: 11px;
+  margin-bottom: 25px;
+}
+#fhm-header .mega-menu-wrap .mega-menu-col .mega-menu-col-list .item {
+  margin-bottom: 20px;
 }
 #fhm-header .mega-menu-wrap .mega-menu-col .item:last-child .link {
   padding: initial;
@@ -8470,7 +8478,7 @@ h6 {
   color: #214336;
   font-size: 16px;
   font-weight: 300;
-  line-height: 270%;
+  line-height: 26px;
   letter-spacing: 0.24px;
   text-transform: capitalize;
 }
