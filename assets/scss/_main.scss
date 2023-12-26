@@ -239,7 +239,7 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 30;
   .header-wrapper {
     @include flex(space-between, end, 20px);
   }
@@ -261,11 +261,18 @@ h6 {
       }
     }
   }
+  .nav-wrapper {
+    @include flex(unset, start, 30px);
+    width: fit-content;
+    position: relative;
+    width: 100%;
+  }
   .nav {
-    transform: translateY(-5px);
     .list {
       @include flex(space-between, center, 80px);
+      width: 100%;
       .item {
+        width: 100%;
         .link {
           font-size: 16px;
           line-height: 19px;
@@ -273,6 +280,7 @@ h6 {
           transition: all ease 0.5s;
           position: relative;
           font-weight: $fw-l;
+
           &:hover {
             &::before {
               width: 100%;
@@ -310,6 +318,7 @@ h6 {
             padding: 7px 20px;
             border-radius: 5px;
             background-color: $yellow;
+
             &::before {
               content: unset;
             }
@@ -335,47 +344,127 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 20px;
     overflow: hidden;
-    // background-color: $blue-2;
+    background: linear-gradient(35deg, #9f0178 5.45%, #ff6911 100%);
     transform: translateX(100%);
-
-    background-color: #ef66a9;
-    @include flex(center, center, unset);
     transition: all $cubic 1s;
+    .decor-el {
+      z-index: 0;
+      &:nth-child(1) {
+        right: -50px;
+        width: 103px;
+        bottom: 250px;
+      }
+      &:nth-child(2) {
+        width: 79px;
+        right: 47px;
+        top: -27px;
+      }
+      &:nth-child(3) {
+        left: -40px;
+        width: 79px;
+        bottom: 313px;
+      }
+    }
+    .container {
+      padding: 0 20px;
+    }
     &.open {
       transform: translateX(0%);
-      // animation: openMenu $cubic 2.5s;
-      // animation-fill-mode: forwards;
     }
 
     &.close {
       transform: translateX(100%);
-      // animation: closeMenu $cubic 2.5s;
-      // animation-fill-mode: forwards;
+    }
+
+    .heading {
+      @include flex(space-between, end, unset);
+      margin: 48px 0 42px;
+    }
+    .logo {
+      max-width: 167px;
+      width: 100%;
     }
 
     .nav {
+      transition: all $cubic 0.75s;
+      transition: all $cubic 0.75s;
+      transform: translateX(-110%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      .back-title {
+        font-size: 20px;
+        line-height: 1.25;
+        font-weight: $fw-b;
+        color: $white;
+        margin-bottom: 34px;
+        @include flex(unset, center, 25px);
+      }
+      &.nav-lv0.active {
+        transform: translateX(0);
+        & ~ .nav-lv1,
+        & ~ .nav-lv2 {
+          transform: translateX(110%);
+        }
+      }
+      &.nav-lv1.active {
+        transform: translateX(0);
+        & ~ .nav-lv2 {
+          transform: translateX(110%);
+        }
+      }
+
+      &.nav-lv2.active {
+        transform: translateX(0);
+      }
+
+      &.nav-lv1,
+      &.nav-lv2 {
+        .list {
+          .item {
+            padding: 10px 0;
+            a {
+              font-size: 16px;
+              line-height: 27px;
+              letter-spacing: 0.3px;
+            }
+          }
+        }
+      }
+
       .list {
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: 40px;
+        gap: 24px;
+        width: 100%;
         .item {
-          @include flex(unset, center, 15px);
+          width: 100%;
+          padding: 10px 0;
+          @include flex(unset, center, 16px);
           .icon {
-            width: 40px;
+            width: 24px;
           }
           a {
-            font-size: 25px;
-            font-weight: $fw-m;
+            font-size: 20px;
+            line-height: 23px;
+            flex: 1;
+            @include flex(space-between, center, unset);
+            .icon {
+              width: 12px;
+              aspect-ratio: 1;
+            }
           }
           &:last-child {
             width: 100%;
+
             a {
               width: 100%;
               text-align: center;
-              padding: 20px 0;
+              padding: 0;
+              background-color: transparent;
             }
           }
         }
@@ -386,31 +475,23 @@ h6 {
       bottom: 0;
       left: 0;
       width: 100%;
-      .decor-el {
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-      }
     }
     .button-close {
       outline: none;
       border: none;
-      width: 40px;
+      background-color: transparent;
+      width: fit-content;
       aspect-ratio: 1;
       @include flex(center, center, unset);
-      position: absolute;
-      top: 30px;
-      right: 30px;
       color: $white;
-      border-radius: 500px;
+      margin-bottom: 10px;
       &:hover {
         img {
           transform: rotate(180deg);
         }
       }
       img {
-        width: 50%;
+        width: 100%;
         transition: all ease 1s;
       }
     }
@@ -420,92 +501,6 @@ h6 {
       width: 18px;
       background-color: transparent;
       display: none;
-    }
-  }
-  .nav-mobile {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 20px;
-    overflow: hidden;
-    // background-color: $blue-2;
-    transform: translateX(100%);
-
-    background-color: #ef66a9;
-    @include flex(center, center, unset);
-    transition: all $cubic 1s;
-    &.open {
-      transform: translateX(0%);
-      // animation: openMenu $cubic 2.5s;
-      // animation-fill-mode: forwards;
-    }
-
-    &.close {
-      transform: translateX(100%);
-      // animation: closeMenu $cubic 2.5s;
-      // animation-fill-mode: forwards;
-    }
-
-    .nav {
-      .list {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        gap: 40px;
-        .item {
-          @include flex(unset, center, 15px);
-          .icon {
-            width: 40px;
-          }
-          a {
-            font-size: 25px;
-            font-weight: $fw-m;
-          }
-          &:last-child {
-            width: 100%;
-            a {
-              width: 100%;
-              text-align: center;
-              padding: 20px 0;
-            }
-          }
-        }
-      }
-    }
-    .bg {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      .decor-el {
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-      }
-    }
-    .button-close {
-      outline: none;
-      border: none;
-      width: 40px;
-      aspect-ratio: 1;
-      @include flex(center, center, unset);
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      color: $white;
-      border-radius: 500px;
-      &:hover {
-        img {
-          transform: rotate(180deg);
-        }
-      }
-      img {
-        width: 50%;
-        transition: all ease 1s;
-      }
     }
   }
 }
