@@ -47,21 +47,35 @@ const displaySlider = new Swiper(".display-slider", {
 });
 
 // COUNT STATISTIC
-let valueDisplays = document.querySelectorAll(".display-statistic-el h4 span");
-let interval = 2500;
-valueDisplays.forEach((valueDisplay) => {
-  let startValue = 0;
-  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-  let duration = Math.floor(interval / endValue);
-  let counter = setInterval(function () {
-    startValue += 1;
-    valueDisplay.textContent = startValue;
-    if (startValue == endValue) {
-      clearInterval(counter);
-    }
-  }, duration);
-});
+const valueDisplays = document.querySelectorAll(
+  ".display-statistic-el h4 span"
+);
+const interval = 2500;
+let isRuned = false;
+function checkScroll() {
+  if (!isRuned) {
+    const triggerBottom = (window.innerHeight / 5) * 4;
+    valueDisplays.forEach((valueDisplay) => {
+      const boxTop = valueDisplay.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        isRuned = true;
+        let startValue = 0;
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function () {
+          startValue += 1;
+          valueDisplay.textContent = startValue;
+          if (startValue == endValue) {
+            clearInterval(counter);
+          }
+        }, duration);
+      }
+    });
+  }
+}
+window.addEventListener("scroll", checkScroll);
 
+// service-partner slider
 const servicePartner = new Swiper(".services-partner-slider", {
   speed: 2000,
   autoplay: {
