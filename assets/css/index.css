@@ -6275,7 +6275,8 @@ h6 {
 .contact-form-row .contact-form-line {
   position: relative;
   flex: 0 0 auto;
-  width: calc(50% - 9px);
+  max-width: calc(50% - 9px);
+  flex: 0 0 calc(50% - 9px);
 }
 .contact-form-row .contact-form-line input,
 .contact-form-row .contact-form-line textarea,
@@ -6351,7 +6352,8 @@ h6 {
   filter: brightness(0) saturate(100%) invert(59%) sepia(98%) saturate(704%) hue-rotate(359deg) brightness(97%) contrast(98%);
 }
 .contact-form-row .contact-form-line-full {
-  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
 }
 .contact-form-row .contact-form-line-full input {
   accent-color: transparent;
@@ -6654,8 +6656,11 @@ h6 {
   .contact-us .intro {
     aspect-ratio: 39/48;
   }
+}
+@media only screen and (max-width: 375px) {
   .contact-form-row .contact-form-line {
-    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 #about-banner {

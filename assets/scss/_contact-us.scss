@@ -48,7 +48,8 @@
   .contact-form-line {
     position: relative;
     flex: 0 0 auto;
-    width: calc(50% - 9px);
+    max-width: calc(50% - 9px);
+    flex: 0 0 calc(50% - 9px);
 
     input,
     textarea,
@@ -144,7 +145,8 @@
   }
 
   .contact-form-line-full {
-    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
 
     input {
       accent-color: transparent;
@@ -553,10 +555,14 @@
       aspect-ratio: 39/48;
     }
   }
+}
 
+@include extra-small-mobile {
   .contact-form-row {
     .contact-form-line {
-      width: 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
     }
   }
 }
+
