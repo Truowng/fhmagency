@@ -4970,6 +4970,12 @@ h6 {
     overflow: hidden;
     -webkit-line-clamp: 2;
   }
+  .review .review-item .feedback:first-child {
+    padding: 20px 10px;
+  }
+  .review .review-item .feedback:first-child .feedback-content p {
+    -webkit-line-clamp: 3;
+  }
   .review .review-item.review-item-reverse {
     grid-template-columns: repeat(1, 1fr);
     gap: 13px;

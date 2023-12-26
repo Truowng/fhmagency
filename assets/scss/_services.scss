@@ -2802,6 +2802,14 @@
             -webkit-line-clamp: 2;
           }
         }
+        &:first-child {
+          padding: 20px 10px;
+          .feedback-content {
+            p {
+              -webkit-line-clamp: 3;
+            }
+          }
+        }
       }
       &.review-item-reverse {
         grid-template-columns: repeat(1, 1fr);
