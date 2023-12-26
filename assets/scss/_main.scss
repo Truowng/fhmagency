@@ -214,13 +214,19 @@ h6 {
     font-size: 20px;
     line-height: 40px;
     margin-bottom: 61px;
+    letter-spacing: 0.3px;
   }
   &.quote-l {
     font-size: 40px;
     line-height: 70px;
     text-align: center;
     font-weight: $fw-el;
+    letter-spacing: 0.6px;
   }
+}
+
+.bg-blue {
+  background-color: $blue-2;
 }
 
 // END INIT
@@ -1005,9 +1011,10 @@ h6 {
         p {
           font-size: 20px;
           line-height: 40px;
-          font-weight: $fw-l;
+          font-weight: $fw-el;
           color: $white;
           margin-bottom: 30px;
+          letter-spacing: 0.3px;
           &:last-child {
             margin-bottom: 0;
           }
@@ -1193,7 +1200,7 @@ h6 {
 
 // START SEO
 .seo {
-  padding: 58px 0;
+  padding: 58px 0 130px;
 
   background-color: $blue;
   p {
@@ -1647,11 +1654,14 @@ h6 {
   }
 
   .benefit {
-    margin-top: 98px;
+    margin-top: 0;
+    padding: 250px 0 132px;
+    background-color: $blue;
     .benefit-content {
       margin-top: 41px;
 
       .content-wrapper {
+        gap: 29px;
         .content {
           p {
             font-size: 14px;
@@ -1666,6 +1676,7 @@ h6 {
     &.quote-m {
       font-size: 14px;
       line-height: 32px;
+      margin-bottom: 32px;
     }
     &.quote-l {
       font-size: 20px;
@@ -1674,15 +1685,15 @@ h6 {
   }
 
   .gallery {
-    padding-bottom: 40px;
+    padding: 60px 0 40px;
     .gallery-wrapper {
       height: 100px;
       .image {
         &::before {
-          top: -7px;
-          left: -8px;
-          width: calc(100% + 14px);
-          height: calc(100% + 14px);
+          top: -5px;
+          left: -5px;
+          width: calc(100% + 9px);
+          height: calc(100% + 9px);
         }
       }
     }
