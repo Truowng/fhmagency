@@ -278,6 +278,7 @@ h6 {
   line-height: 40px;
   margin-bottom: 61px;
   letter-spacing: 0.3px;
+  font-weight: 200;
 }
 .quote.quote-l {
   font-size: 40px;
@@ -998,8 +999,9 @@ h6 {
   margin-top: 38px;
 }
 .cta .heading-block .button.button-l {
-  padding: 20px 50px;
-  font-weight: 400;
+  font-size: 16px !important;
+  padding: 20px 50px !important;
+  font-weight: 400 !important;
 }
 .cta .cta-image {
   margin-top: 100px;
@@ -1020,9 +1022,10 @@ h6 {
 }
 .benefit .benefit-content .content-wrapper .content-image {
   max-width: 444px;
-  height: 444px;
   border-radius: 500px;
   overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1;
 }
 .benefit .benefit-content .content-wrapper .content-image img {
   height: 100%;
@@ -1532,12 +1535,13 @@ h6 {
     padding: 10px;
     max-width: 160px;
     width: 100%;
-    font-size: 12px;
-    line-height: 24px;
+    line-height: 24px !important;
+    font-weight: 400 !important;
   }
   .cta .heading-block .button.button-l {
-    padding: 10px 25px;
+    padding: 10px 25px !important;
     min-width: 160px;
+    font-size: 12px !important;
   }
   .cta .cta-image {
     margin-top: 43px;
@@ -1587,6 +1591,9 @@ h6 {
     font-size: 14px;
     line-height: 32px;
     margin-bottom: 19px;
+  }
+  .benefit .benefit-content .content-wrapper .content-image {
+    aspect-ratio: 1;
   }
   .quote.quote-m {
     font-size: 14px;
@@ -2376,15 +2383,23 @@ h6 {
   padding: 206px 0 235px;
   background: #170a64;
 }
-#project-banner .decor-el {
+#project-banner .decor-el:nth-child(1) {
   left: 50%;
   top: 100px;
   transform: translateX(-40%);
   width: 100%;
 }
+#project-banner .decor-el:nth-child(2) {
+  top: -248px;
+  left: -164px;
+  z-index: 0;
+  display: none;
+}
 #project-banner .curve-bg {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
 }
 #project-banner .heading-block {
   position: relative;
@@ -2396,6 +2411,8 @@ h6 {
 
 #project-benefit {
   position: relative;
+  padding: 250px 0 151px;
+  margin-top: 0;
 }
 #project-benefit .curve-bg {
   position: absolute;
@@ -2427,13 +2444,16 @@ h6 {
   #project-banner {
     padding: 140px 0 66px;
   }
-  #project-banner .decor-el {
+  #project-banner .decor-el:nth-child(1) {
     width: 180%;
     top: 50%;
     transform: translate(-50%, -40%);
   }
-  #project-banner .decor-el svg {
+  #project-banner .decor-el:nth-child(1) svg {
     width: 100%;
+  }
+  #project-banner .decor-el:nth-child(2) {
+    display: block;
   }
   #project-banner .heading-block .badge {
     display: block;
@@ -2446,6 +2466,9 @@ h6 {
   #project-banner .heading-block .desc {
     margin-top: 10px;
     text-align: left;
+  }
+  #project-benefit {
+    padding: 100px 0 60px;
   }
   .project .project-pagination {
     display: none;
