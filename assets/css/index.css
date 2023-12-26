@@ -2485,7 +2485,7 @@ h6 {
   width: 145%;
 }
 
-.bg-blue {
+.bg-service-blue {
   background-color: #170a64;
 }
 
@@ -5647,6 +5647,9 @@ h6 {
   }
   .adv.adv-software {
     padding-top: 50px;
+  }
+  .provide .provide-list {
+    margin-top: 32px;
   }
   .provide .provide-item .provide-content p {
     line-height: 1.3;

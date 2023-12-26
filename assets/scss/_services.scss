@@ -41,7 +41,7 @@
   }
 }
 
-.bg-blue {
+.bg-service-blue {
   background-color: $blue;
 }
 
@@ -3587,6 +3587,9 @@
     }
   }
   .provide {
+    .provide-list {
+      margin-top: 32px;
+    }
     .provide-item {
       .provide-content {
         p {
