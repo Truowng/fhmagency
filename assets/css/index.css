@@ -4785,7 +4785,7 @@ h6 {
     margin-top: -160px;
   }
   .adver::after {
-    content: none;
+    aspect-ratio: 390/35;
   }
   .adver .adver-container {
     align-items: end;
