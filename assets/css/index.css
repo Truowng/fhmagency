@@ -1073,6 +1073,17 @@ h6 {
   color: #fff;
   text-align: center;
 }
+.benefit .benefit-content .content-group .item .read-more {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 3.6px;
+  display: block;
+  margin-top: 24px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center;
+  font-weight: 200;
+}
 
 #fhm-footer .footer-top {
   display: flex;
@@ -1987,7 +1998,17 @@ h6 {
 }
 
 #home-client {
-  margin-top: 160px;
+  margin-top: 40px;
+  padding-top: 120px;
+  background: linear-gradient(0deg, #170a64 0%, rgba(23, 10, 100, 0) 100%);
+  position: relative;
+}
+#home-client::before {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  height: 206px;
 }
 #home-client .client-wrapper {
   display: grid;
@@ -2001,7 +2022,19 @@ h6 {
 }
 
 #home-video {
-  margin-top: 130px;
+  padding-top: 130px;
+  background-color: #170a64;
+}
+
+#home-blog {
+  padding-top: 139px;
+  margin-top: 0;
+  background: #170a64;
+  padding-bottom: 132px;
+}
+
+#home-cta {
+  margin-top: 0;
 }
 
 @media (min-width: 1400px) {
@@ -2166,6 +2199,9 @@ h6 {
   #home-banner {
     padding: 130px 0 0;
   }
+  #home-banner .bg {
+    bottom: 80px;
+  }
   #home-banner .bg img:nth-child(1) {
     display: none;
   }
@@ -2186,19 +2222,19 @@ h6 {
   }
   #home-banner .decor-el:nth-of-type(1) {
     width: 65px;
-    bottom: 0;
+    bottom: 102px;
     left: 15px;
     z-index: 2;
   }
   #home-banner .decor-el:nth-of-type(2) {
     top: 53%;
-    width: 50px;
-    left: 60px;
+    width: 26px;
+    left: 103px;
   }
   #home-banner .decor-el:nth-of-type(3) {
-    bottom: 27%;
-    width: 23px;
-    left: 40px;
+    bottom: 35%;
+    width: 13px;
+    left: 76px;
   }
   #home-banner .decor-el:nth-of-type(4) {
     width: 399px;
@@ -2223,7 +2259,7 @@ h6 {
   #home-about .bg {
     background: #170a64;
     bottom: initial;
-    top: -25px;
+    top: -125px;
   }
   #home-about .image-border {
     width: 100%;
@@ -2359,13 +2395,18 @@ h6 {
     margin-top: 28px;
   }
   #home-client {
-    margin-top: 58px;
+    margin-top: 18px;
+    padding-top: 40px;
   }
   #home-client .client-item img {
     width: 60%;
   }
   #home-video {
-    margin-top: 58px;
+    padding-top: 58px;
+  }
+  #home-blog {
+    padding-top: 53px;
+    padding-bottom: 71px;
   }
 }
 #project-banner {
@@ -2403,6 +2444,7 @@ h6 {
   position: relative;
   padding: 250px 0 151px;
   margin-top: 0;
+  background-color: #170a64;
 }
 #project-benefit .curve-bg {
   position: absolute;
@@ -6357,7 +6399,8 @@ h6 {
 .contact-form-row .contact-form-line {
   position: relative;
   flex: 0 0 auto;
-  width: calc(50% - 9px);
+  max-width: calc(50% - 9px);
+  flex: 0 0 calc(50% - 9px);
 }
 .contact-form-row .contact-form-line input,
 .contact-form-row .contact-form-line textarea,
@@ -6433,7 +6476,8 @@ h6 {
   filter: brightness(0) saturate(100%) invert(59%) sepia(98%) saturate(704%) hue-rotate(359deg) brightness(97%) contrast(98%);
 }
 .contact-form-row .contact-form-line-full {
-  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
 }
 .contact-form-row .contact-form-line-full input {
   accent-color: transparent;
@@ -6736,8 +6780,11 @@ h6 {
   .contact-us .intro {
     aspect-ratio: 39/48;
   }
+}
+@media only screen and (max-width: 375px) {
   .contact-form-row .contact-form-line {
-    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 #about-banner {
@@ -6775,6 +6822,11 @@ h6 {
   right: 37px;
   bottom: 0;
   z-index: 2;
+}
+#about-banner > .decor-el:nth-child(5) {
+  left: -70px;
+  bottom: 69px;
+  z-index: 0;
 }
 #about-banner > .decor-el:nth-child(6) {
   width: 399px;

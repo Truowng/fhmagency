@@ -380,7 +380,19 @@
 }
 
 #home-client {
-  margin-top: 160px;
+  margin-top: 40px;
+  padding-top: 120px;
+  background: linear-gradient(0deg, #170a64 0%, rgba(23, 10, 100, 0) 100%);
+  position: relative;
+  &::before {
+    // content: "";
+    position: absolute;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    height: 206px;
+  }
+
   .client-wrapper {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -394,7 +406,18 @@
 }
 
 #home-video {
-  margin-top: 130px;
+  padding-top: 130px;
+  background-color: $blue;
+}
+
+#home-blog {
+  padding-top: 139px;
+  margin-top: 0;
+  background: $blue;
+  padding-bottom: 132px;
+}
+#home-cta {
+  margin-top: 0;
 }
 
 // START RESPONSIVE
@@ -605,6 +628,7 @@
   #home-banner {
     padding: 130px 0 0;
     .bg {
+      bottom: 80px;
       img {
         &:nth-child(1) {
           display: none;
@@ -633,19 +657,19 @@
     .decor-el {
       &:nth-of-type(1) {
         width: 65px;
-        bottom: 0;
+        bottom: 102px;
         left: 15px;
         z-index: 2;
       }
       &:nth-of-type(2) {
         top: 53%;
-        width: 50px;
-        left: 60px;
+        width: 26px;
+        left: 103px;
       }
       &:nth-of-type(3) {
-        bottom: 27%;
-        width: 23px;
-        left: 40px;
+        bottom: 35%;
+        width: 13px;
+        left: 76px;
       }
       &:nth-of-type(4) {
         width: 399px;
@@ -674,7 +698,7 @@
     .bg {
       background: $blue;
       bottom: initial;
-      top: -25px;
+      top: -125px;
     }
     .image-border {
       width: 100%;
@@ -832,7 +856,8 @@
   }
 
   #home-client {
-    margin-top: 58px;
+    margin-top: 18px;
+    padding-top: 40px;
     .client-item {
       img {
         width: 60%;
@@ -841,7 +866,12 @@
   }
 
   #home-video {
-    margin-top: 58px;
+    padding-top: 58px;
+  }
+
+  #home-blog {
+    padding-top: 53px;
+    padding-bottom: 71px;
   }
 }
 // END RESPONSIVE

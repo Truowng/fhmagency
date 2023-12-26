@@ -38,6 +38,11 @@
       bottom: 0;
       z-index: 2;
     }
+    &:nth-child(5) {
+      left: -70px;
+      bottom: 69px;
+      z-index: 0;
+    }
     &:nth-child(6) {
       width: 399px;
       height: 399px;
