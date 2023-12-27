@@ -1460,10 +1460,13 @@ h6 {
   }
 }
 
-@include mobile {
+@include extra-mobile {
   .container {
     padding: 0 20px;
   }
+}
+
+@include mobile {
 
   .image-border {
     width: 85%;

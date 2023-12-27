@@ -1,0 +1,23 @@
+@include mobile {
+    #about-benefit {
+        padding-bottom: 8px;
+
+        .quote {
+            &.quote-m {
+                letter-spacing: 0.21px;
+                line-height: 40px;
+                margin-bottom: 43px;
+            }
+        }
+
+        .benefit-content {
+            .content-group {
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    #project-benefit {
+        padding: 100px 0 60px;
+    }
+}

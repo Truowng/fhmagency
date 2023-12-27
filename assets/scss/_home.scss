@@ -308,7 +308,7 @@
     position: relative;
     .advantage-image {
       position: absolute;
-      top: 0;
+      top: 50px;
       left: 50%;
       transform: translate(-50%, -0%);
       max-width: 614px;
@@ -624,6 +624,16 @@
   }
 }
 
+@include extra-mobile {
+  #home-advantage {
+    .advantage-group {
+      .advantage-image {
+        margin-bottom: -15px;
+      }
+    }
+  }
+}
+
 @include mobile {
   #home-banner {
     padding: 130px 0 0;
@@ -826,9 +836,6 @@
     }
     .advantage-group {
       margin-top: 32px;
-      .advantage-image {
-        margin-bottom: 0;
-      }
     }
 
     .advantage-item {

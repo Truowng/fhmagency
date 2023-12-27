@@ -259,6 +259,16 @@
   }
 }
 
+@include extra-mobile {
+  #about-benefit {
+    .decor-el {
+      width: 300%;
+      right: -75%;
+      top: 6%;
+    }
+  }
+}
+
 @include mobile {
   .bg-blue {
     background: transparent;
@@ -291,11 +301,20 @@
         display: none;
       }
       &:nth-child(5) {
-        left: 156px;
+        left: initial;
         bottom: 47px;
+        right: 30%;
       }
       &:nth-child(6) {
         display: block;
+      }
+    }
+
+    img {
+
+      &:nth-child(3) {
+        width: calc(100% + 35px);
+        margin-left: -10px;
       }
     }
   }
@@ -312,8 +331,9 @@
     }
     .decor-el {
       width: 300%;
-      right: -335px;
+      right: -66%;
       z-index: 0;
+      top: -2%;
       svg {
         width: 100%;
       }

@@ -102,40 +102,19 @@ const valueDisplays = document.querySelectorAll(
 const counterDisplays = document.querySelectorAll(".counter-item .num span");
 const interval = 2500;
 let isRuned = false;
-function checkScroll(els) {
-  if (!isRuned) {
-    const triggerBottom = (window.innerHeight / 5) * 4;
-    els.forEach((el) => {
-      const boxTop = el.getBoundingClientRect().top;
-      if (boxTop < triggerBottom) {
-        isRuned = true;
-        let startValue = 0;
-        let endValue = parseInt(el.getAttribute("data-val"));
-        let duration = Math.floor(interval / endValue);
-        let counter = setInterval(function () {
-          startValue += 1;
-          el.textContent = startValue;
-          if (startValue == endValue) {
-            clearInterval(counter);
-          }
-        }, duration);
-      }
-    });
-  }
-}
-// function checkScroll() {
+// function checkScroll(els) {
 //   if (!isRuned) {
 //     const triggerBottom = (window.innerHeight / 5) * 4;
-//     valueDisplays.forEach((valueDisplay) => {
-//       const boxTop = valueDisplay.getBoundingClientRect().top;
+//     els.forEach((el) => {
+//       const boxTop = el.getBoundingClientRect().top;
 //       if (boxTop < triggerBottom) {
 //         isRuned = true;
 //         let startValue = 0;
-//         let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+//         let endValue = parseInt(el.getAttribute("data-val"));
 //         let duration = Math.floor(interval / endValue);
 //         let counter = setInterval(function () {
 //           startValue += 1;
-//           valueDisplay.textContent = startValue;
+//           el.textContent = startValue;
 //           if (startValue == endValue) {
 //             clearInterval(counter);
 //           }
@@ -144,10 +123,53 @@ function checkScroll(els) {
 //     });
 //   }
 // }
-window.addEventListener(
-  "scroll",
-  (checkScroll(valueDisplays), checkScroll(counterDisplays))
-);
+function checkScroll() {
+  if (!isRuned && valueDisplays) {
+    const triggerBottom = (window.innerHeight / 5) * 4;
+    valueDisplays.forEach((valueDisplay) => {
+      const boxTop = valueDisplay.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        isRuned = true;
+        let startValue = 0;
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function () {
+          startValue += 1;
+          valueDisplay.textContent = startValue;
+          if (startValue == endValue) {
+            clearInterval(counter);
+          }
+        }, duration);
+      }
+    });
+  }
+}
+let isRunedCounter = false;
+const counterWrapper = document.querySelector(".counter-wrapper");
+function checkScrollCounter() {
+  if (!isRunedCounter && counterDisplays) {
+    const triggerBottom = (window.innerHeight / 5) * 4;
+    counterDisplays.forEach((countDisplay) => {
+      const boxTop = counterWrapper.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        isRunedCounter = true;
+        let startValue = 0;
+        let endValue = parseInt(countDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function () {
+          startValue += 1;
+          countDisplay.textContent = startValue;
+          if (startValue == endValue) {
+            clearInterval(counter);
+          }
+        }, duration);
+      }
+    });
+  }
+}
+
+window.addEventListener("scroll", checkScroll);
+window.addEventListener("scroll", checkScrollCounter);
 
 // ANIMATE LINES
 const lines = document.querySelectorAll("#multiLines path");
