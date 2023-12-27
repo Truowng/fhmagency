@@ -79,8 +79,9 @@
     z-index: 0;
   }
   > .decor-el {
-    bottom: 100px;
+    bottom: 70px;
     left: 50%;
+    transform: translateX(25%);
   }
   .about-wrapper {
     @include flex(space-between, center, 20px);
@@ -692,8 +693,9 @@
   }
 
   #home-about {
-    padding-top: 61px;
+    padding-top: 0px;
     padding-bottom: 38px;
+    margin-top: -10px;
     background: $blue-2;
     .heading-block {
       .button {
@@ -709,7 +711,9 @@
     .bg {
       background: $blue;
       bottom: initial;
-      top: -125px;
+      top: -130px;
+      width: 140%;
+      left: -20%;
     }
     .image-border {
       width: 100%;
@@ -858,6 +862,12 @@
 
   #home-project {
     padding-top: 46px;
+    .heading-block  {
+      .title {
+        line-height: 36px;
+      }
+    }
+    
     .project-group {
       margin-top: 28px;
     }
@@ -880,6 +890,27 @@
   #home-blog {
     padding-top: 53px;
     padding-bottom: 71px;
+
+    .blog-slider {
+      .blog-item {
+        .image {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  #home-testimonials {
+    .testimonials-slider {
+      &:after {    
+        content: "";
+        position: absolute;
+        width: 46%;
+        transform: translateX(64%);
+        background: linear-gradient(90deg, transparent 15%, #1D0E78 51%);
+
+      }
+    }
   }
 }
 // END RESPONSIVE

@@ -1418,6 +1418,9 @@ h6 {
     left: -10px;
     bottom: -20px;
   }
+  .project-item .image {
+    border-radius: 10px;
+  }
   #fhm-header {
     padding-top: 0;
   }
@@ -1727,8 +1730,9 @@ h6 {
   z-index: 0;
 }
 #home-about > .decor-el {
-  bottom: 100px;
+  bottom: 70px;
   left: 50%;
+  transform: translateX(25%);
 }
 #home-about .about-wrapper {
   display: flex;
@@ -2253,8 +2257,9 @@ h6 {
     left: -164px;
   }
   #home-about {
-    padding-top: 61px;
+    padding-top: 0px;
     padding-bottom: 38px;
+    margin-top: -10px;
     background: #1d0e78;
   }
   #home-about .heading-block .button {
@@ -2269,7 +2274,9 @@ h6 {
   #home-about .bg {
     background: #170a64;
     bottom: initial;
-    top: -125px;
+    top: -130px;
+    width: 140%;
+    left: -20%;
   }
   #home-about .image-border {
     width: 100%;
@@ -2398,6 +2405,9 @@ h6 {
   #home-project {
     padding-top: 46px;
   }
+  #home-project .heading-block .title {
+    line-height: 36px;
+  }
   #home-project .project-group {
     margin-top: 28px;
   }
@@ -2414,6 +2424,16 @@ h6 {
   #home-blog {
     padding-top: 53px;
     padding-bottom: 71px;
+  }
+  #home-blog .blog-slider .blog-item .image {
+    margin-bottom: 20px;
+  }
+  #home-testimonials .testimonials-slider:after {
+    content: "";
+    position: absolute;
+    width: 46%;
+    transform: translateX(64%);
+    background: linear-gradient(90deg, transparent 15%, #1D0E78 51%);
   }
 }
 #project-banner {
@@ -7072,6 +7092,7 @@ h6 {
     width: 120px;
     right: initial;
     left: -20px;
+    bottom: 32%;
   }
   #about-banner > .decor-el:nth-child(3) {
     display: none;
