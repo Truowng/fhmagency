@@ -712,6 +712,10 @@
     margin-top: -10px;
     background: $blue-2;
     .heading-block {
+      .title {
+        line-height: 1.5;
+        padding: 5px 0;
+      }
       .button {
         margin-top: 20px;
       }
@@ -755,6 +759,13 @@
     padding-bottom: 87px;
     background: url(../images/background/home-service-bg-m.svg) no-repeat center;
     background-size: cover;
+
+    .heading-block {
+      .title {
+        line-height: 1.5;
+        padding: 5px 0;
+      }
+    }
 
     .decor-el {
       &:nth-of-type(1) {

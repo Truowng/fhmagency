@@ -2283,6 +2283,10 @@ h6 {
     margin-top: -10px;
     background: #1d0e78;
   }
+  #home-about .heading-block .title {
+    line-height: 1.5;
+    padding: 5px 0;
+  }
   #home-about .heading-block .button {
     margin-top: 20px;
   }
@@ -2323,6 +2327,10 @@ h6 {
     padding-bottom: 87px;
     background: url(../images/background/home-service-bg-m.svg) no-repeat center;
     background-size: cover;
+  }
+  #home-services .heading-block .title {
+    line-height: 1.5;
+    padding: 5px 0;
   }
   #home-services .decor-el:nth-of-type(1) {
     display: none;
