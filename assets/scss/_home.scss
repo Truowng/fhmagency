@@ -74,7 +74,7 @@
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -2px;
     width: 100%;
     z-index: 0;
   }
@@ -129,6 +129,8 @@
   padding: 77px 0 289px;
   position: relative;
   overflow: hidden;
+  margin-bottom: -2px;
+
   .curve-bg {
     position: absolute;
     bottom: 0;
@@ -243,6 +245,8 @@
 #home-counter {
   background: $light-blue;
   position: relative;
+  margin-bottom: -5px;
+  padding-bottom: 5px;
 
   .decor-el {
     position: absolute;
@@ -289,7 +293,7 @@
   }
   .curve-bg {
     position: absolute;
-    top: -1px;
+    top: -2px;
     left: 0;
     width: 100%;
   }
@@ -420,6 +424,7 @@
 }
 #home-cta {
   margin-top: 0;
+  margin-bottom: -2px;
 }
 
 // START RESPONSIVE
@@ -550,6 +555,10 @@
   #home-services {
     .services-content {
       .services-item {
+        .image {
+          aspect-ratio: 370/140;
+        }
+
         .content {
           a {
             font-size: 22px;
@@ -558,7 +567,12 @@
         }
       }
     }
+
     .services-item {
+      .image {
+        aspect-ratio: 167/140;
+      }
+
       .content {
         a {
           font-size: 18px;
@@ -836,7 +850,7 @@
     .heading-block {
       .title {
         font-size: 22px;
-        line-height: 36px;
+        line-height: 1.5;
       }
     }
     .advantage-group {

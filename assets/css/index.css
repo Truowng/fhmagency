@@ -733,8 +733,9 @@ h6 {
 
 .gallery {
   position: relative;
-  padding: 142px 0 70px;
+  padding: 143px 0 70px;
   background-color: #170a64;
+  margin-top: -1px;
 }
 .gallery .decor-el {
   bottom: 0;
@@ -873,6 +874,12 @@ h6 {
   letter-spacing: 0.18px;
   text-align: center;
   margin-bottom: 31px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  white-space: unset;
 }
 .testimonials .testimonials-item .user .name {
   text-align: center;
@@ -1339,6 +1346,9 @@ h6 {
   .project .project-group {
     grid-template-columns: repeat(2, 1fr);
   }
+  .blog .blog-heading .button {
+    display: none;
+  }
   .blog .blog-slider .slider-button {
     display: none;
   }
@@ -1551,6 +1561,7 @@ h6 {
   }
   .cta .cta-image {
     margin-top: 43px;
+    margin-bottom: -1px;
   }
   .blog {
     margin-top: 53px;
@@ -1558,8 +1569,8 @@ h6 {
   .blog .blog-heading {
     align-items: baseline;
   }
-  .blog .blog-heading .button {
-    display: none;
+  .blog .blog-heading .title {
+    line-height: 1.5;
   }
   .blog .blog-slider {
     margin-top: 29px;
@@ -1725,7 +1736,7 @@ h6 {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2px;
   width: 100%;
   z-index: 0;
 }
@@ -1778,6 +1789,7 @@ h6 {
   padding: 77px 0 289px;
   position: relative;
   overflow: hidden;
+  margin-bottom: -2px;
 }
 #home-services .curve-bg {
   position: absolute;
@@ -1876,6 +1888,8 @@ h6 {
 #home-counter {
   background: #e8f3ff;
   position: relative;
+  margin-bottom: -5px;
+  padding-bottom: 5px;
 }
 #home-counter .decor-el {
   position: absolute;
@@ -1920,7 +1934,7 @@ h6 {
 }
 #home-advantage .curve-bg {
   position: absolute;
-  top: -1px;
+  top: -2px;
   left: 0;
   width: 100%;
 }
@@ -2044,6 +2058,7 @@ h6 {
 
 #home-cta {
   margin-top: 0;
+  margin-bottom: -2px;
 }
 
 @media (min-width: 1400px) {
@@ -2139,9 +2154,15 @@ h6 {
   #home-counter .counter-item:nth-child(2) {
     align-self: baseline;
   }
+  #home-services .services-content .services-item .image {
+    aspect-ratio: 370/140;
+  }
   #home-services .services-content .services-item .content a {
     font-size: 22px;
     line-height: 30px;
+  }
+  #home-services .services-item .image {
+    aspect-ratio: 167/140;
   }
   #home-services .services-item .content a {
     font-size: 18px;
@@ -2382,7 +2403,7 @@ h6 {
   }
   #home-advantage .heading-block .title {
     font-size: 22px;
-    line-height: 36px;
+    line-height: 1.5;
   }
   #home-advantage .advantage-group {
     margin-top: 32px;
@@ -7535,7 +7556,6 @@ h6 {
   position: relative;
   padding-bottom: 281px;
   background: #170a64;
-  overflow: hidden;
 }
 .project-detail-cta .heading-block {
   position: relative;
