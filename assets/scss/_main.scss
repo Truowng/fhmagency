@@ -385,9 +385,12 @@ h6 {
       width: 100%;
     }
 
+    .nav-wrapper {
+      position: relative;
+    }
+
     .nav {
-      transition: all $cubic 0.75s;
-      transition: all $cubic 0.75s;
+      transition: all $cubic 1s;
       transform: translateX(-110%);
       position: absolute;
       top: 0;
@@ -399,24 +402,36 @@ h6 {
         font-weight: $fw-b;
         color: $white;
         margin-bottom: 34px;
+        cursor: pointer;
         @include flex(unset, center, 25px);
-      }
-      &.nav-lv0.active {
-        transform: translateX(0);
-        & ~ .nav-lv1,
-        & ~ .nav-lv2 {
-          transform: translateX(110%);
+        .icon {
+          width: 12px !important;
         }
       }
-      &.nav-lv1.active {
+
+      &.nav-lv0.active {
         transform: translateX(0);
-        & ~ .nav-lv2 {
+        .nav-lv1 {
           transform: translateX(110%);
         }
       }
 
-      &.nav-lv2.active {
+      &.nav-lv1.active {
+        transform: translateX(110%);
+      }
+
+      &.nav-lv1:has(.nav-lv2.active) {
         transform: translateX(0);
+      }
+
+      &.nav-lv2 {
+        opacity: 0;
+      }
+
+      &.nav-lv2.active {
+        opacity: 1;
+
+        transform: translateX(220%);
       }
 
       &.nav-lv1,
@@ -451,9 +466,18 @@ h6 {
             line-height: 23px;
             flex: 1;
             @include flex(space-between, center, unset);
+            &:hover {
+              text-decoration: underline;
+            }
+            &::before {
+              content: none;
+            }
             .icon {
               width: 12px;
-              aspect-ratio: 1;
+
+              img {
+                height: 12px;
+              }
             }
           }
           &:last-child {
@@ -464,11 +488,15 @@ h6 {
               text-align: center;
               padding: 0;
               background-color: transparent;
+              &:hover {
+                background-color: unset;
+              }
             }
           }
         }
       }
     }
+
     .bg {
       position: absolute;
       bottom: 0;
@@ -1461,7 +1489,6 @@ h6 {
 }
 
 @include mobile {
-
   .image-border {
     width: 85%;
 

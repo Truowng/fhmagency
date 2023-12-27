@@ -82,6 +82,7 @@ const closeButton = document.querySelector(
   "#fhm-header .nav-mobile .button-close"
 );
 const navMobile = document.querySelector("#fhm-header .nav-mobile");
+const navsLv0 = document.querySelectorAll("#fhm-header .nav-mobile .nav-lv0");
 
 if (navMobile) {
   openButton.addEventListener("click", () => {
@@ -91,6 +92,61 @@ if (navMobile) {
   closeButton.addEventListener("click", () => {
     navMobile.classList.remove("open");
     navMobile.classList.add("close");
+  });
+}
+
+if (navsLv0) {
+  navsLv0.forEach((navLv0) => {
+    closeButton.addEventListener("click", () => {
+      document.querySelector(".nav.active").classList.remove("active");
+      navLv0.classList.add("active");
+    });
+    const itemsNavLv0 = navLv0.querySelectorAll(".item-lv0");
+    itemsNavLv0.forEach((itemNavLv0) => {
+      const navLv1 = itemNavLv0.querySelector(".nav-lv1");
+      itemNavLv0.addEventListener("click", () => {
+        if (navLv1) {
+          if (document.querySelector(".nav.active")) {
+          }
+          document.querySelector(".nav.active").classList.remove("active");
+          setTimeout(() => {
+            navLv1.classList.add("active");
+          }, 1);
+          const backBtnLv1 = navLv1.querySelector(".back-title");
+          backBtnLv1.addEventListener("click", () => {
+            setTimeout(() => {
+              navLv0.classList.add("active");
+            }, 1);
+          });
+          const itemsNavLv1 = navLv1.querySelectorAll(".item-lv1");
+          itemsNavLv1.forEach((itemNavLv1) => {
+            itemNavLv1.addEventListener("click", () => {
+              const navLv2 = itemNavLv1.querySelector(".nav-lv2");
+              if (navLv2) {
+                if (document.querySelector(".nav.active")) {
+                  document
+                    .querySelector(".nav.active")
+                    .classList.remove("active");
+                }
+                document
+                  .querySelector(".nav.active")
+                  .classList.remove("active");
+                setTimeout(() => {
+                  navLv2.classList.add("active");
+                }, 1);
+                const backBtnLv2 = navLv2.querySelector(".back-title");
+                backBtnLv2.addEventListener("click", () => {
+                  navLv2.classList.remove("active");
+                  setTimeout(() => {
+                    navLv1.classList.add("active");
+                  }, 1);
+                });
+              }
+            });
+          });
+        }
+      });
+    });
   });
 }
 
