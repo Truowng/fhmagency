@@ -282,6 +282,7 @@
 
 #home-advantage {
   padding-top: 252px;
+  margin-bottom: 180px;
   position: relative;
 
   .decor-el {
@@ -299,8 +300,10 @@
   }
 
   .bg {
-    margin-top: -200px;
-    position: relative;
+    position: absolute;
+    bottom: -402px;
+    left: 0;
+    width: 100%;
     z-index: -1;
   }
   .heading-block {
@@ -850,9 +853,10 @@
   }
 
   #home-advantage {
-    padding-bottom: 84px;
+    padding-bottom: 0;
+    margin-bottom: 65px;
     .bg {
-      bottom: -140px;
+      bottom: -108px;
     }
     .decor-el {
       width: 100%;
@@ -887,12 +891,12 @@
 
   #home-project {
     padding-top: 46px;
-    .heading-block  {
+    .heading-block {
       .title {
         line-height: 36px;
       }
     }
-    
+
     .project-group {
       margin-top: 28px;
     }
@@ -927,13 +931,12 @@
 
   #home-testimonials {
     .testimonials-slider {
-      &:after {    
+      &:after {
         content: "";
         position: absolute;
         width: 46%;
         transform: translateX(64%);
-        background: linear-gradient(90deg, transparent 15%, #1D0E78 51%);
-
+        background: linear-gradient(90deg, transparent 15%, #1d0e78 51%);
       }
     }
   }

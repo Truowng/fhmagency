@@ -1952,6 +1952,7 @@ h6 {
 
 #home-advantage {
   padding-top: 252px;
+  margin-bottom: 180px;
   position: relative;
 }
 #home-advantage .decor-el {
@@ -1968,8 +1969,10 @@ h6 {
   width: 100%;
 }
 #home-advantage .bg {
-  margin-top: -200px;
-  position: relative;
+  position: absolute;
+  bottom: -402px;
+  left: 0;
+  width: 100%;
   z-index: -1;
 }
 #home-advantage .heading-block .title {
@@ -2428,10 +2431,11 @@ h6 {
     line-height: 12px;
   }
   #home-advantage {
-    padding-bottom: 84px;
+    padding-bottom: 0;
+    margin-bottom: 65px;
   }
   #home-advantage .bg {
-    bottom: -140px;
+    bottom: -108px;
   }
   #home-advantage .decor-el {
     width: 100%;
@@ -2490,7 +2494,7 @@ h6 {
     position: absolute;
     width: 46%;
     transform: translateX(64%);
-    background: linear-gradient(90deg, transparent 15%, #1D0E78 51%);
+    background: linear-gradient(90deg, transparent 15%, #1d0e78 51%);
   }
 }
 #project-banner {
