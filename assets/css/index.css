@@ -484,23 +484,17 @@ h6 {
 #fhm-header .nav-mobile .nav.nav-lv0.active .nav-lv1 {
   transform: translateX(110%);
 }
-#fhm-header .nav-mobile .nav.nav-lv1.active {
-  transform: translateX(110%);
-}
-#fhm-header .nav-mobile .nav.nav-lv1:has(.nav-lv2.active) {
-  transform: translateX(0);
-}
-#fhm-header .nav-mobile .nav.nav-lv2 {
+#fhm-header .nav-mobile .nav.nav-lv1 {
   opacity: 0;
 }
-#fhm-header .nav-mobile .nav.nav-lv2.active {
+#fhm-header .nav-mobile .nav.nav-lv1.active {
   opacity: 1;
-  transform: translateX(220%);
+  transform: translateX(110%);
 }
-#fhm-header .nav-mobile .nav.nav-lv1 .list .item, #fhm-header .nav-mobile .nav.nav-lv2 .list .item {
+#fhm-header .nav-mobile .nav.nav-lv1 .list .item {
   padding: 10px 0;
 }
-#fhm-header .nav-mobile .nav.nav-lv1 .list .item a, #fhm-header .nav-mobile .nav.nav-lv2 .list .item a {
+#fhm-header .nav-mobile .nav.nav-lv1 .list .item a {
   font-size: 16px;
   line-height: 27px;
   letter-spacing: 0.3px;
@@ -561,6 +555,7 @@ h6 {
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 }
 #fhm-header .nav-mobile .button-close {
   outline: none;

@@ -416,26 +416,16 @@ h6 {
         }
       }
 
-      &.nav-lv1.active {
-        transform: translateX(110%);
-      }
-
-      &.nav-lv1:has(.nav-lv2.active) {
-        transform: translateX(0);
-      }
-
-      &.nav-lv2 {
+      &.nav-lv1 {
         opacity: 0;
       }
 
-      &.nav-lv2.active {
+      &.nav-lv1.active {
         opacity: 1;
-
-        transform: translateX(220%);
+        transform: translateX(110%);
       }
 
-      &.nav-lv1,
-      &.nav-lv2 {
+      &.nav-lv1 {
         .list {
           .item {
             padding: 10px 0;
@@ -502,6 +492,7 @@ h6 {
       bottom: 0;
       left: 0;
       width: 100%;
+      z-index: 10;
     }
     .button-close {
       outline: none;
