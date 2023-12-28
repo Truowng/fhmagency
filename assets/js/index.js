@@ -101,20 +101,26 @@ if (navsLv0) {
       document.querySelector(".nav.active").classList.remove("active");
       navLv0.classList.add("active");
     });
+
     const itemsNavLv0 = navLv0.querySelectorAll(".item-lv0");
     itemsNavLv0.forEach((itemNavLv0) => {
       const navLv1 = itemNavLv0.querySelector(".nav-lv1");
+      if (navLv1) {
+        const backBtn = navLv1.querySelector(".back-title");
+        backBtn.addEventListener("click", (e) => {
+          if (document.querySelector(".nav.active")) {
+            document.querySelector(".nav.active").classList.remove("active");
+          }
+          setTimeout(() => {
+            navLv0.classList.add("active");
+          }, 1);
+          e.stopPropagation();
+        });
+      }
 
       itemNavLv0.addEventListener("click", () => {
         if (navLv1) {
-          const backBtnLv1 = navLv1.querySelector(".back-title");
-          backBtnLv1.addEventListener("click", () => {
-            navLv1.classList.remove("active");
-            setTimeout(() => {
-              navLv0.classList.add("active");
-            }, 1);
-          });
-          navLv0.classList.remove("active");
+          document.querySelector(".nav.active").classList.remove("active");
           setTimeout(() => {
             navLv1.classList.add("active");
           }, 1);
