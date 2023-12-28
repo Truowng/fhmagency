@@ -104,20 +104,20 @@ if (navsLv0) {
     const itemsNavLv0 = navLv0.querySelectorAll(".item-lv0");
     itemsNavLv0.forEach((itemNavLv0) => {
       const navLv1 = itemNavLv0.querySelector(".nav-lv1");
+
       itemNavLv0.addEventListener("click", () => {
         if (navLv1) {
-          if (document.querySelector(".nav.active")) {
-          }
-          document.querySelector(".nav.active").classList.remove("active");
-          setTimeout(() => {
-            navLv1.classList.add("active");
-          }, 1);
           const backBtnLv1 = navLv1.querySelector(".back-title");
           backBtnLv1.addEventListener("click", () => {
+            navLv1.classList.remove("active");
             setTimeout(() => {
               navLv0.classList.add("active");
             }, 1);
           });
+          navLv0.classList.remove("active");
+          setTimeout(() => {
+            navLv1.classList.add("active");
+          }, 1);
         }
       });
     });
