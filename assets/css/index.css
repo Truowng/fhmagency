@@ -1914,11 +1914,15 @@ h6 {
   overflow: hidden;
   border-radius: 20px;
 }
-#home-services .services-item:hover .image a img {
-  transform: scale(1.1);
+#home-services .services-item:hover .image {
+  opacity: 0;
+}
+#home-services .services-item:hover .video {
+  opacity: 1;
 }
 #home-services .services-item .image {
   width: 100%;
+  transition: all ease 1s;
 }
 #home-services .services-item .image a {
   width: 100%;
@@ -1929,6 +1933,20 @@ h6 {
   -o-object-fit: cover;
      object-fit: cover;
   transition: all ease 1s;
+}
+#home-services .services-item .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease 1s;
+}
+#home-services .services-item .video video {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #home-services .services-item .content {
   padding: 70px 30px 30px;
