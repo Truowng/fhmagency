@@ -930,6 +930,7 @@
       &:after {    
         content: "";
         position: absolute;
+        display: block;
         width: 46%;
         transform: translateX(64%);
         background: linear-gradient(90deg, transparent 15%, #1D0E78 51%);
