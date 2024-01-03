@@ -554,6 +554,21 @@ h6 {
 #fhm-header .nav-mobile .nav-lv1 .list-lv1-item {
   margin-bottom: 20px;
 }
+#fhm-header .nav-mobile .nav-lv1 .list-lv1-item .title {
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+#fhm-header .nav-mobile .nav-lv1 .list-lv1-item .title a {
+  display: block;
+  flex: 1;
+  width: 100%;
+  white-space: nowrap;
+}
 #fhm-header .nav-mobile .nav-lv1 .accordion-item {
   background-color: transparent;
   border: none;
@@ -568,13 +583,19 @@ h6 {
   letter-spacing: 0.24px;
 }
 #fhm-header .nav-mobile .nav-lv1 .accordion-button:not(.collapsed) {
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: none;
 }
 #fhm-header .nav-mobile .nav-lv1 .accordion-button::after {
   filter: invert(1);
 }
 #fhm-header .nav-mobile .nav-lv1 .accordion-body {
   padding: 20px 10px;
+}
+#fhm-header .nav-mobile .nav-lv1 .accordion-collapse {
+  transition: all ease 0.5s;
+}
+#fhm-header .nav-mobile .nav-lv1 .accordion-collapse.show {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 #fhm-header .nav-mobile .nav-lv1 .link-list .link-item {
   margin-bottom: 20px;
