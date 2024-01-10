@@ -138,27 +138,7 @@ const valueDisplays = document.querySelectorAll(
 const counterDisplays = document.querySelectorAll(".counter-item .num span");
 const interval = 2500;
 let isRuned = false;
-// function checkScroll(els) {
-//   if (!isRuned) {
-//     const triggerBottom = (window.innerHeight / 5) * 4;
-//     els.forEach((el) => {
-//       const boxTop = el.getBoundingClientRect().top;
-//       if (boxTop < triggerBottom) {
-//         isRuned = true;
-//         let startValue = 0;
-//         let endValue = parseInt(el.getAttribute("data-val"));
-//         let duration = Math.floor(interval / endValue);
-//         let counter = setInterval(function () {
-//           startValue += 1;
-//           el.textContent = startValue;
-//           if (startValue == endValue) {
-//             clearInterval(counter);
-//           }
-//         }, duration);
-//       }
-//     });
-//   }
-// }
+
 function checkScroll() {
   if (!isRuned && valueDisplays) {
     const triggerBottom = (window.innerHeight / 5) * 4;
