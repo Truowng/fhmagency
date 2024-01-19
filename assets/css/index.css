@@ -2930,6 +2930,10 @@ h6 {
   padding: 20px 60px;
 }
 
+.pin-spacer {
+  z-index: 4 !important;
+}
+
 .display {
   margin-top: -210px;
   padding-bottom: 150px;
@@ -2983,9 +2987,21 @@ h6 {
 }
 .display .display-slider {
   margin-bottom: 82px;
+  position: relative;
+  z-index: 5;
+}
+.display .display-slider .display-slider-track {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: 62px;
+  flex-wrap: nowrap;
 }
 .display .display-slider .display-slider-item {
-  width: 77.6875%;
+  position: relative;
+  z-index: 5;
+  min-width: 77.6875%;
+  width: 1000px;
   aspect-ratio: 1243/680;
   position: relative;
   overflow: hidden;

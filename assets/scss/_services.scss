@@ -285,6 +285,10 @@
 }
 // END LAUNCH
 
+.pin-spacer {
+  z-index: 4 !important;
+}
+
 // START DISPLAY
 .display {
   margin-top: -210px;
@@ -337,10 +341,21 @@
       margin-bottom: 8px;
     }
   }
+
   .display-slider {
     margin-bottom: 82px;
+    position: relative;
+    z-index: 5;
+
+    .display-slider-track {
+      @include flex(unset, center, 62px);
+      flex-wrap: nowrap;
+    }
     .display-slider-item {
-      width: 77.6875%;
+      position: relative;
+      z-index: 5;
+      min-width: 77.6875%;
+      width: 1000px;
       aspect-ratio: 1243 / 680;
       position: relative;
       overflow: hidden;

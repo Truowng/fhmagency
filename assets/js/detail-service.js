@@ -32,19 +32,19 @@ if (window.innerWidth < 991) {
     sayingReverse.removeAttribute("dir");
   }
 }
-const displaySlider = new Swiper(".display-slider", {
-  slidesPerView: "auto",
-  spaceBetween: 10,
-  speed: 1500,
-  breakpoints: {
-    767: {
-      spaceBetween: 30,
-    },
-    991: {
-      spaceBetween: 62,
-    },
-  },
-});
+// const displaySlider = new Swiper(".display-slider", {
+//   slidesPerView: "auto",
+//   spaceBetween: 10,
+//   speed: 1500,
+//   breakpoints: {
+//     767: {
+//       spaceBetween: 30,
+//     },
+//     991: {
+//       spaceBetween: 62,
+//     },
+//   },
+// });
 
 // service-partner slider
 const servicePartner = new Swiper(".services-partner-slider", {
@@ -104,5 +104,32 @@ if (galleryContainer) {
     fullScreen: true,
     showZoomInOutIcons: true,
     actualSize: true,
+  });
+}
+
+const track = document.querySelector(".display-slider-track");
+
+if (track) {
+  const getScrollAmount = () => {
+    let trackWidth = track.scrollWidth;
+    return -(trackWidth - window.innerWidth);
+  };
+
+  const x = window.matchMedia("(max-width: 1299px)");
+
+  const tween = gsap.to(track, {
+    x: getScrollAmount,
+    duration: 3,
+    ease: "none",
+  });
+
+  ScrollTrigger.create({
+    trigger: x.matches ? ".display" : ".display-slider",
+    start: "top 10%",
+    end: () => `+=${getScrollAmount() * -1}`,
+    pin: true,
+    animation: tween,
+    scrub: 1,
+    invalidateOnRefresh: true,
   });
 }
