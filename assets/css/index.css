@@ -8394,6 +8394,7 @@ h6 {
   align-items: center;
   gap: unset;
   width: 100%;
+  height: 100%;
 }
 .list-services .services.fixed {
   margin-top: 0;
@@ -8588,8 +8589,23 @@ h6 {
     line-height: 44px;
     letter-spacing: 0.33px;
   }
+  .list-services {
+    height: 100%;
+  }
+  .list-services .services {
+    height: 100%;
+  }
   .list-services .services h2 {
     margin-bottom: 10px;
+  }
+  .list-services .services .services-list {
+    height: 100%;
+  }
+  .list-services .services .container {
+    height: 100%;
+  }
+  .list-services .services .services-slider {
+    height: 100%;
   }
   .list-services .services .services-slider .services-slider-item .services-slider-content {
     left: 20px;
